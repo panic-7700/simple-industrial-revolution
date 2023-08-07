@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	
+
+		
+	<li Class="PatchOperationFindMod">
+	<mods><li>Combat Extended</li></mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+		<li Class="PatchOperationAdd">
+		<xpath>Defs/FactionDef[defName="TI_IndustrialCivil"]</xpath>
+		<value>
+		  <maxPawnCostPerTotalPointsCurve  Inherit="False">
+			  <points>
+				<li>(0,35)</li>
+				<li>(500, 80)</li>
+				<li>(2000, 120)</li>
+				<li>(4000, 200)</li>
+				<li>(8000, 400)</li>
+				<li>(100000, 10000)</li>
+			  </points>
+		  </maxPawnCostPerTotalPointsCurve>
+		</value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+		<xpath>Defs/FactionDef[defName="TI_IndustrialWarlike"]</xpath>
+		<value>
+		  <maxPawnCostPerTotalPointsCurve  Inherit="False">
+			  <points>
+				<li>(0,35)</li>
+				<li>(500, 80)</li>
+				<li>(2000, 120)</li>
+				<li>(4000, 200)</li>
+				<li>(8000, 400)</li>
+				<li>(100000, 10000)</li>
+			  </points>
+		  </maxPawnCostPerTotalPointsCurve>
+		</value>
+		</li>
+	</operations>
+	</match>
+    </li>
+		
+	</operations>	
+  </Operation>
+</Patch>

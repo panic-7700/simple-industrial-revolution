@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	
+	<li Class="PatchOperationFindMod">
+	<mods><li>Combat Extended</li></mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs</xpath>
+			<value>
+			
+			<ThingDef ParentName="BaseHumanMakeableGun">
+				<defName>TI_Gun_PPSh41gun</defName>
+				<label>PPSh 41</label>
+				<description>Ancient military weapon renowned for its high rate of fire. The simple design makes it easy to assemble, and the high rate of fire makes it a powerful weapon in close quarters.</description>
+				<graphicData>
+				  <texPath>Things/Weapons/TI_PPSh41</texPath>
+				  <graphicClass>Graphic_Single</graphicClass>
+				</graphicData>
+				<soundInteract>Interact_Rifle</soundInteract>
+				<statBases>
+				  <WorkToMake>27500</WorkToMake>
+				  <SightsEfficiency>1</SightsEfficiency>
+				  <ShotSpread>0.12</ShotSpread>
+				  <SwayFactor>1.21</SwayFactor>
+				  <Bulk>8.43</Bulk>
+				  <Mass>3.63</Mass>
+				  <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+				</statBases>
+				<weaponTags>
+				  <li>TI_SMG</li>
+				</weaponTags>
+				<costList>
+				  <Steel>50</Steel>
+				  <ComponentIndustrial>5</ComponentIndustrial>
+				  <WoodLog>5</WoodLog>
+				</costList>
+				<verbs>
+				  <li Class="CombatExtended.VerbPropertiesCE">
+					<recoilAmount>1.26</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
+					<burstShotCount>6</burstShotCount>
+					<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+					<warmupTime>0.6</warmupTime>
+					<range>24</range>
+					<soundCast>Shot_HeavySMG</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>9</muzzleFlashScale>
+				  </li>
+				</verbs>
+				<comps>
+				  <li Class="CombatExtended.CompProperties_AmmoUser">
+					<magazineSize>35</magazineSize>
+					<reloadTime>4</reloadTime>
+					<ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
+				  </li>
+				  <li Class="CombatExtended.CompProperties_FireModes">
+					<aiUseBurstMode>FALSE</aiUseBurstMode>
+					<aiAimMode>Snapshot</aiAimMode>
+					<aimedBurstShotCount>3</aimedBurstShotCount>
+				  </li>
+				</comps>
+				<recipeMaker>
+				  <researchPrerequisite>GasOperation</researchPrerequisite>
+				</recipeMaker>
+				<tools>
+				  <li Class="CombatExtended.ToolCE">
+					<label>stock</label>
+					<capacities>
+					  <li>Blunt</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.55</cooldownTime>
+					<chanceFactor>1.5</chanceFactor>
+					<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+				  </li>
+				  <li Class="CombatExtended.ToolCE">
+					<label>barrel</label>
+					<capacities>
+					  <li>Blunt</li>
+					</capacities>
+					<power>5</power>
+					<cooldownTime>2.02</cooldownTime>
+					<armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+				  </li>
+				  <li Class="CombatExtended.ToolCE">
+					<label>muzzle</label>
+					<capacities>
+					  <li>Poke</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.55</cooldownTime>
+					<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+				  </li>
+				</tools>
+				<modExtensions>
+				  <li Class="CombatExtended.GunDrawExtension">
+					<DrawSize>1.00,1.00</DrawSize>
+					<DrawOffset>0.05,-0.10</DrawOffset>
+				  </li>
+				</modExtensions>
+			</ThingDef>
+			
+			
+			<ThingDef ParentName="BaseHumanMakeableGun">
+				<defName>TI_Gun_FCMaggun</defName>
+				<label>FC Magnum</label>
+				<description>Ancient carbine firing a Magnum handgun cartridge. Simple to manufacture, while the magnum round lends it higher power and range than a conventional pistol cartridge.</description>
+				<graphicData>
+				  <texPath>Things/Weapons/TI_FCMagnum</texPath>
+				  <graphicClass>Graphic_Single</graphicClass>
+				</graphicData>
+				<soundInteract>Interact_Rifle</soundInteract>
+				<statBases>
+				  <WorkToMake>28000</WorkToMake>
+				  <SightsEfficiency>1</SightsEfficiency>
+				  <ShotSpread>0.06</ShotSpread>
+				  <SwayFactor>1.49</SwayFactor>
+				  <Bulk>10.2</Bulk>
+				  <Mass>4.40</Mass>
+				  <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+				</statBases>
+				<weaponTags>
+				  <li>TI_BasicRifle</li>
+				</weaponTags>
+				<costList>
+				  <Steel>50</Steel>
+				  <ComponentIndustrial>5</ComponentIndustrial>
+				  <WoodLog>15</WoodLog>
+				</costList>
+				<recipeMaker>
+				  <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+				</recipeMaker>
+				<verbs>
+				  <li Class="CombatExtended.VerbPropertiesCE">
+					<recoilAmount>1.32</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_357Magnum_FMJ</defaultProjectile>
+					<burstShotCount>6</burstShotCount>
+					<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+					<warmupTime>1.1</warmupTime>
+					<range>36</range>
+					<soundCast>Shot_Revolver</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>9</muzzleFlashScale>
+				  </li>
+				</verbs>
+				<comps>
+				  <li Class="CombatExtended.CompProperties_AmmoUser">
+					<magazineSize>25</magazineSize>
+					<reloadTime>4</reloadTime>
+					<ammoSet>AmmoSet_357Magnum</ammoSet>
+				  </li>
+				  <li Class="CombatExtended.CompProperties_FireModes">
+					<aiUseBurstMode>TRUE</aiUseBurstMode>
+					<aiAimMode>AimedShot</aiAimMode>
+					<aimedBurstShotCount>3</aimedBurstShotCount>
+				  </li>
+				</comps>
+				<tools>
+				  <li Class="CombatExtended.ToolCE">
+					<label>stock</label>
+					<capacities>
+					  <li>Blunt</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.55</cooldownTime>
+					<chanceFactor>1.5</chanceFactor>
+					<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+				  </li>
+				  <li Class="CombatExtended.ToolCE">
+					<label>barrel</label>
+					<capacities>
+					  <li>Blunt</li>
+					</capacities>
+					<power>5</power>
+					<cooldownTime>2.02</cooldownTime>
+					<armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+				  </li>
+				  <li Class="CombatExtended.ToolCE">
+					<label>muzzle</label>
+					<capacities>
+					  <li>Poke</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.55</cooldownTime>
+					<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+				  </li>
+				</tools>
+				<modExtensions>
+				  <li Class="CombatExtended.GunDrawExtension">
+					<DrawSize>1.25,1.25</DrawSize>
+					<DrawOffset>0.15,-0.05</DrawOffset>
+				  </li>
+				</modExtensions>
+			</ThingDef>
+		</value>
+		</li>
+	</operations>
+	</match>
+    </li>
+	
+	</operations>	
+  </Operation>
+</Patch>

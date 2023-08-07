@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+  <FactionDef Name="TI_IndustrialBase" ParentName="OutlanderFactionBase" Abstract="True">
+    <pawnSingular>citizen</pawnSingular>
+    <pawnsPlural>industrials</pawnsPlural>
+    <settlementGenerationWeight>3</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+	<backstoryFilters Inherit="False">
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.85</commonality>
+      </li>
+	  <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+        <commonality>0.10</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.05</commonality>
+      </li>
+    </backstoryFilters>
+    <!--<leaderTitle>head minister</leaderTitle>-->
+	<techLevel>Industrial</techLevel>
+	<apparelStuffFilter>
+		<thingDefs>
+			<li>Steel</li>
+		</thingDefs>
+	</apparelStuffFilter>
+    <allowedArrivalTemperatureRange>-40~40</allowedArrivalTemperatureRange>
+	<colorSpectrum>
+      <li>(0.35, 0.30, 0.60)</li>
+      <li>(0.45, 0.40, 0.90)</li>
+    </colorSpectrum>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(200, 50)</li>
+        <li>(1200, 100)</li>
+        <li>(2000, 150)</li>
+		<li>(4000, 220)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	<pawnGroupMakers Inherit="False">
+      <li>
+        <!-- Normal fights, standard mix -->
+		<commonality>100</commonality>
+        <kindDef>Combat</kindDef>
+        <options>
+			<TI_Outrider_Pistol>1</TI_Outrider_Pistol>
+			<TI_Outrider_Melee>1</TI_Outrider_Melee>
+			<TI_Outrider_Rifle>1.5</TI_Outrider_Rifle>
+			<TI_Militia_Pistol>3</TI_Militia_Pistol>
+			<TI_Militia_Gunner>5</TI_Militia_Gunner>
+			<TI_Militia_Grenadier>2</TI_Militia_Grenadier>
+			<TI_Irregular_Rifle>40</TI_Irregular_Rifle>
+			<TI_Irregular_Marksman>30</TI_Irregular_Marksman>
+			<TI_Irregular_Trooper>30</TI_Irregular_Trooper>
+			<TI_Irregular_Grenadier>15</TI_Irregular_Grenadier>
+			<TI_Regular_AR_545>80</TI_Regular_AR_545>
+			<TI_Regular_AR_762>80</TI_Regular_AR_762>
+			<TI_Regular_BR_762>60</TI_Regular_BR_762>
+			<TI_Regular_MG_762>40</TI_Regular_MG_762>
+			<TI_Regular_AM_145>35</TI_Regular_AM_145>
+			<TI_Regular_Grenadier>20</TI_Regular_Grenadier>
+			<TI_Regular_Trooper>80</TI_Regular_Trooper>
+			<TI_Elite_AR_545>40</TI_Elite_AR_545>
+			<TI_Elite_AR_762>40</TI_Elite_AR_762>
+			<TI_Elite_BR_762>30</TI_Elite_BR_762>
+			<TI_Elite_MG_762>25</TI_Elite_MG_762>
+			<TI_Elite_AM_145>15</TI_Elite_AM_145>
+			<TI_Elite_ATLauncher>15</TI_Elite_ATLauncher>
+			<TI_Elite_Special>1</TI_Elite_Special>
+			<TI_Elite_Leader>1</TI_Elite_Leader>
+        </options>
+      </li>
+      <li>
+        <!-- Elite Raid -->
+		<commonality>25</commonality>
+        <kindDef>Combat</kindDef>
+        <options>
+			<TI_Elite_Special>100</TI_Elite_Special>
+			<TI_Elite_ATLauncher>15</TI_Elite_ATLauncher>
+        </options>
+      </li>
+	  <li>
+        <!-- Swarm Raid -->
+		<commonality>25</commonality>
+        <kindDef>Combat</kindDef>
+        <options>
+			<TI_Irregular_Rifle>40</TI_Irregular_Rifle>
+			<TI_Irregular_Marksman>30</TI_Irregular_Marksman>
+			<TI_Irregular_Trooper>30</TI_Irregular_Trooper>
+			<TI_Irregular_Grenadier>15</TI_Irregular_Grenadier>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+			<Villager>20</Villager>
+			<TI_Irregular_Trooper>10</TI_Irregular_Trooper>
+			<TI_Irregular_Rifle>10</TI_Irregular_Rifle>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Town_Trader>1</Town_Trader>
+        </traders>
+        <carriers>
+			<Muffalo>6</Muffalo>
+			<Dromedary>5</Dromedary>
+			<Alpaca>2</Alpaca>
+			<Elephant>1</Elephant>
+        </carriers>
+        <guards>
+			<Villager>3</Villager>
+			<TI_Regular_AR_545>1.5</TI_Regular_AR_545>
+			<TI_Regular_AR_762>7</TI_Regular_AR_762>
+			<TI_Irregular_Rifle>10</TI_Irregular_Rifle>
+			<TI_Irregular_Trooper>10</TI_Irregular_Trooper>
+		</guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+			<Villager>10</Villager>
+			<TI_Irregular_Trooper>25</TI_Irregular_Trooper>
+			<TI_Elite_AM_145>1.5</TI_Elite_AM_145>
+			<TI_Elite_AR_545>5</TI_Elite_AR_545>
+			<TI_Elite_AR_762>5</TI_Elite_AR_762>
+			<TI_Elite_BR_762>5</TI_Elite_BR_762>
+			<Town_Councilman>1</Town_Councilman>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+  
+  <FactionDef ParentName="TI_IndustrialBase">
+	<description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In this time they have rebuilt their technological base, either through salvage or their own effort, and now seek to expand and build their society and strengthen their holdings on this planet.
+\n While largely eschewing the development of more advanced spacer technology, the industrial people are a significant threat thanks to their well armed military forces and trained, organized raiding parties.
+\nThis particular group is distrustful of outsiders and off-worlders, and it will take negotiations or gifts to turn them to an ally.</description>
+	<defName>TI_IndustrialCivil</defName>
+	<label>civil industrial alliance</label>
+    <leaderTitle>head minister</leaderTitle>
+	<apparelStuffFilter>
+		<thingDefs>
+			<li>WoolMegasloth</li>
+			<li>Leather_Heavy</li>
+		</thingDefs>
+	</apparelStuffFilter>
+    <allowedArrivalTemperatureRange>-40~40</allowedArrivalTemperatureRange>
+	<colorSpectrum>
+      <li>(0.25, 0.30, 0.60)</li>
+      <li>(0.25, 0.40, 0.90)</li>
+    </colorSpectrum>
+    <factionIconPath>Icon/Icon_Industrial_Civil</factionIconPath>
+    <startingGoodwill>-55</startingGoodwill>
+    <naturalColonyGoodwill>-100~-80</naturalColonyGoodwill>
+  </FactionDef>
+  
+  <FactionDef ParentName="TI_IndustrialBase">
+	<defName>TI_IndustrialWarlike</defName>
+	<description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In this time they have rebuilt their technological base, either through salvage or their own effort, and now seek to expand and build their society and strengthen their holdings on this planet.
+\n While largely eschewing the development of more advanced spacer technology, the industrial people are a significant threat thanks to their well armed military forces and trained, organized raiding parties.
+\nThis particular group is isolationist and militaristic to the extreme. The only way for an outsider to join their society would be as a prisoner.</description>
+    <leaderTitle>governor general</leaderTitle>
+	<label>warlike industrial alliance</label>
+	<apparelStuffFilter>
+		<thingDefs>
+			<li>WoolMuffalo</li>
+			<li>Leather_Bluefur</li>
+		</thingDefs>
+	</apparelStuffFilter>
+    <allowedArrivalTemperatureRange>-40~40</allowedArrivalTemperatureRange>
+	<colorSpectrum>
+      <li>(0.15, 0.50, 0.40)</li>
+      <li>(0.35, 0.60, 0.70)</li>
+    </colorSpectrum>
+    <factionIconPath>Icon/Icon_Industrial_Warlike</factionIconPath>
+    <permanentEnemy>true</permanentEnemy>
+    <goodwillDailyGain>0</goodwillDailyGain>
+    <goodwillDailyFall>0</goodwillDailyFall>
+  </FactionDef>
+  
+</Defs>
