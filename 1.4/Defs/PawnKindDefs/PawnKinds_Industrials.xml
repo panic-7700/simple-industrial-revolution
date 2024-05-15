@@ -2,7 +2,7 @@
 <Defs>
 	
 	
-	<PawnKindDef Name="TI_IndusrialBasePawn" Abstract="True">
+	<PawnKindDef Name="EarlyInd_BasePawn" Abstract="True">
       <race>Human</race>
       <defaultFactionType>TI_IndustrialCivil</defaultFactionType>
       <chemicalAddictionChance>0.1</chemicalAddictionChance>
@@ -10,7 +10,7 @@
       <itemQuality>Normal</itemQuality>
       <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
 	  <minGenerationAge>18</minGenerationAge>
-      <maxGenerationAge>75</maxGenerationAge>
+      <maxGenerationAge>60</maxGenerationAge>
       <combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance>
 	  <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
       <combatEnhancingDrugsCount>
@@ -23,7 +23,7 @@
       <initialResistanceRange>4~14</initialResistanceRange>
 	</PawnKindDef>
 	
-	<PawnKindDef Name="TI_IndusrialElitePawn" Abstract="True">
+	<PawnKindDef Name="EarlyInd_ElitePawn" Abstract="True">
       <race>Human</race>
       <defaultFactionType>TI_IndustrialCivil</defaultFactionType>
       <chemicalAddictionChance>0</chemicalAddictionChance>
@@ -46,7 +46,7 @@
 	
 	<!--Outriders : Low Quality : No Armor-->
 	
-	<PawnKindDef Name="TI_OutriderBase" ParentName="TI_IndusrialBasePawn" Abstract="True">
+	<PawnKindDef Name="TI_OutriderBase" ParentName="EarlyInd_BasePawn" Abstract="True">
 		<combatPower>40</combatPower>
 		<itemQuality>Poor</itemQuality>
 		<isFighter>true</isFighter>
@@ -110,7 +110,7 @@
   
   <!--Militia : Normal Quality : Forced Flak Jacket-->
   
-	<PawnKindDef Name="TI_MilitaBase" ParentName="TI_IndusrialBasePawn" Abstract="True">
+	<PawnKindDef Name="TI_MilitaBase" ParentName="EarlyInd_BasePawn" Abstract="True">
 		<combatPower>50</combatPower>
 		<itemQuality Inherit="False" >Normal</itemQuality>
 		<isFighter>true</isFighter>
@@ -172,7 +172,7 @@
 	
 	<!--Irregulars : Normal Quality : Forced Combat Kit-->
 	
-	<PawnKindDef Name="TI_IrregularBase" ParentName="TI_IndusrialBasePawn" Abstract="True">
+	<PawnKindDef Name="TI_IrregularBase" ParentName="EarlyInd_BasePawn" Abstract="True">
 		<combatPower>110</combatPower>
 		<itemQuality Inherit="False" >Normal</itemQuality>
 		<isFighter>true</isFighter>
@@ -248,7 +248,7 @@
 	
 	<!--Regulars : Normal Quality : Forced Composite Kit-->
 	
-	<PawnKindDef Name="TI_RegularBase" ParentName="TI_IndusrialBasePawn" Abstract="True">
+	<PawnKindDef Name="TI_RegularBase" ParentName="EarlyInd_BasePawn" Abstract="True">
 		<combatPower>135</combatPower>
 		<itemQuality Inherit="False" >Good</itemQuality>
 		<isFighter>true</isFighter>
@@ -380,7 +380,7 @@
 	
 	<!--Elites : Excellent Quality : Forced Composite Kit-->
 	
-	<PawnKindDef Name="TI_EliteBase" ParentName="TI_IndusrialElitePawn" Abstract="True">
+	<PawnKindDef Name="TI_EliteBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
 		<combatPower>200</combatPower>
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
