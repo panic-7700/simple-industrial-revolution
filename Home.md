@@ -1,4 +1,12 @@
-Rough plans
+Planning and notes, not very organized. So it goes.
+
+## Factions
+- civil early-industrial faction
+  - individualist ideo
+  - blue and grey colorsets
+- warlike early-industrial faction
+  - loyalist
+  - red and black color sets
 
 ## Military
 - base attire
@@ -92,3 +100,10 @@ possible drug-use attach
         public bool forceNormalGearQuality;
         public Gender? fixedGender;
 
+> faction color defs
+```
+    <colorSpectrum>
+      <li>(0.03, 0.47, 0.16)</li>
+      <li>(0.49, 0.96, 0.51)</li>
+    </colorSpectrum>
+```
