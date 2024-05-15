@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Simple Early Industrial Factions</name>
+	<author>panic</author>
+	<supportedVersions>
+	  <li>1.4</li>
+	</supportedVersions>
+	<description>Adds Civil and Warlike early-industrial factions, which use flintlock weapons and wear garish uniforms.</description>
+	<packageId>panic.simpleearlyindustrialfactions</packageId>
+</ModMetaData>

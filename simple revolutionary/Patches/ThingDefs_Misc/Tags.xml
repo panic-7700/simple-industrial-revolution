@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+	<operations>
+	
+	<!--Test for tags and add-->
+	<li Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Gun_Autopistol"]/weaponTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Gun_Autopistol"]</xpath>
+			<value>
+				<weaponTags/>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Gun_Autopistol"]</xpath>
+			<value>
+			</value>
+		</match>
+	</li>
+	
+	<li Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Gun_MachinePistol"]/weaponTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Gun_MachinePistol"]</xpath>
+			<value>
+				<weaponTags/>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Gun_MachinePistol"]</xpath>
+			<value>
+			</value>
+		</match>
+	</li>
+	
+	<li Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Gun_PumpShotgun"]/weaponTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Gun_PumpShotgun"]</xpath>
+			<value>
+				<weaponTags/>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Gun_PumpShotgun"]</xpath>
+			<value>
+			</value>
+		</match>
+	</li>
+	
+	<li Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Gun_ChainShotgun"]/weaponTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Gun_ChainShotgun"]</xpath>
+			<value>
+				<weaponTags/>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Gun_ChainShotgun"]</xpath>
+			<value>
+			</value>
+		</match>
+	</li>
+	
+	<li Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Weapon_GrenadeFrag"]/weaponTags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Weapon_GrenadeFrag"]</xpath>
+			<value>
+				<weaponTags/>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Weapon_GrenadeFrag"]</xpath>
+			<value>
+			</value>
+		</match>
+	</li>
+	
+	<!--Add tags-->
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Gun_Autopistol"]/weaponTags</xpath>
+		<value>
+			<li>TI_BasicPistol</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Gun_MachinePistol"]/weaponTags</xpath>
+		<value>
+			<li>TI_AutoPistol</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Gun_PumpShotgun"]/weaponTags</xpath>
+		<value>
+			<li>TI_BasicShotgun</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Gun_ChainShotgun"]/weaponTags</xpath>
+		<value>
+			<li>TI_Shotgun</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Apparel_Pants" or
+		defName="Apparel_BasicShirt" or
+		defName="Apparel_CollarShirt"
+		]/apparel/tags</xpath>
+		<value>
+			<li>TI_Outrider</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Apparel_CowboyHat" or
+		defName="Apparel_Tuque" or
+		defName="Apparel_Duster"
+		]/apparel/tags</xpath>
+		<value>
+			<li>TI_Outrider_A</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Apparel_Pants" or
+		defName="Apparel_BasicShirt" or
+		defName="Apparel_CollarShirt" or
+		defName="Apparel_FlakJacket" or
+		defName="Apparel_SimpleHelmet"
+		]/apparel/tags</xpath>
+		<value>
+			<li>TI_Militia</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Apparel_FlakPants" or
+		defName="Apparel_BasicShirt" or
+		defName="Apparel_CollarShirt" or
+		defName="Apparel_FlakJacket" or
+		defName="Apparel_FlakVest" or
+		defName="Apparel_SimpleHelmet"
+		]/apparel/tags</xpath>
+		<value>
+			<li>TI_Irregular</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Apparel_FlakPants" or
+		defName="Apparel_BasicShirt" or
+		defName="Apparel_CollarShirt" or
+		defName="Apparel_FlakJacket" or
+		defName="Apparel_AdvancedHelmet"
+		]/apparel/tags</xpath>
+		<value>
+			<li>TI_Regular</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Apparel_Pants" or
+		defName="Apparel_BasicShirt" or
+		defName="Apparel_CollarShirt" or
+		defName="Apparel_AdvancedHelmet"
+		]/apparel/tags</xpath>
+		<value>
+			<li>TI_Regular_Light</li>
+			<li>TI_Elite_Light</li>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Apparel_FlakPants" or
+		defName="Apparel_BasicShirt" or
+		defName="Apparel_CollarShirt" or
+		defName="Apparel_FlakJacket" or
+		defName="Apparel_AdvancedHelmet"
+		]/apparel/tags</xpath>
+		<value>
+			<li>TI_Elite</li>
+		</value>
+	</li>
+	
+	
+	
+	<li Class="PatchOperationFindMod">
+	<mods><li>Combat Extended</li></mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+		
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/ThingDef[defName="CE_GrenadeLauncher"]/weaponTags</xpath>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="CE_GrenadeLauncher"]</xpath>
+				<value>
+					<weaponTags/>
+				</value>
+			</nomatch>
+			<match Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="CE_GrenadeLauncher"]</xpath>
+				<value>
+				</value>
+			</match>
+		</li>
+		
+		<!--Add tags-->
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="CE_GrenadeLauncher"]/weaponTags</xpath>
+			<value>
+				<li>TI_GrenadeBasic</li>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="CE_Apparel_Backpack"]/apparel/tags</xpath>
+			<value>
+				<li>TI_Outrider_A</li>
+				<li>TI_Irregular</li>
+				<li>TI_Regular</li>
+				<li>TI_Elite</li>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="CE_Apparel_TacVest"]/apparel/tags</xpath>
+			<value>
+				<li>TI_Elite</li>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="CE_Apparel_CompositeVest"]/apparel/tags</xpath>
+			<value>
+				<li>TI_Regular</li>
+				<li>TI_Regular_Light</li>
+				<li>TI_Elite_Light</li>
+			</value>
+		</li>
+		
+		<!--Add forced apparel-->
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[@Name="TI_IndusrialBasePawn"]/apparelRequired</xpath>
+			<value>
+				<li>CE_Apparel_Backpack</li>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/PawnKindDef[@Name="TI_IndusrialElitePawn"]/apparelRequired</xpath>
+			<value>
+				<li>CE_Apparel_Backpack</li>
+				<li>CE_Apparel_TacVest</li>
+				<li>CE_Apparel_CompositeVest</li>
+			</value>
+		</li>
+		
+	</operations>
+	</match>
+	<nomatch Class="PatchOperationSequence">
+	<operations>
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/ThingDef[defName="Gun_BoltActionRifle"]/weaponTags</xpath>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Gun_BoltActionRifle"]</xpath>
+				<value>
+					<weaponTags/>
+				</value>
+			</nomatch>
+			<match Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Gun_BoltActionRifle"]</xpath>
+				<value>
+				</value>
+			</match>
+		</li>
+		
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/ThingDef[defName="Gun_HeavySMG"]/weaponTags</xpath>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Gun_HeavySMG"]</xpath>
+				<value>
+					<weaponTags/>
+				</value>
+			</nomatch>
+			<match Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Gun_HeavySMG"]</xpath>
+				<value>
+				</value>
+			</match>
+		</li>
+		
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/ThingDef[defName="Gun_LMG"]/weaponTags</xpath>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Gun_LMG"]</xpath>
+				<value>
+					<weaponTags/>
+				</value>
+			</nomatch>
+			<match Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Gun_LMG"]</xpath>
+				<value>
+				</value>
+			</match>
+		</li>
+		
+		<li Class="PatchOperationConditional">
+			<xpath>/Defs/ThingDef[defName="Gun_Minigun"]/weaponTags</xpath>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Gun_Minigun"]</xpath>
+				<value>
+					<weaponTags/>
+				</value>
+			</nomatch>
+			<match Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Gun_Minigun"]</xpath>
+				<value>
+				</value>
+			</match>
+		</li>
+		
+		<!--Add tags-->
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Weapon_GrenadeFrag"]/weaponTags</xpath>
+			<value>
+				<li>TI_GrenadeBasic</li>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Gun_BoltActionRifle"]/weaponTags</xpath>
+			<value>
+				<li>TI_BasicRifle</li>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Gun_HeavySMG"]/weaponTags</xpath>
+			<value>
+				<li>TI_SMG</li>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Gun_LMG"]/weaponTags</xpath>
+			<value>
+				<li>TI_762LMG</li>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Gun_Minigun"]/weaponTags</xpath>
+			<value>
+				<li>TI_762MMG</li>
+			</value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[
+			defName="Apparel_FlakVest"
+			]/apparel/tags</xpath>
+			<value>
+				<li>TI_Regular</li>
+				<li>TI_Elite</li>
+				<li>TI_Regular_Light</li>
+				<li>TI_Elite_Light</li>
+			</value>
+		</li>
+	</operations>
+	</nomatch>
+    </li>
+	
+	<li Class="PatchOperationFindMod">
+		<mods><li>Combat Extended Guns</li></mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_AKTwelve"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_AKTwelve"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_AKTwelve"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_AKM"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_AKM"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_AKM"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_AKSSeventyFourU"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_AKSSeventyFourU"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_AKSSeventyFourU"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_RPD"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_RPD"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_RPD"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_SVD"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_SVD"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_SVD"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_PKM"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_PKM"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_PKM"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_MilkorMGL"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_MilkorMGL"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_MilkorMGL"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_SKS"]/weaponTags</xpath>
+				<value>
+					<li>TI_762Rifle</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_RPD"]/weaponTags</xpath>
+				<value>
+					<li>TI_762LMG</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_AKM"]/weaponTags</xpath>
+				<value>
+					<li>TI_762ARifle</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_AKTwelve" or defName="CE_Gun_AKSSeventyFourU"]/weaponTags</xpath>
+				<value>
+					<li>TI_545ARifle</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_SVD"]/weaponTags</xpath>
+				<value>
+					<li>TI_762BRifle</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_PTRS"]/weaponTags</xpath>
+				<value>
+					<li>TI_145AMRifle</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_PKM"]/weaponTags</xpath>
+				<value>
+					<li>TI_762MMG</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_RPGSeven"]/weaponTags</xpath>
+				<value>
+					<li>TI_ATLauncher</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_MilkorMGL"]/weaponTags</xpath>
+				<value>
+					<li>TI_GrenadeAdvanced</li>
+				</value>
+			</li>
+			
+		</operations>
+		</match>	
+	</li>
+	
+	<li Class="PatchOperationFindMod">
+		<mods><li>Gun Nut - Chapter #1</li></mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="GN_AKOneOThree"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GN_AKOneOThree"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GN_AKOneOThree"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="GN_AKOneOFive"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GN_AKOneOFive"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GN_AKOneOFive"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="GN_SaigaTwelveK"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GN_SaigaTwelveK"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GN_SaigaTwelveK"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="GN_BullpupPKP"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GN_BullpupPKP"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GN_BullpupPKP"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="GN_AKOneOThree"]/weaponTags</xpath>
+				<value>
+					<li>TI_762ARifle</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="GN_AKOneOFive"]/weaponTags</xpath>
+				<value>
+					<li>TI_545ARifle</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="GN_SaigaTwelveK"]/weaponTags</xpath>
+				<value>
+					<li>TI_Shotgun</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="GN_BullpupPKP"]/weaponTags</xpath>
+				<value>
+					<li>TI_762MMG</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[
+				defName="GN_SAFiftyEight" or
+				defName="GN_RSevenHundred"
+				]/weaponTags</xpath>
+				<value>
+					<li>TI_Commando</li>
+				</value>
+			</li>
+			
+		</operations>
+		</match>	
+	</li>
+	
+	<li Class="PatchOperationFindMod">
+		<mods><li>Gun Nut - Chapter #2</li></mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="GN_SKS"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GN_SKS"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GN_SKS"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="GN_MThreeEOne"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GN_MThreeEOne"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="GN_MThreeEOne"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="GN_SKS"]/weaponTags</xpath>
+				<value>
+					<li>TI_762ARifle</li>
+					<li>TI_762Rifle</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="GN_MThreeEOne"]/weaponTags</xpath>
+				<value>
+					<li>TI_ATLauncher</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[
+				defName="GN_AShTwelve" or
+				defName="GN_ASVAL" or
+				defName="GN_GMSix" or
+				defName="GN_GThirtySix" or
+				defName="GN_SSMG"
+				]/weaponTags</xpath>
+				<value>
+					<li>TI_Commando</li>
+				</value>
+			</li>
+			
+		</operations>
+		</match>	
+	</li>
+	
+	<li Class="PatchOperationFindMod">
+		<mods><li>Vanilla Weapons Expanded</li></mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="VWE_Gun_ServiceRifle"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VWE_Gun_ServiceRifle"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VWE_Gun_ServiceRifle"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="VWE_Gun_MarksmanRifle"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VWE_Gun_MarksmanRifle"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VWE_Gun_MarksmanRifle"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="VWE_Gun_GrenadeLauncher"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VWE_Gun_GrenadeLauncher"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VWE_Gun_GrenadeLauncher"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="VWE_Gun_ServiceRifle"]/weaponTags</xpath>
+				<value>
+					<li>TI_762ARifle</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="VWE_Gun_MarksmanRifle"]/weaponTags</xpath>
+				<value>
+					<li>TI_762BRifle</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="VWE_Gun_GrenadeLauncher"]/weaponTags</xpath>
+				<value>
+					<li>TI_GrenadeAdvanced</li>
+				</value>
+			</li>
+			
+		</operations>
+		</match>	
+	</li>
+	
+	</operations>	
+  </Operation>
+</Patch>
