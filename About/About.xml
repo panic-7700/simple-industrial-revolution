@@ -3,8 +3,9 @@
 	<name>Simple Early Industrial Factions</name>
 	<author>panic</author>
 	<supportedVersions>
-	  <li>1.4</li>
+		<li>1.4</li>
 	</supportedVersions>
-	<description>Adds Civil and Warlike early-industrial factions, which use flintlock weapons and wear garish uniforms.</description>
+	<description>Adds Civil and Warlike early-industrial factions, which use flintlock weapons and
+		wear garish uniforms.</description>
 	<packageId>panic.simpleearlyindustrialfactions</packageId>
 </ModMetaData>
