@@ -80,26 +80,29 @@ Planning and notes, not very organized. So it goes.
 
 ## Code notes
 
-possible drug-use attach
+possible drug-use attach, have non-elites arrive drunk?
+```
     <techHediffsMoney>1000~1200</techHediffsMoney>
     <techHediffsTags>
       <li>Advanced</li>
       <li>ImplantEmpireCommon</li>
     </techHediffsTags>
     <techHediffsChance>0.35</techHediffsChance>
-> maybe <startingHediffs>? 
+```
+> maybe `<startingHediffs>`? 
 ^ maybe only 1.5?
 
 
->  interesting that you can use HairDef  <forcedHair> in pawnkinddef 
+>  interesting that you can use `HairDef  <forcedHair> in pawnkinddef `
 
 > There's also these in pawnkind defs, could be useful for victorian armies:
+```
         public Color apparelColor = Color.white;
         public QualityCategory itemQuality = QualityCategory.Normal;
         public QualityCategory? forceWeaponQuality;
         public bool forceNormalGearQuality;
         public Gender? fixedGender;
-
+```
 > faction color defs
 ```
     <colorSpectrum>
