@@ -25,6 +25,7 @@
     - flintlock musket w/bayonet
     - colored jacket, white facings
     - line infantry webbing
+    - backpack?
     - low chance to spawn drunk?
   - skirmisher
     - flintlock rifle
@@ -46,11 +47,13 @@
     - Fancy helm
     - lance
     - cuirass
+    - light infantry webbing
 - mercenary (accompanies traders)
   - Halberd
   - Fancy helmet
   - Cuirass
   - Flintlock pistol or Blunderbuss
+  - engineer webbing
 
 ## Civilians
 
