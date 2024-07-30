@@ -13,10 +13,6 @@
 		<maxGenerationAge>60</maxGenerationAge>
 		<combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance>
 		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-		<combatEnhancingDrugsCount>
-			<min>1</min>
-			<max>1</max>
-		</combatEnhancingDrugsCount>
 		<apparelRequired>
 		</apparelRequired>
 		<initialWillRange>3~7</initialWillRange>
@@ -34,474 +30,113 @@
 		<maxGenerationAge>32</maxGenerationAge>
 		<combatEnhancingDrugsChance>0.45</combatEnhancingDrugsChance>
 		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-		<combatEnhancingDrugsCount>
-			<min>1</min>
-			<max>1</max>
-		</combatEnhancingDrugsCount>
 		<apparelRequired>
 		</apparelRequired>
-		<initialWillRange>20~22</initialWillRange>
+		<initialWillRange>10~15</initialWillRange>
 		<initialResistanceRange>9~12</initialResistanceRange>
 	</PawnKindDef>
 
-	<!--Outriders
-	: Low Quality : No Armor-->
+	<!--Line Infantry
+	: Low to Normal Quality : Musket -->
 
-	<PawnKindDef Name="TI_OutriderBase" ParentName="EarlyInd_BasePawn" Abstract="True">
+	<PawnKindDef Name="ei_InfantryLineBase" ParentName="EarlyInd_BasePawn" Abstract="True">
 		<combatPower>40</combatPower>
 		<itemQuality>Poor</itemQuality>
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
+		<apparelTags>
+			<li>ei_infantry_line</li>
+		</apparelTags>
 		<apparelMoney>
 			<min>1000</min>
 			<max>1000</max>
 		</apparelMoney>
-		<apparelTags>
-			<li>TI_Outrider</li>
-		</apparelTags>
-		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_OutriderBase">
-		<defName>TI_Outrider_Pistol</defName>
-		<label>Outrider Scavenger</label>
 		<weaponTags>
-			<li>TI_BasicPistol</li>
+			<li>ei_Musket</li>
 		</weaponTags>
 		<weaponMoney>
 			<min>200</min>
-			<max>300</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_OutriderBase">
-		<defName>TI_Outrider_Melee</defName>
-		<label>Outrider Scavenger</label>
-		<canBeSapper>true</canBeSapper>
-		<weaponTags>
-			<li>MedievalMeleeBasic</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>169</min>
-			<max>200</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_OutriderBase">
-		<defName>TI_Outrider_Rifle</defName>
-		<combatPower>45</combatPower>
-		<label>Outrider</label>
-		<apparelMoney>
-			<min>400</min>
-			<max>800</max>
-		</apparelMoney>
-		<apparelTags>
-			<li>TI_Outrider</li>
-			<li>TI_Outrider_A</li>
-		</apparelTags>
-		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
-		<weaponTags>
-			<li>TI_BasicRifle</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>375</min>
 			<max>400</max>
 		</weaponMoney>
+		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
 	</PawnKindDef>
 
-	<!--Militia
-	: Normal Quality : Forced Flak Jacket-->
+	<PawnKindDef ParentName="ei_InfantryLineBase">
+		<defName>ei_Infantry_reserve</defName>
+		<label>Reserve Infantry</label>
+		<!-- uses default poor quality and lower combat power -->
+	</PawnKindDef>
 
-	<PawnKindDef Name="TI_MilitaBase" ParentName="EarlyInd_BasePawn" Abstract="True">
+	<PawnKindDef ParentName="ei_InfantryLineBase">
+		<defName>ei_Infantry_line</defName>
 		<combatPower>50</combatPower>
 		<itemQuality Inherit="False">Normal</itemQuality>
+		<label>Line Infantry</label>
+	</PawnKindDef>
+
+	<!--Skirmishers
+	: High Quality : Rifle -->
+
+	<PawnKindDef ParentName="EarlyInd_ElitePawn">
+		<defName>ei_Skirmisher</defName>
+		<label>Skirmisher</label>
+		<combatPower>60</combatPower>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>8~14</range>
+				<!-- average somewhere above 10, but not too crazy? idk -->
+			</li>
+		</skills>
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
+		<apparelTags>
+			<li>ei_skirmisher</li>
+		</apparelTags>
 		<apparelMoney>
-			<min>3000</min>
+			<min>1000</min>
+			<max>2000</max>
+		</apparelMoney>
+		<weaponTags>
+			<li>ei_Rifle</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+	</PawnKindDef>
+
+	<!-- Officers
+	: Excellent quality : Pistol, Sword -->
+
+	<PawnKindDef ParentName="EarlyInd_ElitePawn">
+		<defName>ei_Officer</defName>
+		<label>Officer</label>
+		<combatPower>70</combatPower>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~12</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>8~14</range>
+			</li>
+		</skills>
+		<isFighter>true</isFighter>
+		<canBeSapper>false</canBeSapper>
+		<apparelTags>
+			<li>ei_infantry_officer</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>2000</min>
 			<max>3000</max>
 		</apparelMoney>
-		<apparelTags>
-			<li>TI_Militia</li>
-		</apparelTags>
-		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_MilitaBase">
-		<defName>TI_Militia_Pistol</defName>
-		<label>Militia Gunner</label>
-		<combatPower>50</combatPower>
-		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
 		<weaponTags>
-			<li>TI_BasicPistol</li>
-			<li>TI_AutoPistol</li>
+			<li>ei_Pistol</li>
 		</weaponTags>
-		<weaponMoney>
-			<min>255</min>
-			<max>450</max>
-		</weaponMoney>
+		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+		<!-- <startingHediffs>
+			<li>CombatCommand</li>
+		</startingHediffs>
+			may be 1.5 only, and even so attaching the hediff manually does not seem to affect peers (??)
+		-->
 	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_MilitaBase">
-		<defName>TI_Militia_Gunner</defName>
-		<label>Militia Gunner</label>
-		<combatPower>75</combatPower>
-		<weaponTags>
-			<li>TI_BasicRifle</li>
-			<li>TI_BasicShotgun</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>255</min>
-			<max>450</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_MilitaBase">
-		<defName>TI_Militia_Grenadier</defName>
-		<label>Militia Grenadier</label>
-		<combatPower>65</combatPower>
-		<itemQuality>Normal</itemQuality>
-		<isFighter>true</isFighter>
-		<canBeSapper>true</canBeSapper>
-		<weaponTags>
-			<li>TI_GrenadeBasic</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>360</min>
-			<max>400</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<!--Irregulars
-	: Normal Quality : Forced Combat Kit-->
-
-	<PawnKindDef Name="TI_IrregularBase" ParentName="EarlyInd_BasePawn" Abstract="True">
-		<combatPower>110</combatPower>
-		<itemQuality Inherit="False">Normal</itemQuality>
-		<isFighter>true</isFighter>
-		<canBeSapper>false</canBeSapper>
-		<apparelMoney>
-			<min>5000</min>
-			<max>5000</max>
-		</apparelMoney>
-		<apparelTags>
-			<li>TI_Irregular</li>
-		</apparelTags>
-		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
-		<skills>
-			<li>
-				<skill>Shooting</skill>
-				<range>6~10</range>
-			</li>
-		</skills>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_IrregularBase">
-		<defName>TI_Irregular_Rifle</defName>
-		<label>Militia Rifleman</label>
-		<weaponTags>
-			<li>TI_BasicRifle</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>800</min>
-			<max>1200</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_IrregularBase">
-		<defName>TI_Irregular_Marksman</defName>
-		<label>Militia Marksman</label>
-		<weaponTags>
-			<li>TI_762Rifle</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>800</min>
-			<max>1200</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_IrregularBase">
-		<defName>TI_Irregular_Trooper</defName>
-		<label>Militia Trooper</label>
-		<combatPower>115</combatPower>
-		<weaponTags>
-			<li>TI_SMG</li>
-			<li>TI_Shotgun</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>800</min>
-			<max>1200</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_IrregularBase">
-		<defName>TI_Irregular_Grenadier</defName>
-		<label>Militia Grenadier</label>
-		<combatPower>105</combatPower>
-		<canBeSapper>true</canBeSapper>
-		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
-		<weaponTags>
-			<li>TI_GrenadeBasic</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>800</min>
-			<max>1200</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<!--Regulars
-	: Normal Quality : Forced Composite Kit-->
-
-	<PawnKindDef Name="TI_RegularBase" ParentName="EarlyInd_BasePawn" Abstract="True">
-		<combatPower>135</combatPower>
-		<itemQuality Inherit="False">Good</itemQuality>
-		<isFighter>true</isFighter>
-		<canBeSapper>false</canBeSapper>
-		<apparelMoney>
-			<min>5000</min>
-			<max>5000</max>
-		</apparelMoney>
-		<apparelTags>
-			<li>TI_Regular</li>
-		</apparelTags>
-		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
-		<skills>
-			<li>
-				<skill>Shooting</skill>
-				<range>7~11</range>
-			</li>
-		</skills>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_RegularBase">
-		<defName>TI_Regular_AR_545</defName>
-		<label>Army Rifleman</label>
-		<apparelTags>
-			<li>TI_Regular</li>
-		</apparelTags>
-		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
-		<weaponTags>
-			<li>TI_545ARifle</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>800</min>
-			<max>1200</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_RegularBase">
-		<defName>TI_Regular_AR_762</defName>
-		<label>Army Rifleman</label>
-		<apparelTags>
-			<li>TI_Regular</li>
-		</apparelTags>
-		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
-		<weaponTags>
-			<li>TI_762ARifle</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>800</min>
-			<max>1200</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_RegularBase">
-		<defName>TI_Regular_BR_762</defName>
-		<label>Army Marksman</label>
-		<combatPower>135</combatPower>
-		<itemQuality>Normal</itemQuality>
-		<weaponTags>
-			<li>TI_762BRifle</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>800</min>
-			<max>1200</max>
-		</weaponMoney>
-		<skills>
-			<li>
-				<skill>Shooting</skill>
-				<range>9~11</range>
-			</li>
-		</skills>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_RegularBase">
-		<defName>TI_Regular_MG_762</defName>
-		<label>Army Machinegunner</label>
-		<combatPower>155</combatPower>
-		<weaponTags>
-			<li>TI_762LMG</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>800</min>
-			<max>1200</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_RegularBase">
-		<defName>TI_Regular_Grenadier</defName>
-		<label>Army Grenadier</label>
-		<combatPower>145</combatPower>
-		<canBeSapper>true</canBeSapper>
-		<weaponTags>
-			<li>TI_GrenadeAdvanced</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>800</min>
-			<max>1200</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_RegularBase">
-		<defName>TI_Regular_AM_145</defName>
-		<label>Army Anti-Tank</label>
-		<combatPower>165</combatPower>
-		<apparelTags Inherit="False">
-			<li>TI_Regular_Light</li>
-		</apparelTags>
-		<weaponTags>
-			<li>TI_145AMRifle</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>1200</min>
-			<max>1600</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_IrregularBase">
-		<defName>TI_Regular_Trooper</defName>
-		<label>Army Trooper</label>
-		<combatPower>135</combatPower>
-		<weaponTags>
-			<li>TI_SMG</li>
-			<li>TI_Shotgun</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>800</min>
-			<max>1200</max>
-		</weaponMoney>
-	</PawnKindDef>
-
-	<!--Elites
-	: Excellent Quality : Forced Composite Kit-->
-
-	<PawnKindDef Name="TI_EliteBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
-		<combatPower>200</combatPower>
-		<isFighter>true</isFighter>
-		<canBeSapper>false</canBeSapper>
-		<itemQuality Inherit="False">Excellent</itemQuality>
-		<apparelMoney>
-			<min>20000</min>
-			<max>20000</max>
-		</apparelMoney>
-		<apparelTags>
-			<li>TI_Elite</li>
-		</apparelTags>
-		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
-		<weaponMoney>
-			<min>6000</min>
-			<max>6000</max>
-		</weaponMoney>
-		<skills>
-			<li>
-				<skill>Shooting</skill>
-				<range>9~15</range>
-			</li>
-		</skills>
-		<specificApparelRequirements>
-			<li>
-				<color>(45,45,45)</color>
-			</li>
-		</specificApparelRequirements>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_EliteBase">
-		<defName>TI_Elite_AR_545</defName>
-		<label>Elite Rifleman</label>
-		<combatPower>200</combatPower>
-		<weaponTags>
-			<li>TI_545ARifle</li>
-			<li>TI_545MG</li>
-		</weaponTags>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_EliteBase">
-		<defName>TI_Elite_AR_762</defName>
-		<label>Elite Rifleman</label>
-		<combatPower>210</combatPower>
-		<weaponTags>
-			<li>TI_762ARifle</li>
-			<li>TI_762LMG</li>
-		</weaponTags>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_EliteBase">
-		<defName>TI_Elite_BR_762</defName>
-		<label>Elite Marksman</label>
-		<combatPower>210</combatPower>
-		<weaponTags>
-			<li>TI_762BRifle</li>
-		</weaponTags>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_EliteBase">
-		<defName>TI_Elite_MG_762</defName>
-		<label>Elite Machinegunner</label>
-		<combatPower>250</combatPower>
-		<weaponTags>
-			<li>TI_762MMG</li>
-		</weaponTags>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_EliteBase">
-		<defName>TI_Elite_AM_145</defName>
-		<label>Elite Anti-Tank</label>
-		<combatPower>265</combatPower>
-		<apparelTags Inherit="False">
-			<li>TI_Elite_Light</li>
-		</apparelTags>
-		<weaponTags>
-			<li>TI_145AMRifle</li>
-		</weaponTags>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_EliteBase">
-		<defName>TI_Elite_ATLauncher</defName>
-		<label>Elite Heavy</label>
-		<canBeSapper>true</canBeSapper>
-		<combatPower>275</combatPower>
-		<apparelTags Inherit="False">
-			<li>TI_Elite_Light</li>
-		</apparelTags>
-		<weaponTags>
-			<li>TI_ATLauncher</li>
-		</weaponTags>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_EliteBase">
-		<defName>TI_Elite_Special</defName>
-		<label>Elite Commando</label>
-		<combatPower>260</combatPower>
-		<weaponTags>
-			<li>TI_762MMG</li>
-			<li>TI_762ARifle</li>
-			<li>TI_545ARifle</li>
-			<li>TI_Commando</li>
-		</weaponTags>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="TI_EliteBase">
-		<defName>TI_Elite_Leader</defName>
-		<factionLeader>true</factionLeader>
-		<label>Elite Commando</label>
-		<combatPower>260</combatPower>
-		<weaponTags>
-			<li>TI_762MMG</li>
-			<li>TI_762ARifle</li>
-			<li>TI_545ARifle</li>
-			<li>TI_Commando</li>
-		</weaponTags>
-	</PawnKindDef>
-
-
 </Defs>

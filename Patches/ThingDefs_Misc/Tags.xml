@@ -111,86 +111,109 @@
 				</value>
 			</li>
 
+			<!-- officer -->
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="Apparel_Pants" or
-					defName="Apparel_BasicShirt" or
-					defName="Apparel_CollarShirt"
-					]/apparel/tags</xpath>
+				<xpath>Defs/ThingDef[
+					defName="rc_ColorableBicornPommel" or
+					defName="rc_ShirtAndWaistcoat" or
+					defName="rc_ColorableJacketWHITEfacings" or
+					defName="rc_MilitaryWebbingBase"
+				]/apparel/tags</xpath>
 				<value>
-					<li>TI_Outrider</li>
+					<li>ei_infantry_officer</li>
 				</value>
 			</li>
 
+			<!-- line infantry -->
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="Apparel_CowboyHat" or
-					defName="Apparel_Tuque" or
-					defName="Apparel_Duster"
-					]/apparel/tags</xpath>
+				<xpath>Defs/ThingDef[
+					defName="rc_BearskinMitreCap" or
+					defName="rc_ShirtAndWaistcoat" or
+					defName="rc_ColorableJacketWHITEfacings" or
+					defName="rc_WebbingLineInfantry"
+				]/apparel/tags</xpath>
 				<value>
-					<li>TI_Outrider_A</li>
+					<li>ei_infantry_line</li>
 				</value>
 			</li>
 
+			<!-- skirmisher -->
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="Apparel_Pants" or
-					defName="Apparel_BasicShirt" or
-					defName="Apparel_CollarShirt" or
-					defName="Apparel_FlakJacket" or
-					defName="Apparel_SimpleHelmet"
-					]/apparel/tags</xpath>
+				<xpath>Defs/ThingDef[
+					defName="rc_LightInfantryCap" or
+					defName="rc_ShirtAndWaistcoat" or
+					defName="rc_CoatBaseColorable" or
+					defName="rc_WebbingLightInfantry"
+				]/apparel/tags</xpath>
 				<value>
-					<li>TI_Militia</li>
+					<li>ei_skirmisher</li>
 				</value>
 			</li>
 
+			<!-- grenadier -->
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="Apparel_FlakPants" or
-					defName="Apparel_BasicShirt" or
-					defName="Apparel_CollarShirt" or
-					defName="Apparel_FlakJacket" or
-					defName="Apparel_FlakVest" or
-					defName="Apparel_SimpleHelmet"
-					]/apparel/tags</xpath>
+				<xpath>Defs/ThingDef[
+					defName="rc_ShirtAndWaistcoatYellowKerchief" or
+					defName="rc_HessianCoat" or
+					defName="rc_WebbingGrenadier"
+				]/apparel/tags</xpath>
 				<value>
-					<li>TI_Irregular</li>
+					<li>ei_grenadier</li>
 				</value>
 			</li>
 
+			<!-- engineer -->
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="Apparel_FlakPants" or
-					defName="Apparel_BasicShirt" or
-					defName="Apparel_CollarShirt" or
-					defName="Apparel_FlakJacket" or
-					defName="Apparel_AdvancedHelmet"
-					]/apparel/tags</xpath>
+				<xpath>Defs/ThingDef[
+					defName="rc_ShirtAndWaistcoatYellowKerchief" or
+					defName="rc_HessianCoat" or
+					defName="rc_WebbingLineInfantry"
+				]/apparel/tags</xpath>
 				<value>
-					<li>TI_Regular</li>
+					<li>ei_engineer</li>
 				</value>
 			</li>
 
+			<!-- mercenary / caravan guard -->
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="Apparel_Pants" or
-					defName="Apparel_BasicShirt" or
-					defName="Apparel_CollarShirt" or
-					defName="Apparel_AdvancedHelmet"
-					]/apparel/tags</xpath>
+				<xpath>Defs/ThingDef[
+					defName="rc_ShirtAndWaistcoat" or
+					defName="rc_CoatBaseColorable" or
+					defName="rc_MilitaryWebbingBase"
+				]/apparel/tags</xpath>
 				<value>
-					<li>TI_Regular_Light</li>
-					<li>TI_Elite_Light</li>
+					<li>ei_mercenary</li>
 				</value>
 			</li>
 
+			<!-- heavy cavalry / dragoon -->
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="Apparel_FlakPants" or
-					defName="Apparel_BasicShirt" or
-					defName="Apparel_CollarShirt" or
-					defName="Apparel_FlakJacket" or
-					defName="Apparel_AdvancedHelmet"
-					]/apparel/tags</xpath>
+				<xpath>Defs/ThingDef[
+					<!-- helmet -->
+					<!-- cuirass -->
+					defName="rc_ShirtAndWaistcoat" or
+					defName="rc_CoatBaseColorable" or
+					defName="rc_MilitaryWebbingBase"
+				]/apparel/tags</xpath>
 				<value>
-					<li>TI_Elite</li>
+					<li>ei_cav_heavy</li>
 				</value>
 			</li>
+
+			<!-- lancer cavalry -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[
+					<!-- helmet -->
+					<!-- cuirass -->
+					defName="rc_ShirtAndWaistcoat" or
+					defName="rc_CoatBaseColorable" or
+					defName="rc_MilitaryWebbingBase"
+				]/apparel/tags</xpath>
+				<value>
+					<li>ei_cav_light</li>
+				</value>
+			</li>
+
 
 
 			<li Class="PatchOperationFindMod">
@@ -389,440 +412,88 @@
 
 			<li Class="PatchOperationFindMod">
 				<mods>
-					<li>Combat Extended Guns</li>
+					<li>Flintolcks Extended</li>
 				</mods>
 				<match Class="PatchOperationSequence">
 					<operations>
 
 						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="CE_Gun_AKTwelve"]/weaponTags</xpath>
+							<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]/weaponTags</xpath>
 							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_AKTwelve"]</xpath>
+								<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]</xpath>
 								<value>
-									<weaponTags />
+									<li>ei_Rifle</li>
 								</value>
-							</nomatch>
+								</nomatch>
 							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_AKTwelve"]</xpath>
+								<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]</xpath>
 								<value>
 								</value>
 							</match>
 						</li>
 
 						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="CE_Gun_AKM"]/weaponTags</xpath>
+							<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]/weaponTags</xpath>
 							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_AKM"]</xpath>
+								<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
 								<value>
-									<weaponTags />
+									<li>ei_Pistol</li>
 								</value>
 							</nomatch>
 							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_AKM"]</xpath>
+								<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
 								<value>
 								</value>
 							</match>
 						</li>
 
 						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="CE_Gun_AKSSeventyFourU"]/weaponTags</xpath>
+							<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]/weaponTags</xpath>
 							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_AKSSeventyFourU"]</xpath>
+								<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]</xpath>
 								<value>
-									<weaponTags />
+									<li>ei_Musket</li>
 								</value>
 							</nomatch>
 							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_AKSSeventyFourU"]</xpath>
+								<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]</xpath>
 								<value>
 								</value>
 							</match>
 						</li>
 
 						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="CE_Gun_RPD"]/weaponTags</xpath>
+							<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]/weaponTags</xpath>
 							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_RPD"]</xpath>
+								<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]</xpath>
 								<value>
-									<weaponTags />
+									<li>ei_Blunderbuss</li>
 								</value>
 							</nomatch>
 							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_RPD"]</xpath>
+								<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]</xpath>
 								<value>
 								</value>
 							</match>
 						</li>
 
 						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="CE_Gun_SVD"]/weaponTags</xpath>
+							<xpath>/Defs/ThingDef[defName="CE_Gun_HandMortar"]/weaponTags</xpath>
 							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_SVD"]</xpath>
+								<xpath>/Defs/ThingDef[defName="CE_Gun_HandMortar"]</xpath>
 								<value>
-									<weaponTags />
+									<li>ei_Handmortar</li>
 								</value>
 							</nomatch>
 							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_SVD"]</xpath>
+								<xpath>/Defs/ThingDef[defName="CE_Gun_HandMortar"]</xpath>
 								<value>
 								</value>
 							</match>
 						</li>
-
-						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="CE_Gun_PKM"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_PKM"]</xpath>
-								<value>
-									<weaponTags />
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_PKM"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="CE_Gun_MilkorMGL"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_MilkorMGL"]</xpath>
-								<value>
-									<weaponTags />
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="CE_Gun_MilkorMGL"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="CE_Gun_SKS"]/weaponTags</xpath>
-							<value>
-								<li>TI_762Rifle</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="CE_Gun_RPD"]/weaponTags</xpath>
-							<value>
-								<li>TI_762LMG</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="CE_Gun_AKM"]/weaponTags</xpath>
-							<value>
-								<li>TI_762ARifle</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="CE_Gun_AKTwelve" or
-								defName="CE_Gun_AKSSeventyFourU"]/weaponTags</xpath>
-							<value>
-								<li>TI_545ARifle</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="CE_Gun_SVD"]/weaponTags</xpath>
-							<value>
-								<li>TI_762BRifle</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="CE_Gun_PTRS"]/weaponTags</xpath>
-							<value>
-								<li>TI_145AMRifle</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="CE_Gun_PKM"]/weaponTags</xpath>
-							<value>
-								<li>TI_762MMG</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="CE_Gun_RPGSeven"]/weaponTags</xpath>
-							<value>
-								<li>TI_ATLauncher</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="CE_Gun_MilkorMGL"]/weaponTags</xpath>
-							<value>
-								<li>TI_GrenadeAdvanced</li>
-							</value>
-						</li>
-
 					</operations>
 				</match>
 			</li>
-
-			<li Class="PatchOperationFindMod">
-				<mods>
-					<li>Gun Nut - Chapter #1</li>
-				</mods>
-				<match Class="PatchOperationSequence">
-					<operations>
-
-						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="GN_AKOneOThree"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="GN_AKOneOThree"]</xpath>
-								<value>
-									<weaponTags />
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="GN_AKOneOThree"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="GN_AKOneOFive"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="GN_AKOneOFive"]</xpath>
-								<value>
-									<weaponTags />
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="GN_AKOneOFive"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="GN_SaigaTwelveK"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="GN_SaigaTwelveK"]</xpath>
-								<value>
-									<weaponTags />
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="GN_SaigaTwelveK"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="GN_BullpupPKP"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="GN_BullpupPKP"]</xpath>
-								<value>
-									<weaponTags />
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="GN_BullpupPKP"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="GN_AKOneOThree"]/weaponTags</xpath>
-							<value>
-								<li>TI_762ARifle</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="GN_AKOneOFive"]/weaponTags</xpath>
-							<value>
-								<li>TI_545ARifle</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="GN_SaigaTwelveK"]/weaponTags</xpath>
-							<value>
-								<li>TI_Shotgun</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="GN_BullpupPKP"]/weaponTags</xpath>
-							<value>
-								<li>TI_762MMG</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[
-								defName="GN_SAFiftyEight" or
-								defName="GN_RSevenHundred"
-								]/weaponTags</xpath>
-							<value>
-								<li>TI_Commando</li>
-							</value>
-						</li>
-
-					</operations>
-				</match>
-			</li>
-
-			<li Class="PatchOperationFindMod">
-				<mods>
-					<li>Gun Nut - Chapter #2</li>
-				</mods>
-				<match Class="PatchOperationSequence">
-					<operations>
-
-						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="GN_SKS"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="GN_SKS"]</xpath>
-								<value>
-									<weaponTags />
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="GN_SKS"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="GN_MThreeEOne"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="GN_MThreeEOne"]</xpath>
-								<value>
-									<weaponTags />
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="GN_MThreeEOne"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="GN_SKS"]/weaponTags</xpath>
-							<value>
-								<li>TI_762ARifle</li>
-								<li>TI_762Rifle</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="GN_MThreeEOne"]/weaponTags</xpath>
-							<value>
-								<li>TI_ATLauncher</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[
-								defName="GN_AShTwelve" or
-								defName="GN_ASVAL" or
-								defName="GN_GMSix" or
-								defName="GN_GThirtySix" or
-								defName="GN_SSMG"
-								]/weaponTags</xpath>
-							<value>
-								<li>TI_Commando</li>
-							</value>
-						</li>
-
-					</operations>
-				</match>
-			</li>
-
-			<li Class="PatchOperationFindMod">
-				<mods>
-					<li>Vanilla Weapons Expanded</li>
-				</mods>
-				<match Class="PatchOperationSequence">
-					<operations>
-
-						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="VWE_Gun_ServiceRifle"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="VWE_Gun_ServiceRifle"]</xpath>
-								<value>
-									<weaponTags />
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="VWE_Gun_ServiceRifle"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="VWE_Gun_MarksmanRifle"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="VWE_Gun_MarksmanRifle"]</xpath>
-								<value>
-									<weaponTags />
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="VWE_Gun_MarksmanRifle"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationConditional">
-							<xpath>/Defs/ThingDef[defName="VWE_Gun_GrenadeLauncher"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="VWE_Gun_GrenadeLauncher"]</xpath>
-								<value>
-									<weaponTags />
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>/Defs/ThingDef[defName="VWE_Gun_GrenadeLauncher"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="VWE_Gun_ServiceRifle"]/weaponTags</xpath>
-							<value>
-								<li>TI_762ARifle</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="VWE_Gun_MarksmanRifle"]/weaponTags</xpath>
-							<value>
-								<li>TI_762BRifle</li>
-							</value>
-						</li>
-
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[defName="VWE_Gun_GrenadeLauncher"]/weaponTags</xpath>
-							<value>
-								<li>TI_GrenadeAdvanced</li>
-							</value>
-						</li>
-
-					</operations>
-				</match>
-			</li>
-
 		</operations>
 	</Operation>
 </Patch>
