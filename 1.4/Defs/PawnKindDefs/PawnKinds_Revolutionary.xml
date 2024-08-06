@@ -4,7 +4,7 @@
 
 	<PawnKindDef Name="EarlyInd_BasePawn" Abstract="True">
 		<race>Human</race>
-		<defaultFactionType>TI_IndustrialCivil</defaultFactionType>
+		<defaultFactionType>ei_RevolutionaryCivil</defaultFactionType>
 		<chemicalAddictionChance>0.1</chemicalAddictionChance>
 		<invNutrition>1.2</invNutrition>
 		<itemQuality>Normal</itemQuality>
@@ -15,13 +15,34 @@
 		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
 		<apparelRequired>
 		</apparelRequired>
+		<apparelColor>
+		</apparelColor>
+		<disallowedTraits>
+			<li>Nudist</li>
+		</disallowedTraits>  
 		<initialWillRange>3~7</initialWillRange>
 		<initialResistanceRange>4~14</initialResistanceRange>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>OnSkin</apparelLayer>
+				<stuff>WoolSheep</stuff>
+			</li>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<!--<stuff>WoolSheep</stuff>-->
+			</li>
+			<!--<li>
+				<apparelLayer>Backpack</apparelLayer>
+				<stuff>Leather_Plain</stuff>
+			</li>-->
+		</specificApparelRequirements>
+
 	</PawnKindDef>
 
 	<PawnKindDef Name="EarlyInd_ElitePawn" Abstract="True">
 		<race>Human</race>
-		<defaultFactionType>TI_IndustrialCivil</defaultFactionType>
+		<defaultFactionType>ei_RevolutionaryCivil</defaultFactionType>
 		<chemicalAddictionChance>0</chemicalAddictionChance>
 		<invNutrition>2.2</invNutrition>
 		<itemQuality>Excellent</itemQuality>
@@ -64,7 +85,14 @@
 	<PawnKindDef ParentName="ei_InfantryLineBase">
 		<defName>ei_Infantry_reserve</defName>
 		<label>Reserve Infantry</label>
-		<!-- uses default poor quality and lower combat power -->
+		<!-- uses default poor quality and lower combat power. worst aim. -->
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>3~5</range>
+			</li>
+		</skills>
+
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ei_InfantryLineBase">
@@ -72,6 +100,12 @@
 		<combatPower>50</combatPower>
 		<itemQuality Inherit="False">Normal</itemQuality>
 		<label>Line Infantry</label>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>5~7</range>
+			</li>
+		</skills>
 	</PawnKindDef>
 
 	<!--Skirmishers
@@ -84,8 +118,8 @@
 		<skills>
 			<li>
 				<skill>Shooting</skill>
-				<range>8~14</range>
-				<!-- average somewhere above 10, but not too crazy? idk -->
+				<range>8~12</range>
+				<!-- average somewhere around 10? idk -->
 			</li>
 		</skills>
 		<isFighter>true</isFighter>
@@ -113,11 +147,11 @@
 		<skills>
 			<li>
 				<skill>Shooting</skill>
-				<range>6~12</range>
+				<range>4~12</range>
 			</li>
 			<li>
 				<skill>Melee</skill>
-				<range>8~14</range>
+				<range>6~14</range>
 			</li>
 		</skills>
 		<isFighter>true</isFighter>

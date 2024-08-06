@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <FactionDef Name="TI_IndustrialBase" ParentName="OutlanderFactionBase" Abstract="True">
+  <FactionDef Name="ei_RevolutionaryBase" ParentName="OutlanderFactionBase" Abstract="True">
     <pawnSingular>citizen</pawnSingular>
-    <pawnsPlural>industrials</pawnsPlural>
+    <pawnsPlural>citizens</pawnsPlural>
     <settlementGenerationWeight>3</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
@@ -59,7 +59,12 @@
         <commonality>100</commonality>
         <kindDef>Combat</kindDef>
         <options>
-          <TI_Outrider_Pistol>1</TI_Outrider_Pistol>
+          <ei_Officer>1</ei_Officer>
+          <ei_Infantry_reserve>40</ei_Infantry_reserve>
+          <ei_Infantry_line>40</ei_Infantry_line>
+          <ei_Skirmisher>20</ei_Skirmisher>
+
+          <!-- <TI_Outrider_Pistol>1</TI_Outrider_Pistol>
           <TI_Outrider_Melee>1</TI_Outrider_Melee>
           <TI_Outrider_Rifle>1.5</TI_Outrider_Rifle>
           <TI_Militia_Pistol>3</TI_Militia_Pistol>
@@ -83,7 +88,7 @@
           <TI_Elite_AM_145>15</TI_Elite_AM_145>
           <TI_Elite_ATLauncher>15</TI_Elite_ATLauncher>
           <TI_Elite_Special>1</TI_Elite_Special>
-          <TI_Elite_Leader>1</TI_Elite_Leader>
+          <TI_Elite_Leader>1</TI_Elite_Leader> -->
         </options>
       </li>
       <li>
@@ -190,7 +195,7 @@
     </disallowedPrecepts>
   </FactionDef>
 
-  <FactionDef ParentName="TI_IndustrialBase">
+  <FactionDef ParentName="ei_RevolutionaryBase">
     <description>These people have been here a very long time. Maybe their ancestors crashed here a
       thousand years ago. Maybe they survived some cataclysm that destroyed a technological
       civilization here. In this time they have rebuilt their technological base, either through
@@ -201,7 +206,7 @@
       organized raiding parties.
       \nThis particular group is distrustful of outsiders and off-worlders, and it will take
       negotiations or gifts to turn them to an ally.</description>
-    <defName>TI_IndustrialCivil</defName>
+    <defName>ei_RevolutionaryCivil</defName>
     <label>civil industrial alliance</label>
     <leaderTitle>head minister</leaderTitle>
     <apparelStuffFilter>
@@ -224,8 +229,8 @@
     </requiredMemes>
   </FactionDef>
 
-  <FactionDef ParentName="TI_IndustrialBase">
-    <defName>TI_IndustrialWarlike</defName>
+  <FactionDef ParentName="ei_RevolutionaryBase">
+    <defName>ei_RevolutionaryWarlike</defName>
     <description>These people have been here a very long time. Maybe their ancestors crashed here a
       thousand years ago. Maybe they survived some cataclysm that destroyed a technological
       civilization here. In this time they have rebuilt their technological base, either through
@@ -258,8 +263,8 @@
     </requiredMemes>
   </FactionDef>
 
-  <FactionDef ParentName="TI_IndustrialBase">
-    <defName>TI_IndustrialFriendly</defName>
+  <FactionDef ParentName="ei_RevolutionaryBase">
+    <defName>ei_RevolutionaryFriendly</defName>
     <description>These people have been here a very long time. Maybe their ancestors crashed here a
       thousand years ago. Maybe they survived some cataclysm that destroyed a technological
       civilization here. In this time they have rebuilt their technological base, either through
