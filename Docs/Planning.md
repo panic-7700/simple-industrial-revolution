@@ -21,54 +21,53 @@
 ## Military
 
 - Base attire
-	- Shirt and waistcoat
-	- Pants
-	- Military boots if available
+	- Shirt and waistcoat (`redcoats!`)
+	- footwear
+		- Military boots if available	(`boots and stuff`)
+		- boots (`vanilla apparel`)
+	- backpack? (except officer)
 - Infantry
 	- Officer
-		- bicorn hat
+		- bicorn hat (`redcoats!`)
 		- sabre
-		- flintlock pistol
-		- ?combat command enabled?? -- this doesn't seem to be possible unfortunately
+		- flintlock pistol (`flintlocks`)
+		- combat command knockoff (stretch goal)
 	- Line infantry
-		- flintlock musket w/bayonet
-		- colored jacket, white facings
-		- line infantry webbing
-		- backpack?
+		- flintlock musket w/bayonet (`flintlocks`)
+		- colored jacket, white facings (`redcoats!`)
+		- line infantry webbing (`redcoats!`)
 		- low chance to spawn drunk?
-		- Elites:
-			- Chosen Man (expansionist)
-			- Old Guard (revolutionary)
-	- Engineer and/or grenadier
-		- hand bombard
-		- demo charges?
-		- Engineer webbing
+		- Grenadier
+			- **unique to revolutionary faction**
+			- Bursting and incendiary bombs (`flintlocks`)
+			- Grenadier webbing (`redcoats!`)
+			- Elites: Old Guard
 	- Rifleman
 		- **unique to expansionist faction**
-		- flintlock rifle
+		- flintlock rifle (`flintlocks`)
 		- sword bayonet
-		- different colored jacket, maybe forced green?, white facings
-		- light infantry webbing
+		- different colored jacket, maybe forced green?, white facings (`redcoats!`)
+		- light infantry webbing (`redcoats!`)
+		- Elites: Chosen Man
 - Cavalry
 	- dragoons
 		- fancy helmet
 		- sabre
-		- flintlock pistol, carbine musket, or blunderbuss
+		- flintlock pistol, carbine musket, or blunderbuss (`flintlocks`)
 		- cuirass
-		- light infantry webbing
+		- light infantry webbing (`redcoats!`)
 	- lancer
-		- **unique to revolutionary faction**
 		- Fancy helm
 		- lance
 		- cuirass
-		- light infantry webbing
+		- light infantry webbing (`redcoats!`)
 - mercenary
 	- **only appears with caravans**
 	- Halberd
 	- Fancy helmet
 	- Cuirass
-	- Flintlock pistol or Blunderbuss
-	- engineer webbing
+	- Flintlock pistol or blunderbuss (`flintlocks`)
+	- engineer webbing (`redcoats!`)
 
 
 ## Civilians
@@ -100,14 +99,16 @@
 - supported extras
 	- ??
 
-- base on simple industrial faction
-
 
 ## Wishlist
 
 - scale difficulty by upgrading to bolt action
 	- martini-henry
 	- needle gun
+- combat command knockoff
+	- buff to nearby soldiers
+	- reduce suppression chance (CE)
+	- increase fire rate
 
 
 ## Code notes
@@ -115,12 +116,12 @@
 possible drug-use attach, have non-elites occasionally arrive drunk?
 
 ```xml
-    <techHediffsMoney>1000~1200</techHediffsMoney>
-    <techHediffsTags>
-      <li>Advanced</li>
-      <li>ImplantEmpireCommon</li>
-    </techHediffsTags>
-    <techHediffsChance>0.35</techHediffsChance>
+	<techHediffsMoney>1000~1200</techHediffsMoney>
+	<techHediffsTags>
+		<li>Advanced</li>
+		<li>ImplantEmpireCommon</li>
+	</techHediffsTags>
+	<techHediffsChance>0.35</techHediffsChance>
 ```
 
 > maybe `<startingHediffs>`?
@@ -140,19 +141,19 @@ possible drug-use attach, have non-elites occasionally arrive drunk?
 > There's also these in pawnkind defs, could be useful for victorian armies:
 
 ```C#
-        public Color apparelColor = Color.white;
-        public QualityCategory itemQuality = QualityCategory.Normal;
-        public QualityCategory? forceWeaponQuality;
-        public bool forceNormalGearQuality;
-        public Gender? fixedGender;
+	public Color apparelColor = Color.white;
+	public QualityCategory itemQuality = QualityCategory.Normal;
+	public QualityCategory? forceWeaponQuality;
+	public bool forceNormalGearQuality;
+	public Gender? fixedGender;
 ```
 
 
 #### faction color defs
 
 ```xml
-    <colorSpectrum>
-      <li>(0.03, 0.47, 0.16)</li>
-      <li>(0.49, 0.96, 0.51)</li>
-    </colorSpectrum>
+	<colorSpectrum>
+		<li>(0.03, 0.47, 0.16)</li>
+		<li>(0.49, 0.96, 0.51)</li>
+	</colorSpectrum>
 ```
