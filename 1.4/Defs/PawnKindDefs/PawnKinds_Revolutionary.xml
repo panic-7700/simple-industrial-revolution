@@ -173,4 +173,40 @@
 			may be 1.5 only, and even so attaching the hediff manually does not seem to affect peers (??)
 		-->
 	</PawnKindDef>
+
+	<PawnKindDef ParentName="EarlyInd_ElitePawn">
+		<defName>ei_Cavalry_Dragoon</defName>
+		<label>Dragoon</label>
+		<!-- light ranged cavalry w/carbine and sword -->
+		<combatPower>70</combatPower>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~12</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>6~14</range>
+			</li>
+		</skills>
+		<isFighter>true</isFighter>
+		<canBeSapper>false</canBeSapper>
+		<apparelTags>
+			<li>ei_cavalry_dragoon</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>2000</min>
+			<max>3000</max>
+		</apparelMoney>
+		<weaponTags>
+			<li>ei_Pistol</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+		<!-- <startingHediffs>
+			<li>CombatCommand</li>
+		</startingHediffs>
+			may be 1.5 only, and even so attaching the hediff manually does not seem to affect peers (??)
+		-->
+	</PawnKindDef>
+
 </Defs>
