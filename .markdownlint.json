@@ -1,0 +1,9 @@
+{
+    "no-hard-tabs": false,
+    "ul-indent": false,
+    "blanks-around-headings": {
+        "lines_above": 2,
+        "lines_below": 1
+    },
+    "no-multiple-blanks": false
+}
