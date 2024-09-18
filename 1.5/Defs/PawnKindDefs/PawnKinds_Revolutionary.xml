@@ -57,12 +57,13 @@
 		<apparelTags>
 			<li>ei_apparel_line</li>
 		</apparelTags>
-		<apparelColor>(0.556, 0.698, 0.843)</apparelColor>
+		<apparelColor>(0.8, 0, 0.168)</apparelColor>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ei_InfantryLineBase">
 		<defName>ei_Infantry_reserve</defName>
 		<label>Reserve Infantry</label>
+		<fixedGender>Male</fixedGender>
 		<!-- uses default poor quality and lower combat power. worst aim. -->
 		<skills>
 			<li>
@@ -91,6 +92,7 @@
 		<combatPower>50</combatPower>
 		<itemQuality Inherit="False">Normal</itemQuality>
 		<label>Line Infantry</label>
+		<fixedGender>Male</fixedGender>
 		<skills>
 			<li>
 				<skill>Shooting</skill>
@@ -120,6 +122,7 @@
 	<PawnKindDef ParentName="EarlyInd_ElitePawn">
 		<defName>ei_Skirmisher</defName>
 		<label>Skirmisher</label>
+		<fixedGender>Male</fixedGender>
 		<combatPower>60</combatPower>
 		<skills>
 			<li>
@@ -130,6 +133,7 @@
 		</skills>
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
+		<apparelColor>(0, 0.501, 0.094)</apparelColor>
 		<apparelTags>
 			<li>ei_apparel_skirmisher</li>
 		</apparelTags>
