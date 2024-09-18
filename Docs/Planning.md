@@ -1,6 +1,21 @@
 # Planning and notes
 
 
+## Workflow
+
+1. Basic infantry defs
+2. Basic faction def for testing
+3. Colors and mats
+4. More infantry
+5. Cavalry with giddy up
+6. Traders
+7. Titles
+8. Trade discounts?
+9. Negative goodwill with opponent 
+10. Permits
+11. Mercenaries
+
+
 ## Factions
 
 - just two to keep it simple
@@ -50,12 +65,14 @@
 		- light infantry webbing (`redcoats!`)
 		- Elites: Chosen Man
 - Cavalry
-	- dragoons
+	- dragoon
+		- light ranged cavalry w/carbine and sword. originally fought on foot. could still exist if giddyup doesn't work out.
 		- fancy helmet
 		- sabre
 		- flintlock pistol, carbine musket, or blunderbuss (`flintlocks`)
 		- cuirass
 		- light infantry webbing (`redcoats!`)
+
 	- lancer
 		- Fancy helm
 		- lance
@@ -85,11 +102,23 @@
 
 ## Traders
 
-- Bulk goods
-- Weapons
-- ???
+- Buy
+	- Spices if they exist
+	- Chocolate
+	- Coffee
+	- Tea
+	- Cloth
+	- Herbal meds
+	- Chemfuel
+	- Furs (not leathers)
+	- Gold
+	- Silver
+	- Slaves (only expansionist) 
+- Sell 
+	- components
+	- weapons
 - One or two merchants, plus mercenaries
-
+- Will also trade honor for the things they buy
 
 ## choose weapon/apparel dependencies
 

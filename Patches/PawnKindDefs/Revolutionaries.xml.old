@@ -1,0 +1,1213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+
+			<li Class="PatchOperationFindMod">
+				<mods>
+					<li>Combat Extended</li>
+				</mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+						<li Class="PatchOperationFindMod">
+							<mods>
+								<li>Combat Extended</li>
+							</mods>
+							<match Class="PatchOperationSequence">
+								<operations>
+									<!--545
+									caliber-->
+									<li Class="PatchOperationFindMod">
+										<mods>
+											<li>Combat Extended Guns</li>
+											<li>Gun Nut - Chapter #1</li>
+										</mods>
+										<match Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationAdd">
+													<xpath>
+														Defs/PawnKindDef[defName="TI_Regular_AR_545"]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>60</choiceChance>
+																	<thingDef>Ammo_545x39mmSoviet_AP</thingDef>
+																	<countRange>
+																		<min>120</min>
+																		<max>150</max>
+																	</countRange>
+																</li>
+																<li>
+																	<choiceChance>40</choiceChance>
+																	<thingDef>
+																		Ammo_545x39mmSoviet_FMJ</thingDef>
+																	<countRange>
+																		<min>120</min>
+																		<max>150</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+												<li Class="PatchOperationAdd">
+													<xpath>
+														Defs/PawnKindDef[defName="TI_Elite_AR_545"]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>70</choiceChance>
+																	<thingDef>
+																		Ammo_545x39mmSoviet_Incendiary</thingDef>
+																	<countRange>
+																		<min>180</min>
+																		<max>270</max>
+																	</countRange>
+																</li>
+																<li>
+																	<choiceChance>30</choiceChance>
+																	<thingDef>Ammo_545x39mmSoviet_HE</thingDef>
+																	<countRange>
+																		<min>180</min>
+																		<max>270</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+												<li Class="PatchOperationAddModExtension">
+													<xpath>Defs/PawnKindDef[
+														defName="TI_Regular_AR_545" or
+														defName="TI_Elite_AR_545"
+														]</xpath>
+													<value>
+														<li
+															Class="CombatExtended.LoadoutPropertiesExtension">
+														</li>
+													</value>
+												</li>
+											</operations>
+										</match>
+										<nomatch Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationRemove">
+													<xpath>Defs//PawnKindDef[
+														defName="TI_Regular_AR_545" or
+														defName="TI_Elite_AR_545"
+														]</xpath>
+												</li>
+												<li Class="PatchOperationRemove">
+													<xpath>
+														Defs/FactionDef/pawnGroupMakers/li/*//TI_Regular_AR_545</xpath>
+												</li>
+												<li Class="PatchOperationRemove">
+													<xpath>
+														Defs/FactionDef/pawnGroupMakers/li/*//TI_Elite_AR_545</xpath>
+												</li>
+											</operations>
+										</nomatch>
+									</li>
+
+									<!--762x39
+									caliber rifle-->
+									<li Class="PatchOperationFindMod">
+										<mods>
+											<li>Combat Extended Guns</li>
+											<li>Gun Nut - Chapter #1</li>
+											<li>Gun Nut - Chapter #2</li>
+											<li>Vanilla Weapons Expanded</li>
+										</mods>
+										<match Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationAdd">
+													<xpath>Defs/PawnKindDef[
+														defName="TI_Irregular_Marksman" or
+														defName="TI_Regular_AR_762"
+														]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>30</choiceChance>
+																	<thingDef>Ammo_762x39mmSoviet_AP</thingDef>
+																	<countRange>
+																		<min>120</min>
+																		<max>150</max>
+																	</countRange>
+																</li>
+																<li>
+																	<choiceChance>60</choiceChance>
+																	<thingDef>
+																		Ammo_762x39mmSoviet_FMJ</thingDef>
+																	<countRange>
+																		<min>120</min>
+																		<max>150</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+												<li Class="PatchOperationAdd">
+													<xpath>
+														Defs/PawnKindDef[defName="TI_Elite_AR_762"]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>60</choiceChance>
+																	<thingDef>
+																		Ammo_762x39mmSoviet_Incendiary</thingDef>
+																	<countRange>
+																		<min>180</min>
+																		<max>270</max>
+																	</countRange>
+																</li>
+																<li>
+																	<choiceChance>60</choiceChance>
+																	<thingDef>Ammo_762x39mmSoviet_HE</thingDef>
+																	<countRange>
+																		<min>180</min>
+																		<max>270</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+												<li Class="PatchOperationAddModExtension">
+													<xpath>Defs/PawnKindDef[
+														defName="TI_Irregular_Marksman" or
+														defName="TI_Regular_AR_762" or
+														defName="TI_Elite_AR_762"
+														]</xpath>
+													<value>
+														<li
+															Class="CombatExtended.LoadoutPropertiesExtension">
+														</li>
+													</value>
+												</li>
+											</operations>
+										</match>
+										<nomatch Class="PatchOperationFindMod">
+											<mods>
+												<li>Combat Extended Guns</li>
+												<li>Gun Nut - Chapter #1</li>
+											</mods>
+											<match Class="PatchOperationSequence">
+												<operations>
+													<li Class="PatchOperationRemove">
+														<xpath>Defs//PawnKindDef[
+															defName="TI_Irregular_Marksman" or
+															defName="TI_Regular_AR_762" or
+															defName="TI_Elite_AR_762"
+															]</xpath>
+													</li>
+													<li Class="PatchOperationRemove">
+														<xpath>
+															Defs/FactionDef/pawnGroupMakers/li/*//TI_Irregular_Marksman</xpath>
+													</li>
+													<li Class="PatchOperationRemove">
+														<xpath>
+															Defs/FactionDef/pawnGroupMakers/li/*//TI_Regular_AR_762</xpath>
+													</li>
+													<li Class="PatchOperationRemove">
+														<xpath>
+															Defs/FactionDef/pawnGroupMakers/li/*//TI_Elite_AR_762</xpath>
+													</li>
+												</operations>
+											</match>
+											<nomatch Class="PatchOperationSequence">
+												<operations>
+													<!--Convert
+													to 5.56 pawn-->
+													<li Class="PatchOperationAdd">
+														<xpath>
+															Defs/PawnKindDef[defName="TI_Regular_AR_762"]</xpath>
+														<value>
+															<inventoryOptions>
+																<skipChance>0</skipChance>
+																<subOptionsChooseOne>
+																	<li>
+																		<choiceChance>60</choiceChance>
+																		<thingDef>
+																			Ammo_556x45mmNATO_AP</thingDef>
+																		<countRange>
+																			<min>120</min>
+																			<max>150</max>
+																		</countRange>
+																	</li>
+																	<li>
+																		<choiceChance>40</choiceChance>
+																		<thingDef>
+																			Ammo_556x45mmNATO_FMJ</thingDef>
+																		<countRange>
+																			<min>120</min>
+																			<max>150</max>
+																		</countRange>
+																	</li>
+																</subOptionsChooseOne>
+															</inventoryOptions>
+														</value>
+													</li>
+													<li Class="PatchOperationAdd">
+														<xpath>
+															Defs/PawnKindDef[defName="TI_Elite_AR_762"]</xpath>
+														<value>
+															<inventoryOptions>
+																<skipChance>0</skipChance>
+																<subOptionsChooseOne>
+																	<li>
+																		<choiceChance>70</choiceChance>
+																		<thingDef>
+																			Ammo_556x45mmNATO_Incendiary</thingDef>
+																		<countRange>
+																			<min>180</min>
+																			<max>270</max>
+																		</countRange>
+																	</li>
+																	<li>
+																		<choiceChance>30</choiceChance>
+																		<thingDef>
+																			Ammo_556x45mmNATO_HE</thingDef>
+																		<countRange>
+																			<min>180</min>
+																			<max>270</max>
+																		</countRange>
+																	</li>
+																</subOptionsChooseOne>
+															</inventoryOptions>
+														</value>
+													</li>
+													<li Class="PatchOperationConditional">
+														<xpath>
+															/Defs/ThingDef[defName="Gun_AssaultRifle"]/weaponTags</xpath>
+														<nomatch Class="PatchOperationAdd">
+															<xpath>
+																/Defs/ThingDef[defName="Gun_AssaultRifle"]</xpath>
+															<value>
+																<weaponTags />
+															</value>
+														</nomatch>
+														<match Class="PatchOperationAdd">
+															<xpath>
+																/Defs/ThingDef[defName="Gun_AssaultRifle"]</xpath>
+															<value>
+															</value>
+														</match>
+													</li>
+
+													<!--Add
+													tags-->
+
+													<li Class="PatchOperationAdd">
+														<xpath>
+															Defs/ThingDef[defName="Gun_AssaultRifle"]/weaponTags</xpath>
+														<value>
+															<li>TI_762ARifle</li>
+														</value>
+													</li>
+													<li Class="PatchOperationRemove">
+														<xpath>
+															Defs//PawnKindDef[defName="TI_Irregular_Marksman"]</xpath>
+													</li>
+													<li Class="PatchOperationRemove">
+														<xpath>
+															Defs/FactionDef/pawnGroupMakers/li/*//TI_Irregular_Marksman</xpath>
+													</li>
+												</operations>
+											</nomatch>
+										</nomatch>
+									</li>
+
+									<!--762x39
+									caliber LMG-->
+									<li Class="PatchOperationFindMod">
+										<mods>
+											<li>Combat Extended Guns</li>
+										</mods>
+										<match Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationAdd">
+													<xpath>Defs/PawnKindDef[
+														defName="TI_Regular_MG_762"
+														]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>30</choiceChance>
+																	<thingDef>Ammo_762x39mmSoviet_AP</thingDef>
+																	<countRange>
+																		<min>200</min>
+																		<max>300</max>
+																	</countRange>
+																</li>
+																<li>
+																	<choiceChance>60</choiceChance>
+																	<thingDef>
+																		Ammo_762x39mmSoviet_FMJ</thingDef>
+																	<countRange>
+																		<min>200</min>
+																		<max>300</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+												<li Class="PatchOperationAddModExtension">
+													<xpath>Defs/PawnKindDef[
+														defName="TI_Regular_MG_762"
+														]</xpath>
+													<value>
+														<li
+															Class="CombatExtended.LoadoutPropertiesExtension">
+														</li>
+													</value>
+												</li>
+											</operations>
+										</match>
+										<nomatch Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationRemove">
+													<xpath>Defs//PawnKindDef[
+														defName="TI_Regular_MG_762"
+														]</xpath>
+												</li>
+												<li Class="PatchOperationRemove">
+													<xpath>
+														Defs/FactionDef/pawnGroupMakers/li/*//TI_Regular_MG_762</xpath>
+												</li>
+											</operations>
+										</nomatch>
+									</li>
+
+									<!--762x54
+									caliber Rifle-->
+									<li Class="PatchOperationFindMod">
+										<mods>
+											<li>Combat Extended Guns</li>
+											<li>Vanilla Weapons Expanded</li>
+										</mods>
+										<match Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationAdd">
+													<xpath>Defs/PawnKindDef[
+														defName="TI_Regular_BR_762"
+														]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>30</choiceChance>
+																	<thingDef>Ammo_762x54mmR_AP</thingDef>
+																	<countRange>
+																		<min>60</min>
+																		<max>80</max>
+																	</countRange>
+																</li>
+																<li>
+																	<choiceChance>60</choiceChance>
+																	<thingDef>Ammo_762x54mmR_FMJ</thingDef>
+																	<countRange>
+																		<min>60</min>
+																		<max>80</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+												<li Class="PatchOperationAdd">
+													<xpath>
+														Defs/PawnKindDef[defName="TI_Elite_BR_762"]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>60</choiceChance>
+																	<thingDef>
+																		Ammo_762x54mmR_Incendiary</thingDef>
+																	<countRange>
+																		<min>80</min>
+																		<max>120</max>
+																	</countRange>
+																</li>
+																<li>
+																	<choiceChance>60</choiceChance>
+																	<thingDef>Ammo_762x54mmR_HE</thingDef>
+																	<countRange>
+																		<min>80</min>
+																		<max>120</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+												<li Class="PatchOperationAddModExtension">
+													<xpath>Defs/PawnKindDef[
+														defName="TI_Regular_BR_762" or
+														defName="TI_Elite_BR_762"
+														]</xpath>
+													<value>
+														<li
+															Class="CombatExtended.LoadoutPropertiesExtension">
+														</li>
+													</value>
+												</li>
+											</operations>
+										</match>
+										<nomatch Class="PatchOperationSequence">
+											<operations>
+												<!--Convert
+												to basic sniper-->
+												<li Class="PatchOperationAdd">
+													<xpath>
+														Defs/PawnKindDef[defName="TI_Regular_BR_762"]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>60</choiceChance>
+																	<thingDef>Ammo_762x51mmNATO_AP</thingDef>
+																	<countRange>
+																		<min>60</min>
+																		<max>80</max>
+																	</countRange>
+																</li>
+																<li>
+																	<choiceChance>40</choiceChance>
+																	<thingDef>Ammo_762x51mmNATO_FMJ</thingDef>
+																	<countRange>
+																		<min>60</min>
+																		<max>80</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+												<li Class="PatchOperationAdd">
+													<xpath>
+														Defs/PawnKindDef[defName="TI_Elite_BR_762"]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>70</choiceChance>
+																	<thingDef>
+																		Ammo_762x51mmNATO_Incendiary</thingDef>
+																	<countRange>
+																		<min>60</min>
+																		<max>80</max>
+																	</countRange>
+																</li>
+																<li>
+																	<choiceChance>30</choiceChance>
+																	<thingDef>Ammo_762x51mmNATO_HE</thingDef>
+																	<countRange>
+																		<min>60</min>
+																		<max>80</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+												<li Class="PatchOperationConditional">
+													<xpath>
+														/Defs/ThingDef[defName="Gun_SniperRifle"]/weaponTags</xpath>
+													<nomatch Class="PatchOperationAdd">
+														<xpath>
+															/Defs/ThingDef[defName="Gun_SniperRifle"]</xpath>
+														<value>
+															<weaponTags />
+														</value>
+													</nomatch>
+													<match Class="PatchOperationAdd">
+														<xpath>
+															/Defs/ThingDef[defName="Gun_SniperRifle"]</xpath>
+														<value>
+														</value>
+													</match>
+												</li>
+
+												<!--Add
+												tags-->
+
+												<li Class="PatchOperationAdd">
+													<xpath>
+														Defs/ThingDef[defName="Gun_SniperRifle"]/weaponTags</xpath>
+													<value>
+														<li>TI_762BRifle</li>
+													</value>
+												</li>
+											</operations>
+										</nomatch>
+									</li>
+
+									<!--762x54
+									caliber LMG-->
+									<li Class="PatchOperationFindMod">
+										<mods>
+											<li>Combat Extended Guns</li>
+											<li>Gun Nut - Chapter #1</li>
+										</mods>
+										<match Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationAdd">
+													<xpath>
+														Defs/PawnKindDef[defName="TI_Elite_MG_762"]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>60</choiceChance>
+																	<thingDef>
+																		Ammo_762x54mmR_Incendiary</thingDef>
+																	<countRange>
+																		<min>200</min>
+																		<max>300</max>
+																	</countRange>
+																</li>
+																<li>
+																	<choiceChance>60</choiceChance>
+																	<thingDef>Ammo_762x54mmR_HE</thingDef>
+																	<countRange>
+																		<min>200</min>
+																		<max>300</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+												<li Class="PatchOperationAddModExtension">
+													<xpath>Defs/PawnKindDef[
+														defName="TI_Regular_BR_762"
+														]</xpath>
+													<value>
+														<li
+															Class="CombatExtended.LoadoutPropertiesExtension">
+														</li>
+													</value>
+												</li>
+											</operations>
+										</match>
+										<nomatch Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationRemove">
+													<xpath>Defs//PawnKindDef[
+														defName="TI_Elite_MG_762"
+														]</xpath>
+												</li>
+												<li Class="PatchOperationRemove">
+													<xpath>
+														Defs/FactionDef/pawnGroupMakers/li/*//TI_Elite_MG_762</xpath>
+												</li>
+											</operations>
+										</nomatch>
+									</li>
+
+									<!--145
+									caliber-->
+									<li Class="PatchOperationFindMod">
+										<mods>
+											<li>Combat Extended Guns</li>
+										</mods>
+										<match Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationAdd">
+													<xpath>
+														Defs/PawnKindDef[defName="TI_Regular_AM_145"]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>40</choiceChance>
+																	<thingDef>Ammo_145x114mm_FMJ</thingDef>
+																	<countRange>
+																		<min>10</min>
+																		<max>15</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+												<li Class="PatchOperationAdd">
+													<xpath>
+														Defs/PawnKindDef[defName="TI_Elite_AM_145"]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>60</choiceChance>
+																	<thingDef>
+																		Ammo_145x114mm_Incendiary</thingDef>
+																	<countRange>
+																		<min>15</min>
+																		<max>30</max>
+																	</countRange>
+																</li>
+																<li>
+																	<choiceChance>40</choiceChance>
+																	<thingDef>Ammo_145x114mm_HE</thingDef>
+																	<countRange>
+																		<min>15</min>
+																		<max>30</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+												<li Class="PatchOperationAddModExtension">
+													<xpath>Defs/PawnKindDef[
+														defName="TI_Regular_AM_145" or
+														defName="TI_Elite_AM_145"
+														]</xpath>
+													<value>
+														<li
+															Class="CombatExtended.LoadoutPropertiesExtension">
+														</li>
+													</value>
+												</li>
+											</operations>
+										</match>
+										<nomatch Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationRemove">
+													<xpath>Defs//PawnKindDef[
+														defName="TI_Regular_AM_145" or
+														defName="TI_Elite_AM_145"
+														]</xpath>
+												</li>
+												<li Class="PatchOperationRemove">
+													<xpath>
+														Defs/FactionDef/pawnGroupMakers/li/*//TI_Regular_AM_145</xpath>
+												</li>
+												<li Class="PatchOperationRemove">
+													<xpath>
+														Defs/FactionDef/pawnGroupMakers/li/*//TI_Elite_AM_145</xpath>
+												</li>
+											</operations>
+										</nomatch>
+									</li>
+
+									<!--RPG-->
+									<li Class="PatchOperationFindMod">
+										<mods>
+											<li>Combat Extended Guns</li>
+											<li>Gun Nut - Chapter #2</li>
+										</mods>
+										<match Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationAddModExtension">
+													<xpath>Defs/PawnKindDef[
+														defName="TI_Elite_ATLauncher"
+														]</xpath>
+													<value>
+														<li
+															Class="CombatExtended.LoadoutPropertiesExtension">
+															<primaryMagazineCount>
+																<min>2</min>
+																<max>4</max>
+															</primaryMagazineCount>
+															<forcedSidearm>
+																<sidearmMoney>
+																	<min>400</min>
+																	<max>600</max>
+																</sidearmMoney>
+																<weaponTags>
+																	<li>TI_SMG</li>
+																	<li>TI_AutoPistol</li>
+																</weaponTags>
+																<magazineCount>
+																	<min>0</min>
+																	<max>2</max>
+																</magazineCount>
+															</forcedSidearm>
+														</li>
+													</value>
+												</li>
+											</operations>
+										</match>
+										<nomatch Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationRemove">
+													<xpath>Defs//PawnKindDef[
+														defName="TI_Elite_ATLauncher"
+														]</xpath>
+												</li>
+												<li Class="PatchOperationRemove">
+													<xpath>
+														Defs/FactionDef/pawnGroupMakers/li/*//TI_Elite_ATLauncher</xpath>
+												</li>
+											</operations>
+										</nomatch>
+									</li>
+
+									<!--Grenade-->
+									<li Class="PatchOperationFindMod">
+										<mods>
+											<li>Combat Extended Guns</li>
+											<li>Vanilla Weapons Expanded</li>
+										</mods>
+										<match Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationAddModExtension">
+													<xpath>Defs/PawnKindDef[
+														defName="TI_Regular_Grenadier"
+														]</xpath>
+													<value>
+														<li
+															Class="CombatExtended.LoadoutPropertiesExtension">
+															<primaryMagazineCount>
+																<min>0</min>
+																<max>0</max>
+															</primaryMagazineCount>
+															<forcedSidearm>
+																<sidearmMoney>
+																	<min>400</min>
+																	<max>600</max>
+																</sidearmMoney>
+																<weaponTags>
+																	<li>TI_SMG</li>
+																</weaponTags>
+																<magazineCount>
+																	<min>0</min>
+																	<max>2</max>
+																</magazineCount>
+															</forcedSidearm>
+														</li>
+													</value>
+												</li>
+												<li Class="PatchOperationAdd">
+													<xpath>
+														Defs/PawnKindDef[defName="TI_Regular_Grenadier"]</xpath>
+													<value>
+														<inventoryOptions>
+															<skipChance>0</skipChance>
+															<subOptionsChooseOne>
+																<li>
+																	<choiceChance>40</choiceChance>
+																	<thingDef>Ammo_40x46mmGrenade_HE</thingDef>
+																	<countRange>
+																		<min>18</min>
+																		<max>24</max>
+																	</countRange>
+																</li>
+															</subOptionsChooseOne>
+														</inventoryOptions>
+													</value>
+												</li>
+											</operations>
+										</match>
+										<nomatch Class="PatchOperationSequence">
+											<operations>
+												<li Class="PatchOperationRemove">
+													<xpath>Defs//PawnKindDef[
+														defName="TI_Regular_Grenadier"
+														]</xpath>
+												</li>
+												<li Class="PatchOperationRemove">
+													<xpath>
+														Defs/FactionDef/pawnGroupMakers/li/*//TI_Regular_Grenadier</xpath>
+												</li>
+											</operations>
+										</nomatch>
+									</li>
+
+									<li Class="PatchOperationAddModExtension">
+										<xpath>Defs/PawnKindDef[
+											defName="TI_Outrider_Pistol" or
+											defName="TI_Outrider_Rifle" or
+											defName="TI_Militia_Pistol" or
+											defName="TI_Militia_Gunner" or
+											defName="TI_Irregular_Rifle" or
+											defName="TI_Irregular_Trooper" or
+											defName="TI_Regular_Trooper" or
+											defName="TI_Elite_Special" or
+											defName="TI_Elite_Leader"
+											]</xpath>
+										<value>
+											<li Class="CombatExtended.LoadoutPropertiesExtension">
+												<primaryMagazineCount>
+													<min>3</min>
+													<max>6</max>
+												</primaryMagazineCount>
+											</li>
+										</value>
+									</li>
+
+									<li Class="PatchOperationAddModExtension">
+										<xpath>Defs/PawnKindDef[
+											defName="TI_Militia_Grenadier" or
+											defName="TI_Irregular_Grenadier"
+											]</xpath>
+										<value>
+											<li Class="CombatExtended.LoadoutPropertiesExtension">
+												<primaryMagazineCount>
+													<min>0</min>
+													<max>0</max>
+												</primaryMagazineCount>
+												<forcedSidearm>
+													<sidearmMoney>
+														<min>400</min>
+														<max>600</max>
+													</sidearmMoney>
+													<weaponTags>
+														<li>TI_BasicPistol</li>
+														<li>TI_AutoPistol</li>
+													</weaponTags>
+													<magazineCount>
+														<min>0</min>
+														<max>2</max>
+													</magazineCount>
+												</forcedSidearm>
+											</li>
+										</value>
+									</li>
+
+									<li Class="PatchOperationAdd">
+										<xpath>Defs/PawnKindDef[
+											defName="TI_Militia_Grenadier" or
+											defName="TI_Irregular_Grenadier"
+											]</xpath>
+										<value>
+											<inventoryOptions>
+												<skipChance>0</skipChance>
+												<subOptionsChooseOne>
+													<li>
+														<choiceChance>40</choiceChance>
+														<thingDef>Ammo_40x46mmGrenade_HE</thingDef>
+														<countRange>
+															<min>18</min>
+															<max>24</max>
+														</countRange>
+													</li>
+												</subOptionsChooseOne>
+											</inventoryOptions>
+										</value>
+									</li>
+
+								</operations>
+							</match>
+						</li>
+					</operations>
+				</match>
+				<!--No
+				CE -->
+				<nomatch Class="PatchOperationSequence">
+					<operations>
+						<li Class="PatchOperationRemove">
+							<xpath>Defs//PawnKindDef[
+								defName="TI_Irregular_Marksman"
+								]</xpath>
+						</li>
+
+						<li Class="PatchOperationRemove">
+							<xpath>Defs/FactionDef/pawnGroupMakers/li/*//TI_Irregular_Marksman</xpath>
+						</li>
+
+						<!--545
+						caliber-->
+						<li Class="PatchOperationFindMod">
+							<mods>
+								<li>Combat Extended Guns</li>
+								<li>Gun Nut - Chapter #1</li>
+							</mods>
+							<match Class="PatchOperationSequence">
+								<operations>
+								</operations>
+							</match>
+							<nomatch Class="PatchOperationSequence">
+								<operations>
+									<li Class="PatchOperationRemove">
+										<xpath>Defs//PawnKindDef[
+											defName="TI_Regular_AR_545" or
+											defName="TI_Elite_AR_545"
+											]</xpath>
+									</li>
+									<li Class="PatchOperationRemove">
+										<xpath>
+											Defs/FactionDef/pawnGroupMakers/li/*//TI_Regular_AR_545</xpath>
+									</li>
+									<li Class="PatchOperationRemove">
+										<xpath>Defs/FactionDef/pawnGroupMakers/li/*//TI_Elite_AR_545</xpath>
+									</li>
+								</operations>
+							</nomatch>
+						</li>
+
+						<!--762x39
+						caliber rifle-->
+						<li Class="PatchOperationFindMod">
+							<mods>
+								<li>Combat Extended Guns</li>
+								<li>Gun Nut - Chapter #1</li>
+								<li>Gun Nut - Chapter #2</li>
+								<li>Vanilla Weapons Expanded</li>
+							</mods>
+							<match Class="PatchOperationSequence">
+								<operations>
+								</operations>
+							</match>
+							<nomatch Class="PatchOperationFindMod">
+								<mods>
+									<li>Combat Extended Guns</li>
+									<li>Gun Nut - Chapter #1</li>
+								</mods>
+								<match Class="PatchOperationSequence">
+									<operations>
+										<li Class="PatchOperationRemove">
+											<xpath>Defs//PawnKindDef[
+												defName="TI_Regular_AR_762" or
+												defName="TI_Elite_AR_762"
+												]</xpath>
+										</li>
+										<li Class="PatchOperationRemove">
+											<xpath>
+												Defs/FactionDef/pawnGroupMakers/li/*//TI_Regular_AR_762</xpath>
+										</li>
+										<li Class="PatchOperationRemove">
+											<xpath>
+												Defs/FactionDef/pawnGroupMakers/li/*//TI_Elite_AR_762</xpath>
+										</li>
+									</operations>
+								</match>
+								<nomatch Class="PatchOperationSequence">
+									<operations>
+										<!--Convert
+										to 5.56 pawn-->
+										<li Class="PatchOperationConditional">
+											<xpath>
+												/Defs/ThingDef[defName="Gun_AssaultRifle"]/weaponTags</xpath>
+											<nomatch Class="PatchOperationAdd">
+												<xpath>/Defs/ThingDef[defName="Gun_AssaultRifle"]</xpath>
+												<value>
+													<weaponTags />
+												</value>
+											</nomatch>
+											<match Class="PatchOperationAdd">
+												<xpath>/Defs/ThingDef[defName="Gun_AssaultRifle"]</xpath>
+												<value>
+												</value>
+											</match>
+										</li>
+
+										<!--Add
+										tags-->
+
+										<li Class="PatchOperationAdd">
+											<xpath>
+												Defs/ThingDef[defName="Gun_AssaultRifle"]/weaponTags</xpath>
+											<value>
+												<li>TI_762ARifle</li>
+											</value>
+										</li>
+									</operations>
+								</nomatch>
+							</nomatch>
+						</li>
+
+						<!--762x39
+						caliber LMG-->
+						<li Class="PatchOperationFindMod">
+							<mods>
+								<li>Combat Extended Guns</li>
+								<li>Gun Nut - Chapter #1</li>
+								<li>Gun Nut - Chapter #2</li>
+								<li>Vanilla Weapons Expanded</li>
+							</mods>
+							<match Class="PatchOperationSequence">
+								<operations>
+								</operations>
+							</match>
+							<nomatch Class="PatchOperationSequence">
+								<operations>
+									<li Class="PatchOperationRemove">
+										<xpath>Defs//PawnKindDef[
+											defName="TI_Regular_MG_762"
+											]</xpath>
+									</li>
+									<li Class="PatchOperationRemove">
+										<xpath>
+											Defs/FactionDef/pawnGroupMakers/li/*//TI_Regular_MG_762</xpath>
+									</li>
+								</operations>
+							</nomatch>
+						</li>
+
+						<!--762x54
+						caliber Rifle-->
+						<li Class="PatchOperationFindMod">
+							<mods>
+								<li>Combat Extended Guns</li>
+								<li>Vanilla Weapons Expanded</li>
+							</mods>
+							<match Class="PatchOperationSequence">
+								<operations>
+								</operations>
+							</match>
+							<nomatch Class="PatchOperationSequence">
+								<operations>
+									<!--Convert
+									to basic sniper-->
+									<li Class="PatchOperationConditional">
+										<xpath>/Defs/ThingDef[defName="Gun_SniperRifle"]/weaponTags</xpath>
+										<nomatch Class="PatchOperationAdd">
+											<xpath>/Defs/ThingDef[defName="Gun_SniperRifle"]</xpath>
+											<value>
+												<weaponTags />
+											</value>
+										</nomatch>
+										<match Class="PatchOperationAdd">
+											<xpath>/Defs/ThingDef[defName="Gun_SniperRifle"]</xpath>
+											<value>
+											</value>
+										</match>
+									</li>
+
+									<!--Add
+									tags-->
+
+									<li Class="PatchOperationAdd">
+										<xpath>Defs/ThingDef[defName="Gun_SniperRifle"]/weaponTags</xpath>
+										<value>
+											<li>TI_762BRifle</li>
+										</value>
+									</li>
+								</operations>
+							</nomatch>
+						</li>
+
+						<!--762x54
+						caliber LMG-->
+						<li Class="PatchOperationFindMod">
+							<mods>
+								<li>Combat Extended Guns</li>
+								<li>Gun Nut - Chapter #1</li>
+							</mods>
+							<match Class="PatchOperationSequence">
+								<operations>
+								</operations>
+							</match>
+							<nomatch Class="PatchOperationSequence">
+								<operations>
+									<li Class="PatchOperationRemove">
+										<xpath>Defs//PawnKindDef[
+											defName="TI_Elite_MG_762"
+											]</xpath>
+									</li>
+									<li Class="PatchOperationRemove">
+										<xpath>Defs/FactionDef/pawnGroupMakers/li/*//TI_Elite_MG_762</xpath>
+									</li>
+								</operations>
+							</nomatch>
+						</li>
+
+						<!--145
+						caliber-->
+						<li Class="PatchOperationFindMod">
+							<mods>
+								<li>Combat Extended Guns</li>
+							</mods>
+							<match Class="PatchOperationSequence">
+								<operations>
+								</operations>
+							</match>
+							<nomatch Class="PatchOperationSequence">
+								<operations>
+									<li Class="PatchOperationRemove">
+										<xpath>Defs//PawnKindDef[
+											defName="TI_Regular_AM_145" or
+											defName="TI_Elite_AM_145"
+											]</xpath>
+									</li>
+									<li Class="PatchOperationRemove">
+										<xpath>
+											Defs/FactionDef/pawnGroupMakers/li/*//TI_Regular_AM_145</xpath>
+									</li>
+									<li Class="PatchOperationRemove">
+										<xpath>Defs/FactionDef/pawnGroupMakers/li/*//TI_Elite_AM_145</xpath>
+									</li>
+								</operations>
+							</nomatch>
+						</li>
+
+						<!--RPG-->
+						<li Class="PatchOperationFindMod">
+							<mods>
+								<li>Combat Extended Guns</li>
+								<li>Gun Nut - Chapter #2</li>
+							</mods>
+							<match Class="PatchOperationSequence">
+								<operations>
+								</operations>
+							</match>
+							<nomatch Class="PatchOperationSequence">
+								<operations>
+									<li Class="PatchOperationRemove">
+										<xpath>Defs//PawnKindDef[
+											defName="TI_Elite_ATLauncher"
+											]</xpath>
+									</li>
+									<li Class="PatchOperationRemove">
+										<xpath>
+											Defs/FactionDef/pawnGroupMakers/li/*//TI_Elite_ATLauncher</xpath>
+									</li>
+								</operations>
+							</nomatch>
+						</li>
+
+						<!--Grenade-->
+						<li Class="PatchOperationFindMod">
+							<mods>
+								<li>Combat Extended Guns</li>
+								<li>Vanilla Weapons Expanded</li>
+							</mods>
+							<match Class="PatchOperationSequence">
+								<operations>
+								</operations>
+							</match>
+							<nomatch Class="PatchOperationSequence">
+								<operations>
+									<li Class="PatchOperationRemove">
+										<xpath>Defs//PawnKindDef[
+											defName="TI_Regular_Grenadier"
+											]</xpath>
+									</li>
+									<li Class="PatchOperationRemove">
+										<xpath>
+											Defs/FactionDef/pawnGroupMakers/li/*//TI_Regular_Grenadier</xpath>
+									</li>
+								</operations>
+							</nomatch>
+						</li>
+
+					</operations>
+				</nomatch>
+			</li>
+
+		</operations>
+	</Operation>
+</Patch>

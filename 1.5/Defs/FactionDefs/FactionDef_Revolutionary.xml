@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <FactionDef Name="ei_RevolutionaryBase" ParentName="OutlanderFactionBase" Abstract="True">
+  <FactionDef Name="ei_FactionBase" ParentName="OutlanderFactionBase" Abstract="True">
     <pawnSingular>citizen</pawnSingular>
     <pawnsPlural>citizens</pawnsPlural>
     <settlementGenerationWeight>3</settlementGenerationWeight>
@@ -32,12 +32,13 @@
     </backstoryFilters>
     <!--<leaderTitle>head
     minister</leaderTitle>-->
-    <techLevel>Industrial</techLevel>
-    <apparelStuffFilter>
+    <techLevel>Medieval</techLevel>
+    <!-- <apparelStuffFilter>
       <thingDefs>
         <li>Steel</li>
+				<li>Cloth</li>
       </thingDefs>
-    </apparelStuffFilter>
+    </apparelStuffFilter> -->
     <allowedArrivalTemperatureRange>-40~40</allowedArrivalTemperatureRange>
     <!--<colorSpectrum>
       <li>(0.35, 0.30, 0.60)</li>
@@ -59,67 +60,21 @@
         <commonality>100</commonality>
         <kindDef>Combat</kindDef>
         <options>
-          <ei_Officer>1</ei_Officer>
+          <!-- <ei_Officer>1</ei_Officer> -->
           <ei_Infantry_reserve>40</ei_Infantry_reserve>
           <ei_Infantry_line>40</ei_Infantry_line>
           <ei_Skirmisher>20</ei_Skirmisher>
-
-          <!-- <TI_Outrider_Pistol>1</TI_Outrider_Pistol>
-          <TI_Outrider_Melee>1</TI_Outrider_Melee>
-          <TI_Outrider_Rifle>1.5</TI_Outrider_Rifle>
-          <TI_Militia_Pistol>3</TI_Militia_Pistol>
-          <TI_Militia_Gunner>5</TI_Militia_Gunner>
-          <TI_Militia_Grenadier>2</TI_Militia_Grenadier>
-          <TI_Irregular_Rifle>40</TI_Irregular_Rifle>
-          <TI_Irregular_Marksman>30</TI_Irregular_Marksman>
-          <TI_Irregular_Trooper>30</TI_Irregular_Trooper>
-          <TI_Irregular_Grenadier>15</TI_Irregular_Grenadier>
-          <TI_Regular_AR_545>80</TI_Regular_AR_545>
-          <TI_Regular_AR_762>80</TI_Regular_AR_762>
-          <TI_Regular_BR_762>60</TI_Regular_BR_762>
-          <TI_Regular_MG_762>40</TI_Regular_MG_762>
-          <TI_Regular_AM_145>35</TI_Regular_AM_145>
-          <TI_Regular_Grenadier>20</TI_Regular_Grenadier>
-          <TI_Regular_Trooper>80</TI_Regular_Trooper>
-          <TI_Elite_AR_545>40</TI_Elite_AR_545>
-          <TI_Elite_AR_762>40</TI_Elite_AR_762>
-          <TI_Elite_BR_762>30</TI_Elite_BR_762>
-          <TI_Elite_MG_762>25</TI_Elite_MG_762>
-          <TI_Elite_AM_145>15</TI_Elite_AM_145>
-          <TI_Elite_ATLauncher>15</TI_Elite_ATLauncher>
-          <TI_Elite_Special>1</TI_Elite_Special>
-          <TI_Elite_Leader>1</TI_Elite_Leader> -->
         </options>
       </li>
-      <li>
-        <!-- Elite Raid -->
-        <commonality>25</commonality>
-        <kindDef>Combat</kindDef>
-        <options>
-          <TI_Elite_Special>100</TI_Elite_Special>
-          <TI_Elite_ATLauncher>15</TI_Elite_ATLauncher>
-        </options>
-      </li>
-      <li>
-        <!-- Swarm Raid -->
-        <commonality>25</commonality>
-        <kindDef>Combat</kindDef>
-        <options>
-          <TI_Irregular_Rifle>40</TI_Irregular_Rifle>
-          <TI_Irregular_Marksman>30</TI_Irregular_Marksman>
-          <TI_Irregular_Trooper>30</TI_Irregular_Trooper>
-          <TI_Irregular_Grenadier>15</TI_Irregular_Grenadier>
-        </options>
-      </li>
-      <li>
+      <!-- <li>
         <kindDef>Peaceful</kindDef>
         <options>
           <Villager>20</Villager>
           <TI_Irregular_Trooper>10</TI_Irregular_Trooper>
           <TI_Irregular_Rifle>10</TI_Irregular_Rifle>
         </options>
-      </li>
-      <li>
+      </li> -->
+      <!-- <li>
         <kindDef>Trader</kindDef>
         <traders>
           <Town_Trader>1</Town_Trader>
@@ -137,8 +92,8 @@
           <TI_Irregular_Rifle>10</TI_Irregular_Rifle>
           <TI_Irregular_Trooper>10</TI_Irregular_Trooper>
         </guards>
-      </li>
-      <li>
+      </li> -->
+      <!-- <li>
         <kindDef>Settlement</kindDef>
         <options>
           <Villager>10</Villager>
@@ -149,45 +104,42 @@
           <TI_Elite_BR_762>5</TI_Elite_BR_762>
           <Town_Councilman>1</Town_Councilman>
         </options>
-      </li>
-      <li MayRequire="Ludeon.RimWorld.Ideology">
+      </li> -->
+      <!-- <li MayRequire="Ludeon.RimWorld.Ideology">
         <kindDef>Miners</kindDef>
         <commonality>1</commonality>
         <options>
           <Miner>3</Miner>
           <TI_Outrider_Rifle>1.5</TI_Outrider_Rifle>
         </options>
-      </li>
-      <li MayRequire="Ludeon.RimWorld.Ideology">
+      </li> -->
+      <!-- <li MayRequire="Ludeon.RimWorld.Ideology">
         <kindDef>Hunters</kindDef>
         <commonality>1</commonality>
         <options>
           <TI_Outrider_Rifle>1.5</TI_Outrider_Rifle>
         </options>
-      </li>
-      <li MayRequire="Ludeon.RimWorld.Ideology">
+      </li> -->
+      <!-- <li MayRequire="Ludeon.RimWorld.Ideology">
         <kindDef>Loggers</kindDef>
         <commonality>1</commonality>
         <options>
           <Logger>3</Logger>
           <TI_Outrider_Rifle>1.5</TI_Outrider_Rifle>
         </options>
-      </li>
-      <li MayRequire="Ludeon.RimWorld.Ideology">
+      </li> -->
+      <!-- <li MayRequire="Ludeon.RimWorld.Ideology">
         <kindDef>Farmers</kindDef>
         <commonality>1</commonality>
         <options>
           <Farmer>3</Farmer>
           <TI_Outrider_Rifle>1.5</TI_Outrider_Rifle>
         </options>
-      </li>
+      </li> -->
     </pawnGroupMakers>
     <disallowedMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
     </disallowedMemes>
-    <requiredMemes>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
-    </requiredMemes>
     <disallowedPrecepts>
       <li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_Prohibited</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_MedicalOnly</li>
@@ -195,7 +147,7 @@
     </disallowedPrecepts>
   </FactionDef>
 
-  <FactionDef ParentName="ei_RevolutionaryBase">
+  <FactionDef ParentName="ei_FactionBase">
     <description>These people have been here a very long time. Maybe their ancestors crashed here a
       thousand years ago. Maybe they survived some cataclysm that destroyed a technological
       civilization here. In this time they have rebuilt their technological base, either through
@@ -203,34 +155,32 @@
       their holdings on this planet.
       \n While largely eschewing the development of more advanced spacer technology, the industrial
       people are a significant threat thanks to their well armed military forces and trained,
-      organized raiding parties.
-      \nThis particular group is distrustful of outsiders and off-worlders, and it will take
-      negotiations or gifts to turn them to an ally.</description>
-    <defName>ei_RevolutionaryCivil</defName>
-    <label>civil industrial alliance</label>
+      organized raiding parties.</description>
+    <defName>ei_FactionRevolutionary</defName>
+    <label>revolutionary industrial alliance</label>
     <leaderTitle>head minister</leaderTitle>
     <apparelStuffFilter>
       <thingDefs>
-        <li>WoolMegasloth</li>
-        <li>Leather_Heavy</li>
+        <li>WoolAlpaca</li>
+        <li>Leather_Pig</li>
       </thingDefs>
     </apparelStuffFilter>
     <allowedArrivalTemperatureRange>-40~40</allowedArrivalTemperatureRange>
     <colorSpectrum>
-      <li>(0.25, 0.30, 0.60)</li>
-      <li>(0.25, 0.40, 0.90)</li>
+      <li>(0.556, 0.698, 0.843)</li>
+      <li>(0.960, 0.705, 0.239)</li>
     </colorSpectrum>
     <factionIconPath>Icon/Icon_Industrial_Civil</factionIconPath>
     <naturalEnemy>true</naturalEnemy>
     <configurationListOrderPriority>90</configurationListOrderPriority>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <requiredMemes>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
     </requiredMemes>
   </FactionDef>
 
-  <FactionDef ParentName="ei_RevolutionaryBase">
-    <defName>ei_RevolutionaryWarlike</defName>
+  <FactionDef ParentName="ei_FactionBase">
+    <defName>ei_FactionExpansionist</defName>
     <description>These people have been here a very long time. Maybe their ancestors crashed here a
       thousand years ago. Maybe they survived some cataclysm that destroyed a technological
       civilization here. In this time they have rebuilt their technological base, either through
@@ -238,60 +188,27 @@
       their holdings on this planet.
       \n While largely eschewing the development of more advanced spacer technology, the industrial
       people are a significant threat thanks to their well armed military forces and trained,
-      organized raiding parties.
-      \nThis particular group is isolationist and militaristic to the extreme. The only way for an
-      outsider to join their society would be as a prisoner.</description>
+      organized raiding parties.</description>
     <leaderTitle>governor general</leaderTitle>
-    <label>warlike industrial alliance</label>
+    <label>expansionist industrial alliance</label>
     <apparelStuffFilter>
       <thingDefs>
-        <li>WoolMuffalo</li>
-        <li>Leather_Bluefur</li>
+        <li>WoolSheep</li>
+        <li>Leather_Camel</li>
       </thingDefs>
     </apparelStuffFilter>
     <allowedArrivalTemperatureRange>-40~40</allowedArrivalTemperatureRange>
     <colorSpectrum>
-      <li>(0.15, 0.50, 0.40)</li>
-      <li>(0.35, 0.60, 0.70)</li>
+      <li>(0.8, 0, 0.168)</li>
+      <li>(0.494, 0.482, 0.556)</li>
     </colorSpectrum>
     <factionIconPath>Icon/Icon_Industrial_Warlike</factionIconPath>
-    <permanentEnemy>true</permanentEnemy>
+    <naturalEnemy>true</naturalEnemy>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>91</configurationListOrderPriority>
     <requiredMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
     </requiredMemes>
   </FactionDef>
-
-  <FactionDef ParentName="ei_RevolutionaryBase">
-    <defName>ei_RevolutionaryFriendly</defName>
-    <description>These people have been here a very long time. Maybe their ancestors crashed here a
-      thousand years ago. Maybe they survived some cataclysm that destroyed a technological
-      civilization here. In this time they have rebuilt their technological base, either through
-      salvage or their own effort, and now seek to expand and build their society and strengthen
-      their holdings on this planet.
-      \nWhile largely eschewing the development of more advanced spacer technology, the industrial
-      people are a significant threat thanks to their well armed military forces and trained,
-      organized raiding parties.
-      \nThis particular group treats offworlders and outsiders with caution, but is willing to give
-      others the benefit of the doubt and commit to trades and alliances.</description>
-    <leaderTitle>leading mediator</leaderTitle>
-    <label>mercantile industrial alliance</label>
-    <apparelStuffFilter>
-      <thingDefs>
-        <li>WoolBison</li>
-        <li>Leather_Plain</li>
-      </thingDefs>
-    </apparelStuffFilter>
-    <allowedArrivalTemperatureRange>-40~40</allowedArrivalTemperatureRange>
-    <colorSpectrum>
-      <li>(0.45, 0.80, 0.20)</li>
-      <li>(0.85, 1, 0.40)</li>
-    </colorSpectrum>
-    <factionIconPath>Icon/Icon_Industrial_Merchant</factionIconPath>
-    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
-    <configurationListOrderPriority>92</configurationListOrderPriority>
-    <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
-  </FactionDef>
-
 </Defs>

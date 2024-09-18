@@ -10,7 +10,7 @@
 				<match Class="PatchOperationSequence">
 					<operations>
 						<li Class="PatchOperationAdd">
-							<xpath>Defs/FactionDef[defName="TI_IndustrialCivil"]</xpath>
+							<xpath>Defs/FactionDef[defName="ei_FactionRevolutionary"]</xpath>
 							<value>
 								<maxPawnCostPerTotalPointsCurve Inherit="False">
 									<points>
@@ -26,7 +26,7 @@
 						</li>
 
 						<li Class="PatchOperationAdd">
-							<xpath>Defs/FactionDef[defName="TI_IndustrialWarlike"]</xpath>
+							<xpath>Defs/FactionDef[defName="ei_FactionExpansionist"]</xpath>
 							<value>
 								<maxPawnCostPerTotalPointsCurve Inherit="False">
 									<points>

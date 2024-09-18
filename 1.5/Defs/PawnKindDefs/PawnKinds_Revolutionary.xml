@@ -4,7 +4,7 @@
 
 	<PawnKindDef Name="EarlyInd_BasePawn" Abstract="True">
 		<race>Human</race>
-		<defaultFactionType>ei_RevolutionaryCivil</defaultFactionType>
+		<defaultFactionType>ei_FactionExpansionist</defaultFactionType>
 		<chemicalAddictionChance>0.1</chemicalAddictionChance>
 		<invNutrition>1.2</invNutrition>
 		<itemQuality>Normal</itemQuality>
@@ -22,27 +22,11 @@
 		</disallowedTraits>  
 		<initialWillRange>3~7</initialWillRange>
 		<initialResistanceRange>4~14</initialResistanceRange>
-		<specificApparelRequirements>
-			<li>
-				<bodyPartGroup>Torso</bodyPartGroup>
-				<apparelLayer>OnSkin</apparelLayer>
-				<stuff>WoolSheep</stuff>
-			</li>
-			<li>
-				<apparelLayer>Shell</apparelLayer>
-				<!--<stuff>WoolSheep</stuff>-->
-			</li>
-			<!--<li>
-				<apparelLayer>Backpack</apparelLayer>
-				<stuff>Leather_Plain</stuff>
-			</li>-->
-		</specificApparelRequirements>
-
 	</PawnKindDef>
 
 	<PawnKindDef Name="EarlyInd_ElitePawn" Abstract="True">
 		<race>Human</race>
-		<defaultFactionType>ei_RevolutionaryCivil</defaultFactionType>
+		<defaultFactionType>ei_FactionExpansionist</defaultFactionType>
 		<chemicalAddictionChance>0</chemicalAddictionChance>
 		<invNutrition>2.2</invNutrition>
 		<itemQuality>Excellent</itemQuality>
@@ -65,21 +49,15 @@
 		<itemQuality>Poor</itemQuality>
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
-		<apparelTags>
-			<li>ei_infantry_line</li>
-		</apparelTags>
+		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
 		<apparelMoney>
 			<min>1000</min>
 			<max>1000</max>
 		</apparelMoney>
-		<weaponTags>
-			<li>ei_Musket</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>200</min>
-			<max>400</max>
-		</weaponMoney>
-		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>ei_apparel_line</li>
+		</apparelTags>
+		<apparelColor>(0.556, 0.698, 0.843)</apparelColor>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ei_InfantryLineBase">
@@ -92,7 +70,20 @@
 				<range>3~5</range>
 			</li>
 		</skills>
-
+		<apparelMoney>
+			<min>5000</min>
+			<max>5000</max>
+		</apparelMoney>
+		<apparelTags>
+			<li>ei_apparel_line</li>
+		</apparelTags>
+		<weaponTags>
+			<li>ei_Musket</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>200</min>
+			<max>400</max>
+		</weaponMoney>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ei_InfantryLineBase">
@@ -104,8 +95,23 @@
 			<li>
 				<skill>Shooting</skill>
 				<range>5~7</range>
+				<!-- "significant familiarity" to "weak professional" -->
 			</li>
 		</skills>
+		<apparelTags>
+			<li>ei_apparel_line</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>5000</min>
+			<max>5000</max>
+		</apparelMoney>
+		<weaponTags>
+			<li>ei_Musket</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>200</min>
+			<max>400</max>
+		</weaponMoney>
 	</PawnKindDef>
 
 	<!--Skirmishers
@@ -118,14 +124,14 @@
 		<skills>
 			<li>
 				<skill>Shooting</skill>
-				<range>8~12</range>
-				<!-- average somewhere around 10? idk -->
+				<range>8~13</range>
+				<!-- "employable professional" to "strong expert" -->
 			</li>
 		</skills>
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
 		<apparelTags>
-			<li>ei_skirmisher</li>
+			<li>ei_apparel_skirmisher</li>
 		</apparelTags>
 		<apparelMoney>
 			<min>1000</min>
@@ -134,13 +140,17 @@
 		<weaponTags>
 			<li>ei_Rifle</li>
 		</weaponTags>
+		<weaponMoney>
+			<min>300</min>
+			<max>500</max>
+		</weaponMoney>
 		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
 	</PawnKindDef>
 
 	<!-- Officers
 	: Excellent quality : Pistol, Sword -->
 
-	<PawnKindDef ParentName="EarlyInd_ElitePawn">
+	<!-- <PawnKindDef ParentName="EarlyInd_ElitePawn">
 		<defName>ei_Officer</defName>
 		<label>Officer</label>
 		<combatPower>70</combatPower>
@@ -167,17 +177,11 @@
 			<li>ei_Pistol</li>
 		</weaponTags>
 		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
-		<!-- <startingHediffs>
-			<li>CombatCommand</li>
-		</startingHediffs>
-			may be 1.5 only, and even so attaching the hediff manually does not seem to affect peers (??)
-		-->
-	</PawnKindDef>
+	</PawnKindDef> -->
 
-	<PawnKindDef ParentName="EarlyInd_ElitePawn">
+	<!-- <PawnKindDef ParentName="EarlyInd_ElitePawn">
 		<defName>ei_Cavalry_Dragoon</defName>
 		<label>Dragoon</label>
-		<!-- light ranged cavalry w/carbine and sword -->
 		<combatPower>70</combatPower>
 		<skills>
 			<li>
@@ -202,11 +206,6 @@
 			<li>ei_Pistol</li>
 		</weaponTags>
 		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
-		<!-- <startingHediffs>
-			<li>CombatCommand</li>
-		</startingHediffs>
-			may be 1.5 only, and even so attaching the hediff manually does not seem to affect peers (??)
-		-->
-	</PawnKindDef>
+	</PawnKindDef> -->
 
 </Defs>

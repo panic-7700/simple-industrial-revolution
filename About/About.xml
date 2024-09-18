@@ -5,7 +5,11 @@
 	<supportedVersions>
 		<li>1.5</li>
 	</supportedVersions>
-	<description>Adds Civil and Warlike early-industrial factions, which use flintlock weapons and
+	<description>Adds Revolutionary and Expansionist early-industrial factions, which use flintlock weapons and
 		wear garish uniforms.</description>
 	<packageId>panic.simpleearlyindustrialfactions</packageId>
+	<loadAfter>
+		<li>ceteam.combatextendedflintlocks</li>
+		<li>uniform.redcoat</li>
+	</loadAfter>
 </ModMetaData>
