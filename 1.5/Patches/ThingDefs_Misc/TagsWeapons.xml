@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]/weaponTags</xpath>
+				<value>
+					<li>ei_Musket</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]/weaponTags</xpath>
+				<value>
+					<li>ei_Rifle</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]/weaponTags</xpath>
+				<value>
+					<li>ei_Pistol</li>
+				</value>
+			</li>
+<!-- 
+
+			<li Class="PatchOperationFindMod">
+				<mods>
+					<li>Flintolcks Extended</li>
+				</mods>
+				<match Class="PatchOperationSequence">
+					<operations>
+
+						<li Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]/weaponTags</xpath>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]</xpath>
+								<value>
+									<li>ei_Rifle</li>
+								</value>
+							</nomatch>
+							<match Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]</xpath>
+								<value>
+								</value>
+							</match>
+						</li>
+
+						<li Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]/weaponTags</xpath>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
+								<value>
+									<li>ei_Pistol</li>
+								</value>
+							</nomatch>
+							<match Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
+								<value>
+								</value>
+							</match>
+						</li>
+
+						<li Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]/weaponTags</xpath>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]</xpath>
+								<value>
+									<li>ei_Blunderbuss</li>
+								</value>
+							</nomatch>
+							<match Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]</xpath>
+								<value>
+								</value>
+							</match>
+						</li>
+
+						<li Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="CE_Gun_HandMortar"]/weaponTags</xpath>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="CE_Gun_HandMortar"]</xpath>
+								<value>
+									<li>ei_Handmortar</li>
+								</value>
+							</nomatch>
+							<match Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="CE_Gun_HandMortar"]</xpath>
+								<value>
+								</value>
+							</match>
+						</li>
+					</operations>
+				</match>
+			</li> -->
+
+		</operations>
+	</Operation>
+</Patch>
