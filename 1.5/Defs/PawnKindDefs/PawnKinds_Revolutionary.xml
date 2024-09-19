@@ -154,9 +154,10 @@
 	<!-- Officers
 	: Excellent quality : Pistol, Sword -->
 
-	<!-- <PawnKindDef ParentName="EarlyInd_ElitePawn">
+	<PawnKindDef ParentName="EarlyInd_ElitePawn">
 		<defName>ei_Officer</defName>
 		<label>Officer</label>
+		<fixedGender>Male</fixedGender>
 		<combatPower>70</combatPower>
 		<skills>
 			<li>
@@ -170,8 +171,9 @@
 		</skills>
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
+		<apparelColor>(0.8, 0, 0.168)</apparelColor>
 		<apparelTags>
-			<li>ei_infantry_officer</li>
+			<li>ei_apparel_officer</li>
 		</apparelTags>
 		<apparelMoney>
 			<min>2000</min>
@@ -180,8 +182,12 @@
 		<weaponTags>
 			<li>ei_Pistol</li>
 		</weaponTags>
+		<weaponMoney>
+			<min>300</min>
+			<max>500</max>
+		</weaponMoney>
 		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
-	</PawnKindDef> -->
+	</PawnKindDef>
 
 	<!-- <PawnKindDef ParentName="EarlyInd_ElitePawn">
 		<defName>ei_Cavalry_Dragoon</defName>

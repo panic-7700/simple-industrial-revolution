@@ -30,6 +30,20 @@
 					</value>
 				</match>
 			</li>
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
+					<value>
+						<weaponTags/>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
+					<value>
+					</value>
+				</match>
+			</li>
 
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]/weaponTags</xpath>
@@ -43,12 +57,18 @@
 					<li>ei_Rifle</li>
 				</value>
 			</li>
-
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]/weaponTags</xpath>
+				<value>
+					<li>ei_Pistol</li>
+				</value>
+			</li>
 
 			<li Class="PatchOperationFindMod">
 				<mods><li>Redcoats!</li></mods>
 				<match Class="PatchOperationSequence">
 					<operations>
+						<!-- HAT -->
 						<li Class="PatchOperationConditional">
 							<xpath>Defs/ThingDef[defName="rc_BearskinMitreCap"]/apparel/tags</xpath>
 							<nomatch Class="PatchOperationAdd">
@@ -78,6 +98,22 @@
 							</match>
 						</li>
 						<li Class="PatchOperationConditional">
+							<xpath>Defs/ThingDef[defName="rc_BicornHat"]/apparel/tags</xpath>
+							<nomatch Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="rc_BicornHat"]/apparel</xpath>
+								<value>
+									<tags/>
+								</value>
+							</nomatch>
+							<match Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName="rc_BicornHat"]/apparel</xpath>
+								<value>
+								</value>
+							</match>
+						</li>
+
+						<!-- TORSO -->
+						<li Class="PatchOperationConditional">
 							<xpath>Defs/ThingDef[defName="rc_ShirtAndWaistcoat"]/apparel/tags</xpath>
 							<nomatch Class="PatchOperationAdd">
 								<xpath>Defs/ThingDef[defName="rc_ShirtAndWaistcoat"]/apparel</xpath>
@@ -105,6 +141,8 @@
 								</value>
 							</match>
 						</li>
+
+						<!-- WEBBING -->
 						<li Class="PatchOperationConditional">
 							<xpath>Defs/ThingDef[defName="rc_WebbingLineInfantry"]/apparel/tags</xpath>
 							<nomatch Class="PatchOperationAdd">
@@ -143,6 +181,7 @@
 							<value>
 								<li>ei_apparel_line</li>
 								<li>ei_apparel_skirmisher</li>
+								<li>ei_apparel_officer</li>
 							</value>
 						</li>
 
@@ -165,6 +204,17 @@
 								]/apparel/tags</xpath>
 							<value>
 								<li>ei_apparel_skirmisher</li>
+							</value>
+						</li>
+
+						<!-- officer -->
+						<li Class="PatchOperationAdd">
+							<xpath>Defs/ThingDef[
+									defName="rc_BicornHat" or
+									defName="rc_WebbingLightInfantry"
+								]/apparel/tags</xpath>
+							<value>
+								<li>ei_apparel_officer</li>
 							</value>
 						</li>
 					</operations>
@@ -204,21 +254,6 @@
 							</nomatch>
 							<match Class="PatchOperationAdd">
 								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]</xpath>
-								<value>
-									<li>ei_Musket</li>
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]</xpath>
 								<value>
 								</value>
 							</match>
