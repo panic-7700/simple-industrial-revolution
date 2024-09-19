@@ -15,13 +15,13 @@
         <categories>
           <li>Outlander</li>
         </categories>
-        <commonality>0.85</commonality>
+        <commonality>0.65</commonality>
       </li>
       <li>
         <categories>
           <li>Tribal</li>
         </categories>
-        <commonality>0.10</commonality>
+        <commonality>0.30</commonality>
       </li>
       <li>
         <categories>
@@ -30,20 +30,8 @@
         <commonality>0.05</commonality>
       </li>
     </backstoryFilters>
-    <!--<leaderTitle>head
-    minister</leaderTitle>-->
     <techLevel>Medieval</techLevel>
-    <!-- <apparelStuffFilter>
-      <thingDefs>
-        <li>Steel</li>
-				<li>Cloth</li>
-      </thingDefs>
-    </apparelStuffFilter> -->
     <allowedArrivalTemperatureRange>-40~40</allowedArrivalTemperatureRange>
-    <!--<colorSpectrum>
-      <li>(0.35, 0.30, 0.60)</li>
-      <li>(0.45, 0.40, 0.90)</li>
-    </colorSpectrum>-->
     <maxPawnCostPerTotalPointsCurve>
       <points>
         <li>(0,35)</li>
@@ -60,10 +48,10 @@
         <commonality>100</commonality>
         <kindDef>Combat</kindDef>
         <options>
-          <!-- <ei_Officer>1</ei_Officer> -->
-          <ei_Infantry_reserve>40</ei_Infantry_reserve>
-          <ei_Infantry_line>40</ei_Infantry_line>
-          <ei_Skirmisher>20</ei_Skirmisher>
+          <ei_exp_Officer>1</ei_exp_Officer>
+          <ei_exp_Infantry_reserve>40</ei_exp_Infantry_reserve>
+          <ei_exp_Infantry_line>40</ei_exp_Infantry_line>
+          <ei_exp_Skirmisher>20</ei_exp_Skirmisher>
         </options>
       </li>
       <!-- <li>
@@ -144,55 +132,20 @@
       <li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_Prohibited</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_MedicalOnly</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_MedicalOrSocial</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li> <!-- Never generate with any apparel precepts -->
+      <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
     </disallowedPrecepts>
   </FactionDef>
 
-  <FactionDef ParentName="ei_FactionBase">
-    <description>These people have been here a very long time. Maybe their ancestors crashed here a
-      thousand years ago. Maybe they survived some cataclysm that destroyed a technological
-      civilization here. In this time they have rebuilt their technological base, either through
-      salvage or their own effort, and now seek to expand and build their society and strengthen
-      their holdings on this planet.
-      \n While largely eschewing the development of more advanced spacer technology, the industrial
-      people are a significant threat thanks to their well armed military forces and trained,
-      organized raiding parties.</description>
-    <defName>ei_FactionRevolutionary</defName>
-    <label>revolutionary industrial alliance</label>
-    <leaderTitle>head minister</leaderTitle>
-    <apparelStuffFilter>
-      <thingDefs>
-        <li>WoolAlpaca</li>
-        <li>Leather_Pig</li>
-      </thingDefs>
-    </apparelStuffFilter>
-    <allowedArrivalTemperatureRange>-40~40</allowedArrivalTemperatureRange>
-    <colorSpectrum>
-      <li>(0.556, 0.698, 0.843)</li>
-      <li>(0.960, 0.705, 0.239)</li>
-    </colorSpectrum>
-    <factionIconPath>Icon/Icon_Industrial_Civil</factionIconPath>
-    <naturalEnemy>true</naturalEnemy>
-    <configurationListOrderPriority>90</configurationListOrderPriority>
-    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
-    <requiredMemes>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
-    </requiredMemes>
-  </FactionDef>
-
+	<!-- EXPANSIONISTS -->
   <FactionDef ParentName="ei_FactionBase">
     <defName>ei_FactionExpansionist</defName>
-    <description>These people have been here a very long time. Maybe their ancestors crashed here a
-      thousand years ago. Maybe they survived some cataclysm that destroyed a technological
-      civilization here. In this time they have rebuilt their technological base, either through
-      salvage or their own effort, and now seek to expand and build their society and strengthen
-      their holdings on this planet.
-      \n While largely eschewing the development of more advanced spacer technology, the industrial
-      people are a significant threat thanks to their well armed military forces and trained,
-      organized raiding parties.</description>
-    <leaderTitle>governor general</leaderTitle>
-    <label>expansionist industrial alliance</label>
+    <description>TODO</description>
+    <leaderTitle>lord marshal</leaderTitle>
+    <label>expansionist nation</label>
     <apparelStuffFilter>
       <thingDefs>
+				<li>Cloth</li>
         <li>WoolSheep</li>
         <li>Leather_Camel</li>
       </thingDefs>
@@ -210,5 +163,59 @@
       <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
     </requiredMemes>
+		<pawnGroupMakers Inherit="False">
+      <li>
+        <!-- Normal fights, standard mix -->
+        <commonality>100</commonality>
+        <kindDef>Combat</kindDef>
+        <options>
+          <ei_rev_Officer>1</ei_rev_Officer>
+          <ei_exp_Infantry_reserve>30</ei_exp_Infantry_reserve>
+          <ei_exp_Infantry_line>40</ei_exp_Infantry_line>
+          <ei_exp_Skirmisher>30</ei_exp_Skirmisher>
+        </options>
+      </li>
+		</pawnGroupMakers>
   </FactionDef>
+
+	<!-- REVOLUTIONARIES -->
+  <FactionDef ParentName="ei_FactionBase">
+    <description>TODO</description>
+    <defName>ei_FactionRevolutionary</defName>
+    <label>revolutionary consulate</label>
+    <leaderTitle>first consul</leaderTitle>
+    <apparelStuffFilter>
+      <thingDefs>
+				<li>Cloth</li>
+        <li>WoolAlpaca</li>
+        <li>Leather_Pig</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <allowedArrivalTemperatureRange>-40~40</allowedArrivalTemperatureRange>
+    <colorSpectrum>
+      <li>(0.556, 0.698, 0.843)</li>
+      <li>(0.960, 0.705, 0.239)</li>
+    </colorSpectrum>
+    <factionIconPath>Icon/Icon_Industrial_Civil</factionIconPath>
+    <naturalEnemy>true</naturalEnemy>
+    <configurationListOrderPriority>90</configurationListOrderPriority>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+    </requiredMemes>
+		<pawnGroupMakers Inherit="False">
+      <li>
+        <!-- Normal fights, standard mix -->
+        <commonality>100</commonality>
+        <kindDef>Combat</kindDef>
+        <options>
+          <ei_rev_Officer>1</ei_rev_Officer>
+          <ei_rev_Infantry_reserve>40</ei_rev_Infantry_reserve>
+          <ei_rev_Infantry_line>40</ei_rev_Infantry_line>
+          <ei_rev_Skirmisher>20</ei_rev_Skirmisher>
+        </options>
+      </li>
+		</pawnGroupMakers>
+  </FactionDef>
+
 </Defs>
