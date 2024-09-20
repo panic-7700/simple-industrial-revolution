@@ -3,6 +3,7 @@
 	<Operation Class="PatchOperationSequence">
 		<operations>
 
+			<!-- Color for Expansionist -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/PawnKindDef[
 					defName="ei_exp_Infantry_reserve" or
@@ -14,6 +15,7 @@
 				</value>
 			</li>
 
+			<!-- Color for Revolutionary -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/PawnKindDef[
 					defName="ei_rev_Infantry_reserve" or
@@ -26,6 +28,8 @@
 				</value>
 			</li>
 
+
+			<!-- Apparel tags -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[
 					defName="rc_BearskinMitreCap" or

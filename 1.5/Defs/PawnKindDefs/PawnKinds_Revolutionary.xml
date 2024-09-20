@@ -162,7 +162,6 @@
 	<PawnKindDef ParentName="ei_SkirmisherBase">
 		<defName>ei_exp_Skirmisher</defName>
 		<label>Rifleman</label>
-		<apparelColor>(0.164, 0.329, 0.164)</apparelColor>
 		<apparelRequired>
 			<li>rc_ColorableShirtAndWaistcoat</li>
 			<li>rc_ColorableJacket</li>

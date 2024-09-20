@@ -44,6 +44,40 @@
 				</match>
 			</li>
 
+
+			<!-- Color for Expansionist units -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/PawnKindDef[
+					defName="ei_exp_Infantry_reserve" or
+					defName="ei_exp_Infantry_line" or
+					defName="ei_exp_Officer"
+					]</xpath>
+				<value>
+					<apparelColor>(0.647, 0, 0.015)</apparelColor>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/PawnKindDef[
+					defName="ei_exp_Skirmisher"
+					]</xpath>
+				<value>
+					<apparelColor>(0.164, 0.329, 0.164)</apparelColor>
+				</value>
+			</li>
+
+			<!-- Color for Revolutionary units -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/PawnKindDef[
+					defName="ei_rev_Infantry_reserve" or
+					defName="ei_rev_Infantry_line" or
+					defName="ei_rev_Skirmisher" or
+					defName="ei_rev_Officer"
+					]</xpath>
+				<value>
+					<apparelColor>(0.556, 0.698, 0.843)</apparelColor>
+				</value>
+			</li>
+	
 		</operations>
 	</Operation>
 </Patch>
