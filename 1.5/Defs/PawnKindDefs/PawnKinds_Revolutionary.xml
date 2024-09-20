@@ -166,7 +166,7 @@
 
 	<PawnKindDef ParentName="EarlyInd_ElitePawn">
 		<defName>ei_rev_Skirmisher</defName>
-		<label>Skirmisher</label>
+		<label>Voltigeur</label>
 		<fixedGender>Male</fixedGender>
 		<combatPower>60</combatPower>
 		<skills>
@@ -238,20 +238,7 @@
 		<apparelColor>(0.8, 0, 0.168)</apparelColor>
 	</PawnKindDef>
 
-	<!-- <PawnKindDef ParentName="EarlyInd_ElitePawn">
-		<defName>ei_Cavalry_Dragoon</defName>
-		<label>Dragoon</label>
-		<combatPower>70</combatPower>
-		<skills>
-			<li>
-				<skill>Shooting</skill>
-				<range>4~12</range>
-			</li>
-			<li>
-				<skill>Melee</skill>
-				<range>6~14</range>
-			</li>
-		</skills>
+	<PawnKindDef Name="ei_cavalryBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
 		<apparelTags>
@@ -263,7 +250,37 @@
 		</apparelMoney>
 		<weaponTags>
 			<li>ei_Pistol</li>
+<!--			<li>ei_SwordCav</li>
+-->
 		</weaponTags>
-	</PawnKindDef> -->
+		<fixedGender>Male</fixedGender>
+		<combatPower>70</combatPower>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~12</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>6~14</range>
+			</li>
+		</skills>
+		<modExtensions>
+			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.CustomMounts">
+				<mountChance>100</mountChance>
+				<possibleMounts>
+					<li>
+						<key>Horse</key>
+						<value>100</value>
+					</li>
+				</possibleMounts>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
 
+	<PawnKindDef ParentName="ei_cavalryBase">
+		<defName>ei_exp_HeavyCav</defName>
+		<label>Dragoon</label>
+		<apparelColor>(0.8, 0, 0.168)</apparelColor>
+	</PawnKindDef>
 </Defs>
