@@ -19,11 +19,12 @@
 		</disallowedTraits>
 		<initialWillRange>3~7</initialWillRange>
 		<initialResistanceRange>4~14</initialResistanceRange>
-		<modExtensions>
+		<!-- giddyup compat just isn't worth it right now -->
+		<!-- <modExtensions>
 			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.CustomMounts">
 				<mountChance>0</mountChance>
 			</li>
-		</modExtensions>
+		</modExtensions> -->
 	</PawnKindDef>
 
 	<PawnKindDef Name="EarlyInd_ElitePawn" Abstract="True">
@@ -43,11 +44,6 @@
 		</disallowedTraits>
 		<initialWillRange>10~15</initialWillRange>
 		<initialResistanceRange>9~12</initialResistanceRange>
-		<modExtensions>
-			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.CustomMounts">
-				<mountChance>0</mountChance>
-			</li>
-		</modExtensions>
 	</PawnKindDef>
 
 	<!--Line Infantry
@@ -225,7 +221,9 @@
 		<apparelColor>(0.8, 0, 0.168)</apparelColor>
 	</PawnKindDef>
 
-	<PawnKindDef Name="ei_cavalryBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
+
+	<!-- giddyup compat just isn't worth it right now -->
+	<!-- <PawnKindDef Name="ei_cavalryBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
 		<combatPower>70</combatPower>
 		<fixedGender>Male</fixedGender>
 		<isFighter>true</isFighter>
@@ -269,5 +267,5 @@
 				</possibleMounts>
 			</li>
 		</modExtensions>
-	</PawnKindDef>
+	</PawnKindDef> -->
 </Defs>
