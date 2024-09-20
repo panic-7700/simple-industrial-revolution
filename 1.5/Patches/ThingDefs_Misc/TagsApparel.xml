@@ -3,39 +3,15 @@
 	<Operation Class="PatchOperationSequence">
 		<operations>
 
-			<li Class="PatchOperationConditional">
-				<xpath>Defs/PawnKindDef[
-					defName="ei_exp_Infantry_reserve" or
-					defName="ei_exp_Infantry_line" or
-					defName="ei_exp_Officer" or
-					defName="ei_rev_Infantry_reserve" or
-					defName="ei_rev_Infantry_line" or
-					defName="ei_rev_Skirmisher" or
-					defName="ei_rev_Officer"
-				]/apparelColor</xpath>
-				<nomatch Class="PatchOperationAdd">
-					<xpath>Defs/PawnKindDef[
-						defName="ei_exp_Infantry_reserve" or
-						defName="ei_exp_Infantry_line" or
-						defName="ei_exp_Officer" or
-						defName="ei_rev_Infantry_reserve" or
-						defName="ei_rev_Infantry_line" or
-						defName="ei_rev_Skirmisher" or
-						defName="ei_rev_Officer"
-					]</xpath>
-					<value>
-						<apparelColor/>
-					</value>
-				</nomatch>
-			</li>
-
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/PawnKindDef[
 					defName="ei_exp_Infantry_reserve" or
 					defName="ei_exp_Infantry_line" or
 					defName="ei_exp_Officer"
-				]/apparelColor</xpath>
-				<value>(0.8, 0, 0.168)</value>
+					]</xpath>
+				<value>
+					<apparelColor>(0.647, 0, 0.015)</apparelColor>
+				</value>
 			</li>
 
 			<li Class="PatchOperationAdd">
@@ -44,179 +20,25 @@
 					defName="ei_rev_Infantry_line" or
 					defName="ei_rev_Skirmisher" or
 					defName="ei_rev_Officer"
-				]/apparelColor</xpath>
-				<value>(0.556, 0.698, 0.843)</value>
+					]</xpath>
+				<value>
+					<apparelColor>(0.556, 0.698, 0.843)</apparelColor>
+				</value>
 			</li>
 
-			<li Class="PatchOperationFindMod">
-				<mods><li>Redcoats!</li></mods>
-				<match Class="PatchOperationSequence">
-					<operations>
-						<!-- HAT -->
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="rc_BearskinMitreCap"]/apparel/tags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_BearskinMitreCap"]/apparel</xpath>
-								<value>
-									<tags/>
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_BearskinMitreCap"]/apparel</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="rc_LightInfantryCap"]/apparel/tags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_LightInfantryCap"]/apparel</xpath>
-								<value>
-									<tags/>
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_LightInfantryCap"]/apparel</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="rc_BicornHat"]/apparel/tags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_BicornHat"]/apparel</xpath>
-								<value>
-									<tags/>
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_BicornHat"]/apparel</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<!-- TORSO -->
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="rc_ShirtAndWaistcoat"]/apparel/tags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_ShirtAndWaistcoat"]/apparel</xpath>
-								<value>
-									<tags/>
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_ShirtAndWaistcoat"]/apparel</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="rc_ColorableJacketWHITEfacings"]/apparel/tags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_ColorableJacketWHITEfacings"]/apparel</xpath>
-								<value>
-									<tags/>
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_ColorableJacketWHITEfacings"]/apparel</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<!-- WEBBING -->
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="rc_WebbingLineInfantry"]/apparel/tags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_WebbingLineInfantry"]/apparel</xpath>
-								<value>
-									<tags/>
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_WebbingLineInfantry"]/apparel</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="rc_WebbingLightInfantry"]/apparel/tags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_WebbingLightInfantry"]/apparel</xpath>
-								<value>
-									<tags/>
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="rc_WebbingLightInfantry"]/apparel</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<!-- webbing first to avoid fuckups -->
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[
-									defName="rc_WebbingLineInfantry"
-								]/apparel/tags</xpath>
-							<value>
-								<li>ei_apparel_line</li>
-							</value>
-						</li>
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[
-									defName="rc_WebbingLightInfantry"
-								]/apparel/tags</xpath>
-							<value>
-								<li>ei_apparel_skirmisher</li>
-								<li>ei_apparel_officer</li>
-							</value>
-						</li>
-
-						<!-- shared basic infantry garb -->
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[
-								defName="rc_ShirtAndWaistcoat" or
-								defName="rc_ColorableJacketWHITEfacings"
-							]/apparel/tags</xpath>
-							<value>
-								<li>ei_apparel_line</li>
-								<li>ei_apparel_skirmisher</li>
-								<li>ei_apparel_officer</li>
-							</value>
-						</li>
-
-						<!-- hats -->
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[
-									defName="rc_BearskinMitreCap"
-								]/apparel/tags</xpath>
-							<value>
-								<li>ei_apparel_line</li>
-							</value>
-						</li>
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[
-									defName="rc_LightInfantryCap"
-								]/apparel/tags</xpath>
-							<value>
-								<li>ei_apparel_skirmisher</li>
-							</value>
-						</li>
-						<li Class="PatchOperationAdd">
-							<xpath>Defs/ThingDef[
-									defName="rc_BicornHat"
-								]/apparel/tags</xpath>
-							<value>
-								<li>ei_apparel_officer</li>
-							</value>
-						</li>
-					</operations>
-				</match>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[
+					defName="rc_BearskinMitreCap" or
+					defName="rc_ShirtAndWaistcoat" or
+					defName="rc_ColorableJacketWHITEfacings"
+					]/apparel</xpath>
+				<value>
+					<tags>
+						<li>ei_apparel_line</li>
+					</tags>
+				</value>
 			</li>
-
+	
 		</operations>
 	</Operation>
 </Patch>

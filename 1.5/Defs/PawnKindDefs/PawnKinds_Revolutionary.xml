@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-
 	<PawnKindDef Name="EarlyInd_BasePawn" Abstract="True">
 		<race>Human</race>
 		<defaultFactionType>ei_FactionExpansionist</defaultFactionType>
@@ -14,6 +13,10 @@
 		<combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance>
 		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
 		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+		<apparelRequired>
+			<li>rc_WebbingLineInfantry</li>
+		</apparelRequired>
+		<apparelColor/>
 		<disallowedTraits>
 			<li>Nudist</li>
 		</disallowedTraits>
@@ -33,12 +36,17 @@
 		<combatEnhancingDrugsChance>0.45</combatEnhancingDrugsChance>
 		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
 		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+		<apparelRequired>
+			<li>rc_WebbingLightInfantry</li>
+		</apparelRequired>
+		<apparelColor/>
 		<disallowedTraits>
 			<li>Nudist</li>
 		</disallowedTraits>
 		<initialWillRange>10~15</initialWillRange>
 		<initialResistanceRange>9~12</initialResistanceRange>
 	</PawnKindDef>
+
 
 	<!--Line Infantry
 	: Low to Normal Quality : Musket -->
@@ -59,20 +67,11 @@
 		<apparelTags>
 			<li>ei_apparel_line</li>
 		</apparelTags>
-		<specificApparelRequirements>
-			<li>
-				<apparelLayer>Webbing</apparelLayer>
-				<requiredTag>ei_apparel_line</requiredTag>
-			</li>
-			<li>
-				<bodyPartGroup>UpperHead</bodyPartGroup>
-				<requiredTag>ei_apparel_line</requiredTag>
-			</li>
-			<li>
-				<bodyPartGroup>Torso</bodyPartGroup>
-				<requiredTag>ei_apparel_line</requiredTag>
-			</li>
-		</specificApparelRequirements>
+		<apparelRequired>
+			<li>rc_BearskinMitreCap</li>
+			<li>rc_ShirtAndWaistcoat</li>
+			<li>rc_ColorableJacketWHITEfacings</li>
+		</apparelRequired>
 		<apparelMoney>
 			<min>1000</min>
 			<max>1000</max>
@@ -126,6 +125,7 @@
 		</skills>
 	</PawnKindDef>
 
+
 	<!--Skirmishers
 	: High Quality : Rifle (exp) or Musket (rev) -->
 	<PawnKindDef Name="ei_SkirmisherBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
@@ -143,6 +143,9 @@
 		<apparelTags>
 			<li>ei_apparel_skirmisher</li>
 		</apparelTags>
+		<apparelRequired>
+			<li>rc_LightInfantryCap</li>
+		</apparelRequired>
 		<apparelMoney>
 			<min>1000</min>
 			<max>2000</max>
@@ -159,13 +162,25 @@
 	<PawnKindDef ParentName="ei_SkirmisherBase">
 		<defName>ei_exp_Skirmisher</defName>
 		<label>Rifleman</label>
-		<apparelColor>(0.121, 0.317, 0.137)</apparelColor>
+		<apparelColor>(0.164, 0.329, 0.164)</apparelColor>
+		<apparelRequired>
+			<li>rc_ColorableShirtAndWaistcoat</li>
+			<li>rc_ColorableJacket</li>
+		</apparelRequired>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ei_SkirmisherBase">
 		<defName>ei_rev_Skirmisher</defName>
 		<label>Voltigeur</label>
+		<apparelRequired>
+			<li>rc_ShirtAndWaistcoat</li>
+			<li>rc_ColorableJacketWHITEfacings</li>
+		</apparelRequired>
+		<weaponTags Inherit="False">
+			<li>ei_Musket</li>
+		</weaponTags>
 	</PawnKindDef>
+
 
 	<!-- Officers
 	: Excellent quality : Pistol, Sword -->
@@ -185,6 +200,10 @@
 		</skills>
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
+		<apparelRequired>
+			<li>rc_ShirtAndWaistcoat</li>
+			<li>rc_BicornHat</li>
+		</apparelRequired>
 		<apparelTags>
 			<li>ei_apparel_officer</li>
 		</apparelTags>
@@ -203,8 +222,15 @@
 
 	<PawnKindDef ParentName="ei_InfantryOfficerBase">
 		<defName>ei_exp_Officer</defName>
+		<apparelRequired>
+			<li>rc_RedCoatWings</li>
+		</apparelRequired>
 	</PawnKindDef>
+
 	<PawnKindDef ParentName="ei_InfantryOfficerBase">
 		<defName>ei_rev_Officer</defName>
+		<apparelRequired>
+			<li>rc_ColorableJacketYELLOWfacings</li>
+		</apparelRequired>
 	</PawnKindDef>
 </Defs>
