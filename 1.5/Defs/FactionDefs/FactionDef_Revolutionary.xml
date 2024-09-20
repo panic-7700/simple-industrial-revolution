@@ -7,7 +7,7 @@
     <settlementGenerationWeight>3</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
-    <canSiege>true</canSiege>
+    <canSiege>false</canSiege> <!-- not properly equipped for sieges right now -->
     <canStageAttacks>true</canStageAttacks>
     <raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
     <backstoryFilters Inherit="False">
