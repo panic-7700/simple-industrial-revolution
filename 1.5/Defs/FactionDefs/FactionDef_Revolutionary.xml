@@ -135,6 +135,12 @@
       <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li> <!-- Never generate with any apparel precepts -->
       <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
     </disallowedPrecepts>
+		<!-- never arrive on mounts if GiddyUp is installed, the api is currently fucky -->
+		<modExtensions>
+			<li Class="GiddyUp.FactionRestrictions">
+				<mountChance>0</mountChance>
+			</li>
+		</modExtensions>
   </FactionDef>
 
 	<!-- EXPANSIONISTS -->
@@ -173,20 +179,9 @@
           <ei_exp_Infantry_reserve>30</ei_exp_Infantry_reserve>
           <ei_exp_Infantry_line>40</ei_exp_Infantry_line>
           <ei_exp_Skirmisher>30</ei_exp_Skirmisher>
-          <ei_exp_HeavyCav>10</ei_exp_HeavyCav>
         </options>
       </li>
 		</pawnGroupMakers>
-		<!-- giddyup compat just isn't worth it right now -->
-		<!-- <modExtensions>
-			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.FactionRestrictions">
-				<allowedNonWildAnimals>
-					<li>Horse</li>
-				</allowedNonWildAnimals>
-				<mountChance>0</mountChance>
-				<nonWildAnimalWeight>100</nonWildAnimalWeight>
-			</li>
-		</modExtensions> -->
   </FactionDef>
 
 	<!-- REVOLUTIONARIES -->

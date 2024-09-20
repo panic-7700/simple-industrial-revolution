@@ -19,12 +19,6 @@
 		</disallowedTraits>
 		<initialWillRange>3~7</initialWillRange>
 		<initialResistanceRange>4~14</initialResistanceRange>
-		<!-- giddyup compat just isn't worth it right now -->
-		<!-- <modExtensions>
-			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.CustomMounts">
-				<mountChance>0</mountChance>
-			</li>
-		</modExtensions> -->
 	</PawnKindDef>
 
 	<PawnKindDef Name="EarlyInd_ElitePawn" Abstract="True">
@@ -95,14 +89,12 @@
 	<PawnKindDef ParentName="ei_InfantryLineBase">
 		<defName>ei_exp_Infantry_reserve</defName>
 		<label>Recruit</label>
-		<apparelColor>(0.8, 0, 0.168)</apparelColor>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ei_InfantryLineBase">
 		<defName>ei_exp_Infantry_line</defName>
 		<label>Line Infantry</label>
 		<combatPower>50</combatPower>
-		<apparelColor>(0.8, 0, 0.168)</apparelColor>
 		<itemQuality Inherit="False">Normal</itemQuality>
 		<skills Inherit="False">
 			<li>
@@ -117,7 +109,6 @@
 		<defName>ei_rev_Infantry_reserve</defName>
 		<defaultFactionType>ei_FactionRevolutionary</defaultFactionType>
 		<label>Reservist</label>
-		<apparelColor>(0.556, 0.698, 0.843)</apparelColor>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="ei_InfantryLineBase">
@@ -125,7 +116,6 @@
 		<defaultFactionType>ei_FactionRevolutionary</defaultFactionType>
 		<label>Regular Infantry</label>
 		<combatPower>50</combatPower>
-		<apparelColor>(0.556, 0.698, 0.843)</apparelColor>
 		<itemQuality Inherit="False">Normal</itemQuality>
 		<skills Inherit="False">
 			<li>
@@ -175,7 +165,6 @@
 	<PawnKindDef ParentName="ei_SkirmisherBase">
 		<defName>ei_rev_Skirmisher</defName>
 		<label>Voltigeur</label>
-		<apparelColor>(0.556, 0.698, 0.843)</apparelColor>
 	</PawnKindDef>
 
 	<!-- Officers
@@ -214,58 +203,8 @@
 
 	<PawnKindDef ParentName="ei_InfantryOfficerBase">
 		<defName>ei_exp_Officer</defName>
-		<apparelColor>(0.8, 0, 0.168)</apparelColor>
 	</PawnKindDef>
 	<PawnKindDef ParentName="ei_InfantryOfficerBase">
 		<defName>ei_rev_Officer</defName>
-		<apparelColor>(0.8, 0, 0.168)</apparelColor>
 	</PawnKindDef>
-
-
-	<!-- giddyup compat just isn't worth it right now -->
-	<!-- <PawnKindDef Name="ei_cavalryBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
-		<combatPower>70</combatPower>
-		<fixedGender>Male</fixedGender>
-		<isFighter>true</isFighter>
-		<canBeSapper>false</canBeSapper>
-		<apparelTags>
-			<li>ei_apparel_officer</li>
-		</apparelTags>
-		<apparelMoney>
-			<min>2000</min>
-			<max>3000</max>
-		</apparelMoney>
-		<weaponTags>
-			<li>ei_Pistol</li>
-			<!-- <li>ei_SwordCav</li> -->
-		</weaponTags>
-		<skills>
-			<li>
-				<skill>Shooting</skill>
-				<range>4~12</range>
-			</li>
-			<li>
-				<skill>Melee</skill>
-				<range>6~14</range>
-			</li>
-		</skills>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="ei_cavalryBase">
-		<defName>ei_exp_HeavyCav</defName>
-		<label>Dragoon</label>
-		<apparelColor>(0.8, 0, 0.168)</apparelColor>
-
-		<modExtensions>
-			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.CustomMounts" Inherit="False">
-				<mountChance>100</mountChance>
-				<possibleMounts>
-					<li>
-						<key>Horse</key>
-						<value>100</value>
-					</li>
-				</possibleMounts>
-			</li>
-		</modExtensions>
-	</PawnKindDef> -->
 </Defs>
