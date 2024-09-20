@@ -19,6 +19,11 @@
 		</disallowedTraits>
 		<initialWillRange>3~7</initialWillRange>
 		<initialResistanceRange>4~14</initialResistanceRange>
+		<modExtensions>
+			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.CustomMounts">
+				<mountChance>0</mountChance>
+			</li>
+		</modExtensions>
 	</PawnKindDef>
 
 	<PawnKindDef Name="EarlyInd_ElitePawn" Abstract="True">
@@ -38,6 +43,11 @@
 		</disallowedTraits>
 		<initialWillRange>10~15</initialWillRange>
 		<initialResistanceRange>9~12</initialResistanceRange>
+		<modExtensions>
+			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.CustomMounts">
+				<mountChance>0</mountChance>
+			</li>
+		</modExtensions>
 	</PawnKindDef>
 
 	<!--Line Infantry
@@ -132,10 +142,7 @@
 
 	<!--Skirmishers
 	: High Quality : Rifle (exp) or Musket (rev) -->
-
-	<PawnKindDef ParentName="EarlyInd_ElitePawn">
-		<defName>ei_exp_Skirmisher</defName>
-		<label>Skirmisher</label>
+	<PawnKindDef Name="ei_SkirmisherBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
 		<fixedGender>Male</fixedGender>
 		<combatPower>60</combatPower>
 		<skills>
@@ -147,7 +154,6 @@
 		</skills>
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
-		<apparelColor>(0, 0.501, 0.094)</apparelColor>
 		<apparelTags>
 			<li>ei_apparel_skirmisher</li>
 		</apparelTags>
@@ -164,35 +170,16 @@
 		</weaponMoney>
 	</PawnKindDef>
 
-	<PawnKindDef ParentName="EarlyInd_ElitePawn">
+	<PawnKindDef ParentName="ei_SkirmisherBase">
+		<defName>ei_exp_Skirmisher</defName>
+		<label>Rifleman</label>
+		<apparelColor>(0.121, 0.317, 0.137)</apparelColor>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="ei_SkirmisherBase">
 		<defName>ei_rev_Skirmisher</defName>
 		<label>Voltigeur</label>
-		<fixedGender>Male</fixedGender>
-		<combatPower>60</combatPower>
-		<skills>
-			<li>
-				<skill>Shooting</skill>
-				<range>8~13</range>
-				<!-- "employable professional" to "strong expert" -->
-			</li>
-		</skills>
-		<isFighter>true</isFighter>
-		<canBeSapper>false</canBeSapper>
 		<apparelColor>(0.556, 0.698, 0.843)</apparelColor>
-		<apparelTags>
-			<li>ei_apparel_skirmisher</li>
-		</apparelTags>
-		<apparelMoney>
-			<min>1000</min>
-			<max>2000</max>
-		</apparelMoney>
-		<weaponTags>
-			<li>ei_Musket</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>300</min>
-			<max>500</max>
-		</weaponMoney>
 	</PawnKindDef>
 
 	<!-- Officers
@@ -239,10 +226,12 @@
 	</PawnKindDef>
 
 	<PawnKindDef Name="ei_cavalryBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
+		<combatPower>70</combatPower>
+		<fixedGender>Male</fixedGender>
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
 		<apparelTags>
-			<li>ei_cavalry_dragoon</li>
+			<li>ei_apparel_officer</li>
 		</apparelTags>
 		<apparelMoney>
 			<min>2000</min>
@@ -250,11 +239,8 @@
 		</apparelMoney>
 		<weaponTags>
 			<li>ei_Pistol</li>
-<!--			<li>ei_SwordCav</li>
--->
+			<!-- <li>ei_SwordCav</li> -->
 		</weaponTags>
-		<fixedGender>Male</fixedGender>
-		<combatPower>70</combatPower>
 		<skills>
 			<li>
 				<skill>Shooting</skill>
@@ -265,8 +251,15 @@
 				<range>6~14</range>
 			</li>
 		</skills>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="ei_cavalryBase">
+		<defName>ei_exp_HeavyCav</defName>
+		<label>Dragoon</label>
+		<apparelColor>(0.8, 0, 0.168)</apparelColor>
+
 		<modExtensions>
-			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.CustomMounts">
+			<li MayRequire="Owlchemist.GiddyUp" Class="GiddyUp.CustomMounts" Inherit="False">
 				<mountChance>100</mountChance>
 				<possibleMounts>
 					<li>
@@ -276,11 +269,5 @@
 				</possibleMounts>
 			</li>
 		</modExtensions>
-	</PawnKindDef>
-
-	<PawnKindDef ParentName="ei_cavalryBase">
-		<defName>ei_exp_HeavyCav</defName>
-		<label>Dragoon</label>
-		<apparelColor>(0.8, 0, 0.168)</apparelColor>
 	</PawnKindDef>
 </Defs>
