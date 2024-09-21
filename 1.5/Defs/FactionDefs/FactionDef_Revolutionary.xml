@@ -10,6 +10,9 @@
     <canSiege>false</canSiege> <!-- not properly equipped for sieges right now -->
     <canStageAttacks>true</canStageAttacks>
     <raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+		<caravanTraderKinds Inherit="False">
+			<li>Caravan_Revolutionary_BulkGoods</li>
+		</caravanTraderKinds>
     <backstoryFilters Inherit="False">
       <li>
         <categories>
@@ -42,19 +45,6 @@
         <li>(100000, 10000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
-    <pawnGroupMakers Inherit="False">
-      <li>
-        <!-- Normal fights, standard mix -->
-        <commonality>100</commonality>
-        <kindDef>Combat</kindDef>
-        <options>
-          <ei_exp_Officer>1</ei_exp_Officer>
-          <ei_exp_Infantry_reserve>40</ei_exp_Infantry_reserve>
-          <ei_exp_Infantry_line>40</ei_exp_Infantry_line>
-          <ei_exp_Skirmisher>20</ei_exp_Skirmisher>
-        </options>
-      </li>
-    </pawnGroupMakers>
     <disallowedMemes>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
     </disallowedMemes>
@@ -101,17 +91,96 @@
       <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
     </requiredMemes>
 		<pawnGroupMakers Inherit="False">
+			<!-- Raiders -->
       <li>
-        <!-- Normal fights, standard mix -->
-        <commonality>100</commonality>
+        <!-- Normal -->
         <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
         <options>
-          <ei_rev_Officer>1</ei_rev_Officer>
+          <ei_exp_Officer>1</ei_exp_Officer>
           <ei_exp_Infantry_reserve>30</ei_exp_Infantry_reserve>
           <ei_exp_Infantry_line>40</ei_exp_Infantry_line>
           <ei_exp_Skirmisher>30</ei_exp_Skirmisher>
+          <ei_exp_Mercenary>5</ei_exp_Mercenary>
         </options>
       </li>
+      <li>
+        <!-- Skirmishers -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <options>
+          <ei_exp_Officer>1</ei_exp_Officer>
+          <ei_exp_Skirmisher>30</ei_exp_Skirmisher>
+          <ei_exp_Mercenary>10</ei_exp_Mercenary>
+        </options>
+      </li>
+
+			<!-- World groups -->
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<Villager>20</Villager>
+					<ei_exp_Mercenary>10</ei_exp_Mercenary>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<Town_Trader>1</Town_Trader>
+				</traders>
+				<carriers>
+					<Yak>8</Yak>
+					<Muffalo>3</Muffalo>
+				</carriers>
+				<guards>	
+					<Villager>4</Villager>
+					<ei_exp_Mercenary>25</ei_exp_Mercenary>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<Villager>10</Villager>
+					<ei_exp_Officer>1</ei_exp_Officer>
+					<ei_exp_Infantry_reserve>50</ei_exp_Infantry_reserve>
+          <ei_exp_Infantry_line>20</ei_exp_Infantry_line>
+          <ei_exp_Skirmisher>20</ei_exp_Skirmisher>
+				</options>
+			</li>
+
+			<!-- Outposts -->
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Miners</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<Miner>3</Miner>
+					<ei_exp_Infantry_reserve>1.5</ei_exp_Infantry_reserve>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Hunters</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<ei_exp_Skirmisher>1.5</ei_exp_Skirmisher>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Loggers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<Logger>3</Logger>
+					<ei_exp_Infantry_reserve>1.5</ei_exp_Infantry_reserve>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Farmers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<Farmer>3</Farmer>
+					<ei_exp_Infantry_reserve>1.5</ei_exp_Infantry_reserve>
+				</options>
+			</li>
+
 		</pawnGroupMakers>
   </FactionDef>
 
@@ -143,7 +212,7 @@
     </requiredMemes>
 		<pawnGroupMakers Inherit="False">
       <li>
-        <!-- Normal fights, standard mix -->
+        <!-- Normal -->
         <commonality>100</commonality>
         <kindDef>Combat</kindDef>
         <options>

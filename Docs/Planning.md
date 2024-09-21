@@ -9,11 +9,14 @@
 1. [x] Basic infantry defs
 2. [x] Basic faction def for testing
 3. [x] Colors and mats
-4. More infantry
-	- officers
-	- skirmishers
+4. [ ] More infantry
+	- [x] officers
+	- [x] skirmishers
+	- [x] mercenaries
+	- [ ] grenadiers
 5. [x] ~~Cavalry with giddy up~~
 6. [ ] Traders
+	- fix apparel and weapons for merchants and villagers
 
 
 ### 1.5 / stretch goals
@@ -53,34 +56,35 @@
 - [ ] Infantry
 	- [ ] Officer
 		- [x] bicorn hat (`redcoats!`)
-		- [ ] officer sword (pick out of pike & shot?)
+		- [ ] officer sword (rapier picked from pike & shot?)
 		- [x] flintlock pistol (`flintlocks`)
 	- [ ] Line infantry
 		- [x] flintlock musket w/bayonet (`flintlocks`)
 		- [x] colored jacket, white facings (`redcoats!`)
 		- [x] line infantry webbing (`redcoats!`)
-		- [ ] low chance to spawn drunk?
 	- [ ] Grenadier
 		- [ ] Bursting and incendiary bombs (`flintlocks`)
 		- [ ] Grenadier webbing (`redcoats!`)
 		- [ ] Elites: Old Guard
 	- [ ] Skirmisher
 		- [ ] Rifleman **unique to expansionist faction**
-			- [ ] flintlock rifle (`flintlocks`)
+			- [x] flintlock rifle (`flintlocks`)
 			- [ ] sword bayonet or knife
-			- [ ] different colored jacket, maybe forced green?, white facings (`redcoats!`)
+			- [x]] different colored jacket, maybe forced green?, white facings (`redcoats!`)
 			- [ ] Elites: Chosen Man
-		- [ ] light infantry webbing (`redcoats!`)
-		- [ ] Voltigeur **unique to revolutionary**
-			- [ ] musket
-	- [ ] mercenary
-		- [ ] **only appears with caravans**
-		- [ ] Halberd (pick out of pike & shot?)
-		- [ ] Fancy helmet
-		- [ ] Cuirass (pick Light Cuirass out of pike & shot?)
-		- [ ] Flintlock pistol or blunderbuss (`flintlocks`)
-		- [ ] engineer webbing (`redcoats!`)
+		- [x] light infantry webbing (`redcoats!`)
+		- [x] Voltigeur **unique to revolutionary**
+			- [x] musket
+	- [x] mercenary
+		- [x] **mostly appears with caravans**
+		- [x] Halberd (picked out of pike & shot)
+		- [x] Fancy ~~helmet~~ hat
+		- [x] Cuirass (Light Cuirass picked out of pike & shot?)
+		- [x] Flintlock pistol or blunderbuss (`flintlocks`)
+		- [x] Grenadier webbing (`redcoats!`)
 - Stretch goals
+	- line infantry
+		- low chance to spawn drunk? higher for reserves?
 	- officer
 		- combat command knockoff (stretch goal)
 	- drummer? (stretch goal)
