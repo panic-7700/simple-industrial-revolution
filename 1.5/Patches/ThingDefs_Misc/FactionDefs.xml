@@ -51,7 +51,7 @@
 					defName="ei_exp_Infantry_reserve" or
 					defName="ei_exp_Infantry_line" or
 					defName="ei_exp_Officer"
-					]</xpath>
+				]</xpath>
 				<value>
 					<apparelColor>(0.647, 0, 0.015)</apparelColor>
 				</value>
@@ -59,9 +59,17 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/PawnKindDef[
 					defName="ei_exp_Skirmisher"
-					]</xpath>
+				]</xpath>
 				<value>
 					<apparelColor>(0.164, 0.329, 0.164)</apparelColor>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/PawnKindDef[
+					defName="ei_exp_Mercenary"
+					]</xpath>
+				<value>
+					<apparelColor>(0.823, 0.623, 0.054)</apparelColor>
 				</value>
 			</li>
 
@@ -71,8 +79,9 @@
 					defName="ei_rev_Infantry_reserve" or
 					defName="ei_rev_Infantry_line" or
 					defName="ei_rev_Skirmisher" or
-					defName="ei_rev_Officer"
-					]</xpath>
+					defName="ei_rev_Officer" or
+					defName="ei_rev_Mercenary"
+				]</xpath>
 				<value>
 					<apparelColor>(0.556, 0.698, 0.843)</apparelColor>
 				</value>

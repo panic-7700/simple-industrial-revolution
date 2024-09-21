@@ -232,4 +232,49 @@
 			<li>rc_ColorableJacketYELLOWfacings</li>
 		</apparelRequired>
 	</PawnKindDef>
+
+	<!-- Mercenaries -->
+	<PawnKindDef Name="ei_MercenaryBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
+		<label>Mercenary</label>
+		<fixedGender>Male</fixedGender>
+		<combatPower>70</combatPower>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~12</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>6~14</range>
+			</li>
+		</skills>
+		<isFighter>true</isFighter>
+		<canBeSapper>false</canBeSapper>
+		<apparelRequired Inherit="False">
+			<li>rc_WebbingGrenadier</li>
+			<li>TC_HatCavalier</li>
+			<li>rc_ShirtAndWaistcoatYellowKerchief</li>
+		</apparelRequired>
+		<weaponTags>
+			<li>ei_Mercenary</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>300</min>
+			<max>600</max>
+		</weaponMoney>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="ei_MercenaryBase">
+		<defName>ei_exp_Mercenary</defName>
+		<apparelRequired>
+			<li>rc_HessianCoat</li>
+		</apparelRequired>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="ei_MercenaryBase">
+		<defName>ei_rev_Mercenary</defName>
+		<apparelRequired>
+			<li>TC_LightCuirass</li>
+		</apparelRequired>
+	</PawnKindDef>
 </Defs>

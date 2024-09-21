@@ -3,17 +3,27 @@
 
 ## Workflow
 
+
+### 1.0
+
 1. [x] Basic infantry defs
 2. [x] Basic faction def for testing
 3. [x] Colors and mats
 4. More infantry
-5. Cavalry with giddy up
-6. Traders
-7. Titles
-8. Trade discounts?
-9. Negative goodwill with opponent 
-10. Permits
-11. Mercenaries
+	- officers
+	- skirmishers
+5. [x] ~~Cavalry with giddy up~~
+6. [ ] Traders
+
+
+### 1.5 / stretch goals
+
+1. [ ] Titles
+	- Trade discounts?
+	- Negative goodwill from factional opponent
+	- Permits
+2. [ ] Mercenaries
+3. [ ] Combat Command knockoff
 
 
 ## Factions
@@ -35,58 +45,60 @@
 
 ## Military
 
-- Base attire
-	- Shirt and waistcoat (`redcoats!`)
-	- footwear
-		- Military boots if available	(`boots and stuff`)
-		- boots (`vanilla apparel`)
-	- backpack? (except officer)
-- Infantry
-	- Officer
-		- bicorn hat (`redcoats!`)
-		- sabre (`CE Armory` if available, sword otherwise)
-		- flintlock pistol (`flintlocks`)
+- [ ] Base attire
+	- [x] Shirt and waistcoat (`redcoats!`)
+	- [ ] footwear
+		- boots if available (`redcoats!`, planned)
+	- [ ] backpack? (except officer)
+- [ ] Infantry
+	- [ ] Officer
+		- [x] bicorn hat (`redcoats!`)
+		- [ ] officer sword (pick out of pike & shot?)
+		- [x] flintlock pistol (`flintlocks`)
+	- [ ] Line infantry
+		- [x] flintlock musket w/bayonet (`flintlocks`)
+		- [x] colored jacket, white facings (`redcoats!`)
+		- [x] line infantry webbing (`redcoats!`)
+		- [ ] low chance to spawn drunk?
+	- [ ] Grenadier
+		- [ ] Bursting and incendiary bombs (`flintlocks`)
+		- [ ] Grenadier webbing (`redcoats!`)
+		- [ ] Elites: Old Guard
+	- [ ] Skirmisher
+		- [ ] Rifleman **unique to expansionist faction**
+			- [ ] flintlock rifle (`flintlocks`)
+			- [ ] sword bayonet or knife
+			- [ ] different colored jacket, maybe forced green?, white facings (`redcoats!`)
+			- [ ] Elites: Chosen Man
+		- [ ] light infantry webbing (`redcoats!`)
+		- [ ] Voltigeur **unique to revolutionary**
+			- [ ] musket
+	- [ ] mercenary
+		- [ ] **only appears with caravans**
+		- [ ] Halberd (pick out of pike & shot?)
+		- [ ] Fancy helmet
+		- [ ] Cuirass (pick Light Cuirass out of pike & shot?)
+		- [ ] Flintlock pistol or blunderbuss (`flintlocks`)
+		- [ ] engineer webbing (`redcoats!`)
+- Stretch goals
+	- officer
 		- combat command knockoff (stretch goal)
-	- Line infantry
-		- flintlock musket w/bayonet (`flintlocks`)
-		- colored jacket, white facings (`redcoats!`)
-		- line infantry webbing (`redcoats!`)
-		- low chance to spawn drunk?
-		- Grenadier
-			- **unique to revolutionary faction**
-			- Bursting and incendiary bombs (`flintlocks`)
-			- Grenadier webbing (`redcoats!`)
-			- Elites: Old Guard
-	- Rifleman
-		- **unique to expansionist faction**
-		- flintlock rifle (`flintlocks`)
-		- sword bayonet (?, knife otherwise
-		- different colored jacket, maybe forced green?, white facings (`redcoats!`)
-		- light infantry webbing (`redcoats!`)
-		- Elites: Chosen Man
-- Cavalry
-	- dragoon
-		- light ranged cavalry w/carbine and sword. originally fought on foot. could still exist if giddyup doesn't work out.
-		- fancy helmet
-		- sabre
-		- flintlock pistol, carbine musket, or blunderbuss (`flintlocks`)
-		- cuirass
-		- light infantry webbing (`redcoats!`)
-
-	- lancer
-		- Fancy helm
-		- lance
-		- cuirass
-		- light infantry webbing (`redcoats!`)
-- mercenary
-	- **only appears with caravans**
-	- Halberd
-	- Fancy helmet
-	- Cuirass
-	- Flintlock pistol or blunderbuss (`flintlocks`)
-	- engineer webbing (`redcoats!`)
-- drummer? (stretch goal)
-	- boosts or adds combat command knockoff somehow
+	- drummer? (stretch goal)
+		- boosts or adds combat command knockoff somehow
+	- Cavalry
+		- on hold pending better understanding of GiddyUp configs
+		- dragoon
+			- light ranged cavalry w/carbine and sword. originally fought on foot. could still exist if giddyup doesn't work out.
+			- fancy helmet
+			- sabre
+			- flintlock pistol, carbine musket, or blunderbuss (`flintlocks`)
+			- cuirass
+			- light infantry webbing (`redcoats!`)
+		- lancer
+			- Fancy helm
+			- lance
+			- cuirass
+			- light infantry webbing (`redcoats!`)
 
 
 ## Civilians
@@ -125,10 +137,11 @@
 
 ## choose weapon/apparel dependencies
 
-- flintlocks expanded
-- redcoats
+- dependencies
+	- flintlocks expanded
+	- redcoats
 - supported extras
-	- CE
+	- CE (for now)
 	- Ideo
 	- Royalty
 	- ??

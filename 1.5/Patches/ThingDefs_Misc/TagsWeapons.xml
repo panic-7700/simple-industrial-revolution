@@ -2,60 +2,57 @@
 <Patch>
 	<Operation Class="PatchOperationSequence">
 		<operations>
+
+			<!-- CE Musket -->
 			<li Class="PatchOperationConditional">
 				<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]/weaponTags</xpath>
 				<nomatch Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]</xpath>
-					<value>
-						<weaponTags/>
-					</value>
+					<value><weaponTags/></value>
 				</nomatch>
 				<match Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]</xpath>
-					<value>
-					</value>
+					<value></value>
 				</match>
 			</li>
-			<li Class="PatchOperationConditional">
-				<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]/weaponTags</xpath>
-				<nomatch Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]</xpath>
-					<value>
-						<weaponTags/>
-					</value>
-				</nomatch>
-				<match Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]</xpath>
-					<value>
-					</value>
-				</match>
-			</li>
-			<li Class="PatchOperationConditional">
-				<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]/weaponTags</xpath>
-				<nomatch Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
-					<value>
-						<weaponTags/>
-					</value>
-				</nomatch>
-				<match Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
-					<value>
-					</value>
-				</match>
-			</li>
-
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockMusket"]/weaponTags</xpath>
 				<value>
 					<li>ei_Musket</li>
 				</value>
 			</li>
+
+			<!-- CE Rifle -->
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]</xpath>
+					<value><weaponTags/></value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]</xpath>
+					<value></value>
+				</match>
+			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]/weaponTags</xpath>
 				<value>
 					<li>ei_Rifle</li>
+					<li>ei_Mercenary</li>
 				</value>
+			</li>
+
+			<!-- CE Pistol -->
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
+					<value><weaponTags/></value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
+					<value></value>
+				</match>
 			</li>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]/weaponTags</xpath>
@@ -63,77 +60,36 @@
 					<li>ei_Pistol</li>
 				</value>
 			</li>
-<!-- 
 
-			<li Class="PatchOperationFindMod">
-				<mods>
-					<li>Flintolcks Extended</li>
-				</mods>
-				<match Class="PatchOperationSequence">
-					<operations>
-
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]</xpath>
-								<value>
-									<li>ei_Rifle</li>
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockRifle"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
-								<value>
-									<li>ei_Pistol</li>
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]</xpath>
-								<value>
-									<li>ei_Blunderbuss</li>
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[defName="CE_Gun_HandMortar"]/weaponTags</xpath>
-							<nomatch Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="CE_Gun_HandMortar"]</xpath>
-								<value>
-									<li>ei_Handmortar</li>
-								</value>
-							</nomatch>
-							<match Class="PatchOperationAdd">
-								<xpath>Defs/ThingDef[defName="CE_Gun_HandMortar"]</xpath>
-								<value>
-								</value>
-							</match>
-						</li>
-					</operations>
+			<!-- CE Blunderbuss -->
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]/weaponTags</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]</xpath>
+					<value><weaponTags/></value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]</xpath>
+					<value>
+					</value>
 				</match>
-			</li> -->
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockBlunderbuss"]/weaponTags</xpath>
+				<value>
+					<li>ei_Blunderbuss</li>
+					<li>ei_Mercenary</li>
+				</value>
+			</li>
+
+
+			<!-- TC Halberd (included in package) -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="TC_Halberd"]/weaponTags</xpath>
+				<value>
+					<li>ei_Mercenary</li>
+				</value>
+			</li>
 
 		</operations>
 	</Operation>

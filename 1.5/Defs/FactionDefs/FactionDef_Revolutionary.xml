@@ -54,76 +54,6 @@
           <ei_exp_Skirmisher>20</ei_exp_Skirmisher>
         </options>
       </li>
-      <!-- <li>
-        <kindDef>Peaceful</kindDef>
-        <options>
-          <Villager>20</Villager>
-          <TI_Irregular_Trooper>10</TI_Irregular_Trooper>
-          <TI_Irregular_Rifle>10</TI_Irregular_Rifle>
-        </options>
-      </li> -->
-      <!-- <li>
-        <kindDef>Trader</kindDef>
-        <traders>
-          <Town_Trader>1</Town_Trader>
-        </traders>
-        <carriers>
-          <Muffalo>6</Muffalo>
-          <Dromedary>5</Dromedary>
-          <Alpaca>2</Alpaca>
-          <Elephant>1</Elephant>
-        </carriers>
-        <guards>
-          <Villager>3</Villager>
-          <TI_Regular_AR_545>1.5</TI_Regular_AR_545>
-          <TI_Regular_AR_762>7</TI_Regular_AR_762>
-          <TI_Irregular_Rifle>10</TI_Irregular_Rifle>
-          <TI_Irregular_Trooper>10</TI_Irregular_Trooper>
-        </guards>
-      </li> -->
-      <!-- <li>
-        <kindDef>Settlement</kindDef>
-        <options>
-          <Villager>10</Villager>
-          <TI_Irregular_Trooper>25</TI_Irregular_Trooper>
-          <TI_Elite_AM_145>1.5</TI_Elite_AM_145>
-          <TI_Elite_AR_545>5</TI_Elite_AR_545>
-          <TI_Elite_AR_762>5</TI_Elite_AR_762>
-          <TI_Elite_BR_762>5</TI_Elite_BR_762>
-          <Town_Councilman>1</Town_Councilman>
-        </options>
-      </li> -->
-      <!-- <li MayRequire="Ludeon.RimWorld.Ideology">
-        <kindDef>Miners</kindDef>
-        <commonality>1</commonality>
-        <options>
-          <Miner>3</Miner>
-          <TI_Outrider_Rifle>1.5</TI_Outrider_Rifle>
-        </options>
-      </li> -->
-      <!-- <li MayRequire="Ludeon.RimWorld.Ideology">
-        <kindDef>Hunters</kindDef>
-        <commonality>1</commonality>
-        <options>
-          <TI_Outrider_Rifle>1.5</TI_Outrider_Rifle>
-        </options>
-      </li> -->
-      <!-- <li MayRequire="Ludeon.RimWorld.Ideology">
-        <kindDef>Loggers</kindDef>
-        <commonality>1</commonality>
-        <options>
-          <Logger>3</Logger>
-          <TI_Outrider_Rifle>1.5</TI_Outrider_Rifle>
-        </options>
-      </li> -->
-      <!-- <li MayRequire="Ludeon.RimWorld.Ideology">
-        <kindDef>Farmers</kindDef>
-        <commonality>1</commonality>
-        <options>
-          <Farmer>3</Farmer>
-          <TI_Outrider_Rifle>1.5</TI_Outrider_Rifle>
-        </options>
-      </li> -->
     </pawnGroupMakers>
     <disallowedMemes>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
@@ -151,6 +81,7 @@
     <label>expansionist nation</label>
     <apparelStuffFilter>
       <thingDefs>
+				<li>Steel</li>
 				<li>Cloth</li>
         <li>WoolSheep</li>
         <li>Leather_Camel</li>
@@ -161,7 +92,7 @@
       <li>(0.8, 0, 0.168)</li>
       <li>(0.494, 0.482, 0.556)</li>
     </colorSpectrum>
-    <factionIconPath>Icon/Icon_Industrial_Warlike</factionIconPath>
+    <!-- <factionIconPath>Icon/Icon_Expansionist</factionIconPath> -->
     <naturalEnemy>true</naturalEnemy>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>91</configurationListOrderPriority>
@@ -192,6 +123,7 @@
     <leaderTitle>first consul</leaderTitle>
     <apparelStuffFilter>
       <thingDefs>
+				<li>Steel</li>
 				<li>Cloth</li>
         <li>WoolAlpaca</li>
         <li>Leather_Pig</li>
@@ -202,7 +134,7 @@
       <li>(0.556, 0.698, 0.843)</li>
       <li>(0.960, 0.705, 0.239)</li>
     </colorSpectrum>
-    <factionIconPath>Icon/Icon_Industrial_Civil</factionIconPath>
+    <!-- <factionIconPath>Icon/Icon_Revolutionary</factionIconPath> -->
     <naturalEnemy>true</naturalEnemy>
     <configurationListOrderPriority>90</configurationListOrderPriority>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>

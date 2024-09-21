@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="ApparelMakeableBase" Name="TC_Hat">
+		<defName>TC_Hat</defName>
+		<label>hat</label>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/Headgear/tm_Hat/tm_Hat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<possessionCount>1</possessionCount>
+		<recipeMaker>
+			<researchPrerequisite>ComplexClothing</researchPrerequisite>
+		</recipeMaker>
+		<smeltable>false</smeltable>
+		<techLevel>Medieval</techLevel>
+		<costStuffCount>25</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>3500</WorkToMake>
+			<Mass>0.3</Mass>
+			<StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.4</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1</EquipDelay>
+		</statBases>
+		<thingCategories>
+			<li>Headgear</li>
+		</thingCategories>
+		<apparel>
+			<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Apparel/Headgear/tm_Hat/tm_Hat</wornGraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>Medieval</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<tradeTags>
+			<li>Clothing</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="TC_Hat">
+		<defName>TC_HatCavalier</defName>
+		<label>cavalier hat</label>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/Headgear/tm_CavalierHat/tm_CavalierHat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>30</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+    <equippedStatOffsets>
+      <SocialImpact>0.2</SocialImpact>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.2</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>4700</WorkToMake>
+		</statBases>
+		<apparel>
+			<wornGraphicPath>Apparel/Headgear/tm_CavalierHat/tm_CavalierHat</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<tags>
+				<li>Medieval</li>
+        <li MayRequire="Ludeon.RimWorld.Royalty">Royal</li>
+        <li MayRequire="Ludeon.RimWorld.Royalty">RoyalTier2</li>
+        <li MayRequire="Ludeon.RimWorld.Royalty">RoyalTier5</li>
+        <li MayRequire="Ludeon.RimWorld.Royalty">RoyalTier6</li>
+        <li MayRequire="Ludeon.RimWorld.Royalty">RoyalTier7</li>
+			</tags>
+			<defaultOutfitTags Inherit="False">
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	</ThingDef>	
+
+</Defs>

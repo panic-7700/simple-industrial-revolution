@@ -3,32 +3,6 @@
 	<Operation Class="PatchOperationSequence">
 		<operations>
 
-			<!-- Color for Expansionist -->
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/PawnKindDef[
-					defName="ei_exp_Infantry_reserve" or
-					defName="ei_exp_Infantry_line" or
-					defName="ei_exp_Officer"
-					]</xpath>
-				<value>
-					<apparelColor>(0.647, 0, 0.015)</apparelColor>
-				</value>
-			</li>
-
-			<!-- Color for Revolutionary -->
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/PawnKindDef[
-					defName="ei_rev_Infantry_reserve" or
-					defName="ei_rev_Infantry_line" or
-					defName="ei_rev_Skirmisher" or
-					defName="ei_rev_Officer"
-					]</xpath>
-				<value>
-					<apparelColor>(0.556, 0.698, 0.843)</apparelColor>
-				</value>
-			</li>
-
-
 			<!-- Apparel tags -->
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[
