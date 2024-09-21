@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<PawnKindDef Name="EarlyInd_BasePawn" Abstract="True">
+	<PawnKindDef Name="EarlyInd_BaseSoldier" Abstract="True">
 		<race>Human</race>
 		<defaultFactionType>ei_FactionExpansionist</defaultFactionType>
 		<chemicalAddictionChance>0.1</chemicalAddictionChance>
@@ -22,9 +22,10 @@
 		</disallowedTraits>
 		<initialWillRange>3~7</initialWillRange>
 		<initialResistanceRange>4~14</initialResistanceRange>
+		<useFactionXenotypes>true</useFactionXenotypes>
 	</PawnKindDef>
 
-	<PawnKindDef Name="EarlyInd_ElitePawn" Abstract="True">
+	<PawnKindDef Name="EarlyInd_EliteSoldier" Abstract="True">
 		<race>Human</race>
 		<defaultFactionType>ei_FactionExpansionist</defaultFactionType>
 		<chemicalAddictionChance>0</chemicalAddictionChance>
@@ -45,13 +46,14 @@
 		</disallowedTraits>
 		<initialWillRange>10~15</initialWillRange>
 		<initialResistanceRange>9~12</initialResistanceRange>
+		<useFactionXenotypes>true</useFactionXenotypes>
 	</PawnKindDef>
 
 
 	<!--Line Infantry
 	: Low to Normal Quality : Musket -->
 
-	<PawnKindDef Name="ei_InfantryLineBase" ParentName="EarlyInd_BasePawn" Abstract="True">
+	<PawnKindDef Name="ei_InfantryLineBase" ParentName="EarlyInd_BaseSoldier" Abstract="True">
 		<combatPower>40</combatPower>
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
@@ -128,7 +130,7 @@
 
 	<!--Skirmishers
 	: High Quality : Rifle (exp) or Musket (rev) -->
-	<PawnKindDef Name="ei_SkirmisherBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
+	<PawnKindDef Name="ei_SkirmisherBase" ParentName="EarlyInd_EliteSoldier" Abstract="True">
 		<fixedGender>Male</fixedGender>
 		<combatPower>60</combatPower>
 		<skills>
@@ -183,7 +185,7 @@
 
 	<!-- Officers
 	: Excellent quality : Pistol, Sword -->
-	<PawnKindDef Name="ei_InfantryOfficerBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
+	<PawnKindDef Name="ei_InfantryOfficerBase" ParentName="EarlyInd_EliteSoldier" Abstract="True">
 		<label>Officer</label>
 		<fixedGender>Male</fixedGender>
 		<combatPower>70</combatPower>
@@ -234,7 +236,7 @@
 	</PawnKindDef>
 
 	<!-- Mercenaries -->
-	<PawnKindDef Name="ei_MercenaryBase" ParentName="EarlyInd_ElitePawn" Abstract="True">
+	<PawnKindDef Name="ei_MercenaryBase" ParentName="EarlyInd_EliteSoldier" Abstract="True">
 		<label>Mercenary</label>
 		<fixedGender>Male</fixedGender>
 		<combatPower>70</combatPower>
