@@ -10,10 +10,20 @@
 				<match Class="PatchOperationSequence">
 					<operations>
 
-						<li Class="PatchOperationAdd">
+						<li Class="PatchOperationReplace">
 							<xpath>Defs/ThingDef[defName="TC_LightCuirass"]/statBases</xpath>
 							<value>
-								<Bulk>20</Bulk>
+								<statBases>
+									<MaxHitPoints>200</MaxHitPoints>
+									<WorkToMake>15000</WorkToMake>
+									<Mass>6</Mass>
+									<Bulk>20</Bulk>
+									<WornBulk>3</WornBulk>
+									<StuffEffectMultiplierArmor>3</StuffEffectMultiplierArmor>
+									<StuffEffectMultiplierInsulation_Cold>0.12</StuffEffectMultiplierInsulation_Cold>
+									<StuffEffectMultiplierInsulation_Heat>0.12</StuffEffectMultiplierInsulation_Heat>
+									<EquipDelay>4</EquipDelay>
+								</statBases>
 							</value>
 						</li>
 						<li Class="PatchOperationReplace">
