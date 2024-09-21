@@ -21,27 +21,15 @@
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>ComponentIndustrial</thingDef>
-				<countRange>30~40</countRange>
+				<countRange>10~30</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Steel</thingDef>
 				<countRange>500~1200</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
-				<thingDef>Plasteel</thingDef>
-				<countRange>-50~100</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Uranium</thingDef>
-				<countRange>-50~100</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
 				<thingDef>Gold</thingDef>
 				<countRange>-20~50</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Cloth</thingDef>
-				<countRange>250~400</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>DevilstrandCloth</thingDef>
@@ -120,12 +108,7 @@
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>MusicalInstrument</tag>
 			</li>
-			<li Class="StockGenerator_BuyTradeTag">
-				<tag>Art</tag>
-			</li>
-			<li Class="StockGenerator_BuyTradeTag">
-				<tag>HiTechArmor</tag>
-			</li>
+
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>MusicalInstrument</tag>
 			</li>

@@ -69,56 +69,56 @@
   </FactionDef>
 
 	<!-- EXPANSIONISTS -->
-  <FactionDef ParentName="ei_FactionBase">
-    <defName>ei_FactionExpansionist</defName>
-    <description>TODO</description>
-    <leaderTitle>lord marshal</leaderTitle>
-    <label>expansionist union</label>
-    <apparelStuffFilter>
-      <thingDefs>
-				<li>Steel</li>
-				<li>Cloth</li>
-        <li>WoolSheep</li>
-        <li>Leather_Camel</li>
-      </thingDefs>
-    </apparelStuffFilter>
-    <allowedArrivalTemperatureRange>-40~40</allowedArrivalTemperatureRange>
-    <colorSpectrum>
-      <li>(0.8, 0, 0.168)</li>
-      <li>(0.494, 0.482, 0.556)</li>
-    </colorSpectrum>
-    <!-- <factionIconPath>Icon/Icon_Expansionist</factionIconPath> -->
-    <naturalEnemy>true</naturalEnemy>
-    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
-    <configurationListOrderPriority>91</configurationListOrderPriority>
-    <requiredMemes>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
-    </requiredMemes>
+	<FactionDef ParentName="ei_FactionBase">
+    	<defName>ei_FactionExpansionist</defName>
+	    <description>TODO</description>
+	    <leaderTitle>lord marshal</leaderTitle>
+	    <label>expansionist union</label>
+			<apparelStuffFilter>
+				<thingDefs>
+					<li>Steel</li>
+					<li>Cloth</li>
+					<li>WoolSheep</li>
+					<li>Leather_Camel</li>
+				</thingDefs>
+			</apparelStuffFilter>
+			<allowedArrivalTemperatureRange>-40~40</allowedArrivalTemperatureRange>
+		<colorSpectrum>
+			<li>(0.8, 0, 0.168)</li>
+			<li>(0.494, 0.482, 0.556)</li>
+		</colorSpectrum>
+		<!-- <factionIconPath>Icon/Icon_Expansionist</factionIconPath> -->
+		<naturalEnemy>true</naturalEnemy>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>91</configurationListOrderPriority>
+		<requiredMemes>
+			<liMayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+		</requiredMemes>
 		<pawnGroupMakers Inherit="False">
 			<!-- Raiders -->
-      <li>
-        <!-- Normal -->
-        <kindDef>Combat</kindDef>
-        <commonality>100</commonality>
-        <options>
-          <ei_exp_Officer>1</ei_exp_Officer>
-          <ei_exp_Infantry_reserve>30</ei_exp_Infantry_reserve>
-          <ei_exp_Infantry_line>40</ei_exp_Infantry_line>
-          <ei_exp_Skirmisher>30</ei_exp_Skirmisher>
-          <ei_exp_Mercenary>5</ei_exp_Mercenary>
-        </options>
-      </li>
-      <li>
-        <!-- Skirmishers -->
-        <kindDef>Combat</kindDef>
-        <commonality>30</commonality>
-        <options>
-          <ei_exp_Officer>1</ei_exp_Officer>
-          <ei_exp_Skirmisher>30</ei_exp_Skirmisher>
-          <ei_exp_Mercenary>10</ei_exp_Mercenary>
-        </options>
-      </li>
+			<li>
+				<!-- Normal -->
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<ei_exp_Officer>1</ei_exp_Officer>
+					<ei_exp_Infantry_reserve>30</ei_exp_Infantry_reserve>
+					<ei_exp_Infantry_line>40</ei_exp_Infantry_line>
+					<ei_exp_Skirmisher>30</ei_exp_Skirmisher>
+					<ei_exp_Mercenary>5</ei_exp_Mercenary>
+				</options>
+			</li>
+			<li>
+			<!-- Skirmishers -->
+				<kindDef>Combat</kindDef>
+				<commonality>30</commonality>
+				<options>
+					<ei_exp_Officer>1</ei_exp_Officer>
+					<ei_exp_Skirmisher>30</ei_exp_Skirmisher>
+					<ei_exp_Mercenary>10</ei_exp_Mercenary>
+				</options>
+			</li>
 
 			<!-- World groups -->
 			<li>
@@ -148,8 +148,8 @@
 					<Villager>10</Villager>
 					<ei_exp_Officer>1</ei_exp_Officer>
 					<ei_exp_Infantry_reserve>50</ei_exp_Infantry_reserve>
-          <ei_exp_Infantry_line>20</ei_exp_Infantry_line>
-          <ei_exp_Skirmisher>20</ei_exp_Skirmisher>
+					<ei_exp_Infantry_line>20</ei_exp_Infantry_line>
+					<ei_exp_Skirmisher>20</ei_exp_Skirmisher>
 				</options>
 			</li>
 
@@ -187,7 +187,7 @@
 			</li>
 
 		</pawnGroupMakers>
-  </FactionDef>
+	</FactionDef>
 
 	<!-- REVOLUTIONARIES -->
   <FactionDef ParentName="ei_FactionBase">
