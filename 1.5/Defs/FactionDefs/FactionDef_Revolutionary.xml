@@ -92,7 +92,7 @@
 		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
 		<configurationListOrderPriority>91</configurationListOrderPriority>
 		<requiredMemes>
-			<liMayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
 		</requiredMemes>
 		<pawnGroupMakers Inherit="False">
