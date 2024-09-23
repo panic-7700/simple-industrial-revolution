@@ -54,7 +54,7 @@
 	: Low to Normal Quality : Musket -->
 
 	<PawnKindDef Name="ei_InfantryLineBase" ParentName="EarlyInd_BaseSoldier" Abstract="True">
-		<combatPower>40</combatPower>
+		<combatPower>55</combatPower>
 		<isFighter>true</isFighter>
 		<canBeSapper>false</canBeSapper>
 		<fixedGender>Male</fixedGender>
@@ -95,7 +95,7 @@
 	<PawnKindDef ParentName="ei_InfantryLineBase">
 		<defName>ei_exp_Infantry_line</defName>
 		<label>Line Infantry</label>
-		<combatPower>50</combatPower>
+		<combatPower>60</combatPower>
 		<itemQuality Inherit="False">Normal</itemQuality>
 		<skills Inherit="False">
 			<li>
@@ -116,7 +116,7 @@
 		<defName>ei_rev_Infantry_line</defName>
 		<defaultFactionType>ei_FactionRevolutionary</defaultFactionType>
 		<label>Regular Infantry</label>
-		<combatPower>50</combatPower>
+		<combatPower>60</combatPower>
 		<itemQuality Inherit="False">Normal</itemQuality>
 		<skills Inherit="False">
 			<li>
@@ -132,7 +132,6 @@
 	: High Quality : Rifle (exp) or Musket (rev) -->
 	<PawnKindDef Name="ei_SkirmisherBase" ParentName="EarlyInd_EliteSoldier" Abstract="True">
 		<fixedGender>Male</fixedGender>
-		<combatPower>60</combatPower>
 		<skills>
 			<li>
 				<skill>Shooting</skill>
@@ -164,6 +163,7 @@
 	<PawnKindDef ParentName="ei_SkirmisherBase">
 		<defName>ei_exp_Skirmisher</defName>
 		<label>Rifleman</label>
+		<combatPower>80</combatPower>
 		<apparelRequired>
 			<li>rc_ColorableShirtAndWaistcoat</li>
 			<li>rc_ColorableJacket</li>
@@ -173,6 +173,7 @@
 	<PawnKindDef ParentName="ei_SkirmisherBase">
 		<defName>ei_rev_Skirmisher</defName>
 		<label>Voltigeur</label>
+		<combatPower>70</combatPower> <!-- higher skill than Line, but worse equipment than Rifleman -->
 		<apparelRequired>
 			<li>rc_ShirtAndWaistcoat</li>
 			<li>rc_ColorableJacketWHITEfacings</li>
@@ -188,7 +189,7 @@
 	<PawnKindDef Name="ei_InfantryOfficerBase" ParentName="EarlyInd_EliteSoldier" Abstract="True">
 		<label>Officer</label>
 		<fixedGender>Male</fixedGender>
-		<combatPower>70</combatPower>
+		<combatPower>60</combatPower>
 		<skills>
 			<li>
 				<skill>Shooting</skill>
@@ -239,7 +240,7 @@
 	<PawnKindDef Name="ei_MercenaryBase" ParentName="EarlyInd_EliteSoldier" Abstract="True">
 		<label>Mercenary</label>
 		<fixedGender>Male</fixedGender>
-		<combatPower>70</combatPower>
+		<combatPower>85</combatPower>
 		<skills>
 			<li>
 				<skill>Shooting</skill>
