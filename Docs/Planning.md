@@ -19,6 +19,15 @@
 	- fix apparel and weapons for merchants and villagers
 
 
+#### Testing
+
+- [ ] without CE
+- [ ] with CE
+- [ ] without any DLC
+- [ ] without dependencies
+- [ ] at various difficulty settings
+
+
 ### 1.5 / stretch goals
 
 1. [ ] Titles
@@ -173,7 +182,7 @@
 [14:10]shit got me lookin like: Maybe apply a hediff to all other pawns if they spawn in the raid somehow?
 [14:10]panic: or that
 [14:10]panic: i like that actually
-[14:10]panic: neutralize it or malus it if they are killed
+[14:10]panic: neutralize it or malus if they are killed
 [14:10]shit got me lookin like: Yeah because you never want proximity shit
 [14:10]panic: right
 [14:10]panic: i would want it to apply to the whole raid anyway
