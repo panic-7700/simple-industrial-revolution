@@ -157,6 +157,30 @@
 	- martini-henry
 	- needle gun
 - combat command knockoff
-	- buff to nearby soldiers
+	- buff to raid soldiers
 	- reduce suppression chance (CE)
 	- increase fire rate
+
+### combat command notes
+
+[14:09]shit got me lookin like: Oh god....proximity hediff....
+[14:09]panic: probably super expensive so yeah idk
+[14:09]panic: it's a wishlist item
+[14:09]shit got me lookin like: That will not run well
+[14:10]panic: lol
+[14:10]panic: yeah
+[14:10]panic: maybe just a debuff when the officer is killed
+[14:10]shit got me lookin like: Maybe apply a hediff to all other pawns if they spawn in the raid somehow?
+[14:10]panic: or that
+[14:10]panic: i like that actually
+[14:10]panic: neutralize it or malus it if they are killed
+[14:10]shit got me lookin like: Yeah because you never want proximity shit
+[14:10]panic: right
+[14:10]panic: i would want it to apply to the whole raid anyway
+[14:10]shit got me lookin like: And having them break when the officer is killed so they can route
+[14:10]panic: proximity is just where i went thinking about combat command
+[14:10]panic: yep
+[14:10]panic: exactly
+[14:11]panic: or some percentage of them get flee
+[14:11]shit got me lookin like: Real
+[14:11]panic: and others just reduced effectiveness

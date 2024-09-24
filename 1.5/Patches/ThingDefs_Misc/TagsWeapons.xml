@@ -58,6 +58,7 @@
 				<xpath>Defs/ThingDef[defName="CE_Gun_FlintlockPistol"]/weaponTags</xpath>
 				<value>
 					<li>ei_Pistol</li>
+					<li>ei_OfficerGear</li>
 				</value>
 			</li>
 
@@ -88,6 +89,14 @@
 				<xpath>Defs/ThingDef[defName="TC_Halberd"]/weaponTags</xpath>
 				<value>
 					<li>ei_Mercenary</li>
+				</value>
+			</li>
+
+			<!-- TC Rapier (included in package) -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="TC_Rapier"]/weaponTags</xpath>
+				<value>
+					<li>ei_OfficerGear</li>
 				</value>
 			</li>
 

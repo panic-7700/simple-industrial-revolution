@@ -16,13 +16,16 @@
 		<apparelRequired>
 			<li>rc_WebbingLineInfantry</li>
 		</apparelRequired>
-		<apparelColor/>
+		<apparelColor />
 		<disallowedTraits>
 			<li>Nudist</li>
 		</disallowedTraits>
 		<initialWillRange>3~7</initialWillRange>
 		<initialResistanceRange>4~14</initialResistanceRange>
 		<useFactionXenotypes>true</useFactionXenotypes>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
 	</PawnKindDef>
 
 	<PawnKindDef Name="EarlyInd_EliteSoldier" Abstract="True">
@@ -40,17 +43,21 @@
 		<apparelRequired>
 			<li>rc_WebbingLightInfantry</li>
 		</apparelRequired>
-		<apparelColor/>
+		<apparelColor />
 		<disallowedTraits>
 			<li>Nudist</li>
 		</disallowedTraits>
 		<initialWillRange>10~15</initialWillRange>
 		<initialResistanceRange>9~12</initialResistanceRange>
 		<useFactionXenotypes>true</useFactionXenotypes>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+
 	</PawnKindDef>
 
 
-	<!--Line Infantry
+	<!-- Line Infantry
 	: Low to Normal Quality : Musket -->
 
 	<PawnKindDef Name="ei_InfantryLineBase" ParentName="EarlyInd_BaseSoldier" Abstract="True">
@@ -186,11 +193,17 @@
 
 	<!-- Officers
 	: Excellent quality : Pistol, Sword -->
+	<!--  -->
 	<PawnKindDef Name="ei_InfantryOfficerBase" ParentName="EarlyInd_EliteSoldier" Abstract="True">
 		<label>Officer</label>
 		<fixedGender>Male</fixedGender>
 		<combatPower>60</combatPower>
 		<skills>
+			<!-- this might be a little overcooked but hey let's get some flavor in here -->
+			<li>
+				<skill>Social</skill>
+				<range>5~10</range>
+			</li>
 			<li>
 				<skill>Shooting</skill>
 				<range>4~12</range>
@@ -198,6 +211,18 @@
 			<li>
 				<skill>Melee</skill>
 				<range>6~14</range>
+			</li>
+			<li>
+				<skill>Plants</skill>
+				<range>0~1</range>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>0~1</range>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<range>0~1</range>
 			</li>
 		</skills>
 		<isFighter>true</isFighter>
@@ -209,13 +234,13 @@
 		<apparelTags>
 			<li>ei_apparel_officer</li>
 		</apparelTags>
+		<weaponTags>
+			<li>ei_OfficerGear</li>
+		</weaponTags>
 		<apparelMoney>
 			<min>2000</min>
 			<max>3000</max>
 		</apparelMoney>
-		<weaponTags>
-			<li>ei_Pistol</li>
-		</weaponTags>
 		<weaponMoney>
 			<min>300</min>
 			<max>500</max>
