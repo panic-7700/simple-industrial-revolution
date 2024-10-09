@@ -1,0 +1,11 @@
+Notes
+
+Conical 1.5x pen as ball, 0.75x damage. Always round up past 1.0
+
+SABOT damage Conical x 0.8
+
+Damage can be upscaled when necessary
+
+
+1 wood per 10 steel rounded for ammo crafting, apply FMJ wood amount to all
+

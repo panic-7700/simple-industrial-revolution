@@ -11,7 +11,7 @@
 		<canStageAttacks>true</canStageAttacks>
 		<raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
 		<caravanTraderKinds Inherit="False">
-			<li>Caravan_Revolutionary_BulkGoods</li>
+			<li>Caravan_Flintlock_BulkGoods</li>
 		</caravanTraderKinds>
 		<backstoryFilters Inherit="False">
 			<li>

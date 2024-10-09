@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>Ammo58Minieball</defName>
+		<label>.58 Minié ball Cartridge</label>
+		<parent>AmmoRifles</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+	<!-- .570 ball out of a .58 rifle named .58 for game-play sake-->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_58Minieball</defName>
+		<label>.58 Caliber</label>
+		<ammoTypes>
+			<Ammo_58Minieball_FMJ>Bullet_58Minieball_FMJ</Ammo_58Minieball_FMJ>
+			<Ammo_58Minieball_AP>Bullet_58Minieball_AP</Ammo_58Minieball_AP> 
+			<Ammo_58Minieball_SH>Bullet_58Minieball_SH</Ammo_58Minieball_SH>
+			<Ammo_58Minieball_HE>Bullet_58Minieball_HE</Ammo_58Minieball_HE>
+			<Ammo_58Minieball_Sabot>Bullet_58Minieball_Sabot</Ammo_58Minieball_Sabot> 
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_58Musket</defName>
+		<label>.58 Caliber</label>
+		<ammoTypes>
+			<Ammo_MusketBuck>Bullet_MusketBuck</Ammo_MusketBuck>		
+			<Ammo_58Minieball_FMJ>Bullet_58Minieball_FMJ</Ammo_58Minieball_FMJ>
+			<Ammo_58Minieball_AP>Bullet_58Minieball_AP</Ammo_58Minieball_AP> 	
+			<Ammo_58Minieball_SH>Bullet_58Minieball_SH</Ammo_58Minieball_SH>
+			<Ammo_58Minieball_HE>Bullet_58Minieball_HE</Ammo_58Minieball_HE>
+			<Ammo_58Minieball_Sabot>Bullet_58Minieball_Sabot</Ammo_58Minieball_Sabot> 
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_58Old</defName>
+		<label>.58 Caliber</label>
+		<ammoTypes>
+			<Ammo_MusketBuck>Bullet_MusketBuck</Ammo_MusketBuck>		
+			<Ammo_58Minieball_FMJ>Bullet_58Minieball_FMJ</Ammo_58Minieball_FMJ>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_58RifleOld</defName>
+		<label>.58 Caliber</label>
+		<ammoTypes>
+			<Ammo_58Minieball_FMJ>Bullet_58Minieball_FMJ</Ammo_58Minieball_FMJ>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+	
+	<!-- ==================== Slow AmmoSet ========================== -->		
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_58MinieballSlow</defName>
+		<label>.58 Caliber</label>
+		<ammoTypes>
+			<Ammo_58Minieball_FMJ>Bullet_Slow58Minieball_FMJ</Ammo_58Minieball_FMJ>
+			<Ammo_58Minieball_AP>Bullet_Slow58Minieball_AP</Ammo_58Minieball_AP> 
+			<Ammo_58Minieball_SH>Bullet_Slow58Minieball_SH</Ammo_58Minieball_SH>
+			<Ammo_58Minieball_HE>Bullet_Slow58Minieball_HE</Ammo_58Minieball_HE>
+			<Ammo_58Minieball_Sabot>Bullet_Slow58Minieball_Sabot</Ammo_58Minieball_Sabot> 
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_58MusketSlow</defName>
+		<label>.58 Caliber</label>
+		<ammoTypes>
+			<Ammo_58Minieball_FMJ>Bullet_Slow58Minieball_FMJ</Ammo_58Minieball_FMJ>
+			<Ammo_58Minieball_AP>Bullet_Slow58Minieball_AP</Ammo_58Minieball_AP>
+			<Ammo_MusketBuck>Bullet_SlowMusketBuck</Ammo_MusketBuck>		
+			<Ammo_58Minieball_SH>Bullet_Slow58Minieball_SH</Ammo_58Minieball_SH>
+			<Ammo_58Minieball_HE>Bullet_Slow58Minieball_HE</Ammo_58Minieball_HE>
+			<Ammo_58Minieball_Sabot>Bullet_Slow58Minieball_Sabot</Ammo_58Minieball_Sabot> 
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_58SlowOld</defName>
+		<label>.58 Caliber</label>
+		<ammoTypes>
+			<Ammo_58Minieball_FMJ>Bullet_Slow58Minieball_FMJ</Ammo_58Minieball_FMJ>
+			<Ammo_MusketBuck>Bullet_SlowMusketBuck</Ammo_MusketBuck>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>		
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_58RifleSlowOld</defName>
+		<label>.58 Caliber</label>
+		<ammoTypes>
+			<Ammo_58Minieball_FMJ>Bullet_Slow58Minieball_FMJ</Ammo_58Minieball_FMJ>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="58MinieballBase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>A paper cartridge sealed with wax containing a projectile and black powder, fired by .58 caliber guns.</description>
+		<statBases>
+			<Mass>0.074</Mass>
+			<Bulk>0.05</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_FueledSmithy</li>
+			<li>CE_AutoEnableCrafting_ElectricSmithy</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Ammo58Minieball</li>
+		</thingCategories>
+		<stackLimit>600</stackLimit>		
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="58MinieballBase">
+		<defName>Ammo_58Minieball_FMJ</defName>
+		<label>.58 Ball cartridge</label>
+		<graphicData>
+		    <texPath>Things/Ammo/Medieval/Musket/Paper</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.3</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>CE_PreIndustrialAmmo</li>
+		</tradeTags>
+		<techLevel>Medieval</techLevel>
+		<ammoClass>MusketBall</ammoClass>
+		<cookOffProjectile>Bullet_58Minieball_FMJ</cookOffProjectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="58MinieballBase">
+		<defName>Ammo_58Minieball_AP</defName>
+		<label>.58 Conical ball cartridge</label>
+		<graphicData>
+		    <texPath>Things/Ammo/Medieval/Musket/ConicalB</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.36</MarketValue>
+			<Mass>0.104</Mass>			
+		</statBases>
+		<ammoClass>Conical</ammoClass>
+		<cookOffProjectile>Bullet_58Minieball_AP</cookOffProjectile>
+	</ThingDef>
+	
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="58MinieballBase">
+		<defName>Ammo_58Minieball_SH</defName>
+		<label>.58 Shaler Cartridge</label>
+		<graphicData>
+		    <texPath>Things/Ammo/Medieval/Musket/ShotB</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.3</MarketValue>
+			<Mass>0.104</Mass>
+		</statBases>
+		<ammoClass>Shaler</ammoClass>
+		<cookOffProjectile>Bullet_58Minieball_SH</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="58MinieballBase">
+		<defName>Ammo_58Minieball_HE</defName>
+		<label>.58 Gardiner cartridge (HE)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Medieval/Musket/Gardiner</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.72</MarketValue>
+			<Mass>0.089</Mass>
+		</statBases>
+		<ammoClass>Gardiner</ammoClass>
+		<cookOffProjectile>Bullet_58Minieball_HE</cookOffProjectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="58MinieballBase">
+		<defName>Ammo_58Minieball_Sabot</defName>
+		<label>.58/50 cartridge (Sabot)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Medieval/Musket/Sabot</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.44</MarketValue>
+			<Mass>0.076</Mass>
+		</statBases>
+		<ammoClass>Sabot</ammoClass>
+		<cookOffProjectile>Bullet_58Minieball_Sabot</cookOffProjectile>
+	</ThingDef>	
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Base58MinieballBullet" ParentName="BaseBulletCE" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>74</speed>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base58MinieballBullet">
+		<defName>Bullet_58Minieball_FMJ</defName>
+		<label>.58 ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>100</speed>
+			<damageAmountBase>21</damageAmountBase>
+			<armorPenetrationSharp>6</armorPenetrationSharp>
+			<armorPenetrationBlunt>45.04</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base58MinieballBullet">
+		<defName>Bullet_58Minieball_AP</defName>
+		<label>.58 Conical ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>17</damageAmountBase>
+			<armorPenetrationSharp>9</armorPenetrationSharp>
+			<armorPenetrationBlunt>45.04</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base58MinieballBullet">
+		<defName>Bullet_58Minieball_SH</defName>
+		<label>.58 Shaler fragment</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>60</speed>
+			<damageAmountBase>14</damageAmountBase>
+			<pelletCount>3.0</pelletCount>
+			<armorPenetrationSharp>3.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>14.58</armorPenetrationBlunt>
+			<spreadMult>8.9</spreadMult>
+		</projectile>
+	</ThingDef>	
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base58MinieballBullet">
+		<defName>Bullet_58Minieball_HE</defName>
+		<label>.58 Gardiner (HE)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>21</damageAmountBase>
+			<armorPenetrationSharp>6</armorPenetrationSharp>
+			<armorPenetrationBlunt>45.04</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+			  	<def>Bomb_Secondary</def>
+			  	<amount>13</amount>
+				</li>
+		  </secondaryDamage>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base58MinieballBullet">
+		<defName>Bullet_58Minieball_Sabot</defName>
+		<label>.58/50 (Sabot)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>111</speed>
+			<damageAmountBase>14</damageAmountBase>
+			<armorPenetrationSharp>16</armorPenetrationSharp>
+			<armorPenetrationBlunt>63.7</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>	
+	
+	<!-- ================== Low velocity ================== -->	
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base58MinieballBullet">
+		<defName>Bullet_Slow58Minieball_FMJ</defName>
+		<label>.58 ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>76</speed>
+			<damageAmountBase>17</damageAmountBase>
+			<armorPenetrationSharp>4</armorPenetrationSharp>
+			<armorPenetrationBlunt>26.02</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base58MinieballBullet">
+		<defName>Bullet_Slow58Minieball_AP</defName>
+		<label>.58 Conical ball</label>		
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>57</speed>		
+			<damageAmountBase>13</damageAmountBase>
+			<armorPenetrationSharp>7</armorPenetrationSharp>
+			<armorPenetrationBlunt>26.02</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base58MinieballBullet">
+		<defName>Bullet_Slow58Minieball_SH</defName>
+		<label>.58 Shaler fragment</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>44</speed>
+			<damageAmountBase>11</damageAmountBase>
+			<pelletCount>3</pelletCount>
+			<armorPenetrationSharp>2.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>7.84</armorPenetrationBlunt>
+			<spreadMult>8.9</spreadMult>
+		</projectile>
+	</ThingDef>	
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base58MinieballBullet">
+		<defName>Bullet_Slow58Minieball_HE</defName>
+		<label>.58 Gardiner (HE)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>57</speed>		
+			<damageAmountBase>17</damageAmountBase>
+			<armorPenetrationSharp>4</armorPenetrationSharp>
+			<armorPenetrationBlunt>26.02</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+			  	<def>Bomb_Secondary</def>
+			  	<amount>10</amount>
+				</li>
+		  </secondaryDamage>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base58MinieballBullet">
+		<defName>Bullet_Slow58Minieball_Sabot</defName>
+		<label>.58/50 (Sabot)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>85</speed>
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>10.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>36.74</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>	
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_58Minieball_FMJ</defName>
+		<label>make .58 Ball cartridge x200</label>
+		<description>Craft 200 .58 Ball cartridges.</description>
+		<jobString>Making .58 Ball cartridges.</jobString>
+		<researchPrerequisites>
+			<li>CE_Gunpowder</li>
+		</researchPrerequisites>		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>		
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_58Minieball_FMJ>200</Ammo_58Minieball_FMJ>
+		</products>
+		<workAmount>3000</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_58Minieball_AP</defName>
+		<label>make .58 Conical ball cartridge x200</label>
+		<description>Craft 200 .58 Conical ball cartridges.</description>
+		<jobString>Making .58 Conical ball cartridges.</jobString>
+		<researchPrerequisites>
+			<li>CE_Gunpowder</li>
+		</researchPrerequisites>		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>36</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_58Minieball_AP>200</Ammo_58Minieball_AP>
+		</products>
+		<workAmount>3600</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_58Minieball_SH</defName>
+		<label>make .58 Shaler cartridge x200</label>
+		<description>Craft 200 .58 Shaler cartridges.</description>
+		<jobString>Making .58 Shaler cartridges.</jobString>
+		<researchPrerequisites>
+			<li>CE_Gunpowder</li>
+		</researchPrerequisites>		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_58Minieball_SH>200</Ammo_58Minieball_SH>
+		</products>
+		<workAmount>3800</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_58Minieball_HE</defName>
+		<label>make .58 Gardiner (HE) cartridge x200</label>
+		<description>Craft 200 .58 Gardiner (HE) cartridges.</description>
+		<jobString>Making .58 Gardiner (HE) cartridges.</jobString>
+		<researchPrerequisites>
+			<li>AdvancedAmmo_BP</li>
+		</researchPrerequisites>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>36</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>FSX</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_58Minieball_HE>200</Ammo_58Minieball_HE>
+		</products>
+		<workAmount>6400</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_58Minieball_Sabot</defName>
+		<label>make .58/50 (Sabot) cartridge x200</label>
+		<description>Craft 200 .58/50 (Sabot) cartridges.</description>
+		<jobString>Making .58/50 (Sabot) cartridges.</jobString>
+		<researchPrerequisites>
+			<li>AdvancedAmmo_BP</li>
+		</researchPrerequisites>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>22</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Uranium</li>
+				<li>Chemfuel</li>	
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_58Minieball_Sabot>200</Ammo_58Minieball_Sabot>
+		</products>
+		<workAmount>5200</workAmount>
+	</RecipeDef>	
+
+
+</Defs>

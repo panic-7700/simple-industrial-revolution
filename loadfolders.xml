@@ -2,6 +2,7 @@
     <v1.5>
         <li>/</li>
         <li>1.5</li>
-				<li IfModNotActive="al9000.pikeandshot">PikeAndShot</li>
+				<li IfModNotActive="al9000.pikeandshot">ext_PikeAndShot</li>
+				<!-- <li IfModNotActive="CE.BlackPowderRifle">ext_BlackPowderRifles</li> -->
     </v1.5>
 </loadFolders>

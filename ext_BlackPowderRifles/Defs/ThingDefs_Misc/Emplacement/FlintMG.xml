@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- ==================== Chambers Gun ==================== -->
+
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>Gun_Chambers</defName>
+    <label>Chambers gun</label>
+    <graphicData>
+      <texPath>Things/Turret/Flintlocks/Flintlock_ChambersMG_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>Chambers gun mounted on a tripod. Automatic Flintlock machine gun, fires in long bursts.</description>
+    <statBases>
+      <SightsEfficiency>1.0</SightsEfficiency>
+      <ShotSpread>0.07</ShotSpread>
+      <SwayFactor>0.79</SwayFactor>
+      <RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
+      <Mass>50</Mass>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.25</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ChambersShot_FMJ</defaultProjectile>
+        <warmupTime>1.3</warmupTime>
+        <range>48</range>
+        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <burstShotCount>32</burstShotCount>
+        <soundCast>Shot_CE_BattleRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+	<modExtensions>
+	  <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+		<def>MF_StandardMuzzleFalsh</def>
+		<drawSize>(1.2,1.2)</drawSize>
+		<offsets>
+			<li>(1.0,0.00)</li>
+		</offsets>	
+	  </li>	
+	  <li Class="CombatExtended.GunDrawExtension">
+			<DrawSize>0.85,0.85</DrawSize>
+			<DrawOffset>0.00,-0.00</DrawOffset>
+	  </li>		  
+	</modExtensions>		
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>224</magazineSize>
+        <reloadTime>30.0</reloadTime>
+        <ammoSet>AmmoSet_ChambersShot</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>16</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="TurretMannedBuildableBase">
+    <defName>Turret_ChambersGun</defName>
+    <label>Chambers gun</label>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <graphicData>
+      <texPath>Things/Turret/Flintlocks/ChambersGun_base</texPath>
+      <drawSize>(1.3,1.3)</drawSize>	  
+    </graphicData>
+    <uiIconPath>Things/Turret/Flintlocks/ChambersMG</uiIconPath>
+    <statBases>
+      <WorkToBuild>6000</WorkToBuild>
+      <MaxHitPoints>125</MaxHitPoints>
+      <Mass>100</Mass>
+      <Bulk>80</Bulk>
+    </statBases>
+    <description>Chambers Gun mounted on a tripod. Automatic Flintlock machine gun, fires in long bursts.</description>
+    <costList>
+      <Steel>120</Steel>
+      <WoodLog>40</WoodLog>
+	  <ComponentIndustrial>1</ComponentIndustrial>	  
+    </costList>
+    <building>
+      <turretGunDef>Gun_Chambers</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretBurstCooldownTime>0.34</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <researchPrerequisites>
+      <li>CE_Gunpowder</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

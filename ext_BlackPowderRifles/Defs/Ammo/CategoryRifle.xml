@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <CombatExtended.AmmoCategoryDef>
+        <defName>Conical</defName>
+        <label>Conical</label>
+        <labelShort>Conical</labelShort>
+        <description>Features a rounded bullet, further improving accuracy and armour penetration.</description>
+    </CombatExtended.AmmoCategoryDef>
+	
+    <CombatExtended.AmmoCategoryDef>
+        <defName>Gardiner</defName>
+        <label>Gardiner</label>
+        <labelShort>Gardiner</labelShort>
+        <description>Filled with high-explosives that detonate on impact for additional damage.</description>
+    </CombatExtended.AmmoCategoryDef>
+	
+	<CombatExtended.AmmoCategoryDef>
+        <defName>Shaler</defName>
+        <label>Shaler</label>
+        <labelShort>Shaler</labelShort>
+        <description>Features a bullet that splits into 3 separate projectiles upon leaving the barrel.</description>
+    </CombatExtended.AmmoCategoryDef>
+	
+	<CombatExtended.AmmoCategoryDef>
+        <defName>Hexagonal</defName>
+        <label>Hexagonal Bullet</label>
+        <labelShort>Hexagonal</labelShort>
+        <description>Features a hexagonal bullet made to engage perfectly with hexagonal rifling.</description>
+    </CombatExtended.AmmoCategoryDef>
+</Defs>

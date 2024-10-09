@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ResearchTabDef>
+		<defName>BPResearchTab</defName>
+		<label>Cap'n Ball</label>
+	</ResearchTabDef>
+
+	<ResearchProjectDef>
+		<defName>Stage1Rifle_BP</defName>
+		<label>MuzzleLoading</label>
+		<description>Unlocks MuzzleLoading guns</description>
+			<baseCost>300</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>CE_Gunpowder</li>
+		</prerequisites>
+		<tab>BPResearchTab</tab>
+			<researchViewX>0</researchViewX>
+			<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Stage2Rifle_BP</defName>
+		<label>Breech-Loading</label>
+		<description>Unlocks Breach-loading Guns</description>
+			<baseCost>400</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Stage1Rifle_BP</li>
+		</prerequisites>
+		<tab>BPResearchTab</tab>
+			<researchViewX>1</researchViewX>
+			<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>AdvancedAmmo_BP</defName>
+		<label>Industrial Ammo</label>
+		<description>Unlocks better ammo types</description>
+			<baseCost>600</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>CE_Gunpowder</li>
+		</prerequisites>
+		<tab>BPResearchTab</tab>
+			<researchViewX>0</researchViewX>
+			<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+	
+</Defs>

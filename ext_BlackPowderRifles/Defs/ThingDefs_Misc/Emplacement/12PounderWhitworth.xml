@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- ==================== 12 Pounder Cannon ==================== -->
+
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>Gun_TwelvePounderWhit</defName>
+    <label>12-pounder Whitworth cannon</label>
+    <graphicData>
+      <texPath>Things/Turret/WithworthCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>12-pounder Whitworth cannon mounted on a carriage. Breach-loading Black powder cannon, uses hexagonal rifling to achieve exceptional accuracy and range.</description>
+    <statBases>
+      <SightsEfficiency>2.00</SightsEfficiency>
+      <ShotSpread>0.10</ShotSpread>
+      <SwayFactor>0.75</SwayFactor>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+      <Mass>100</Mass>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>5.34</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_WhitworthShell_Round</defaultProjectile>
+        <warmupTime>3.0</warmupTime>
+        <range>90</range>
+        <minRange>7.9</minRange>
+        <soundCast>Shot_CE_Musket</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>16</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+	<modExtensions>
+	  <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+		<def>MF_StandardMuzzleFalsh</def>
+		<drawSize>(4.5,4.5)</drawSize>
+		<offsets>
+			<li>(0.8,0)</li>
+		</offsets>
+	  </li>		
+	</modExtensions>	
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>1</magazineSize>
+        <reloadTime>5.0</reloadTime>
+        <ammoSet>AmmoSet_WhitworthShell</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="TurretMannedBuildableBase">
+    <defName>Turret_TwelvePounderWhit</defName>
+    <label>12-pounder Whitworth cannon</label>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <graphicData>
+      <texPath>Things/Turret/base_trackmarks</texPath>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <uiIconPath>Things/Turret/ico_WithworthCannon</uiIconPath>
+    <statBases>
+      <WorkToBuild>4500</WorkToBuild>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>200</Mass>
+      <Bulk>120</Bulk>
+    </statBases>
+    <description>12-pounder Witworth cannon mounted on a carriage. Breach-loading Black powder cannon, uses hexagonal rifling to achieve exceptional accuracy and range.</description>
+    <costList>
+      <Steel>180</Steel>
+      <WoodLog>100</WoodLog>
+	  <ComponentIndustrial>3</ComponentIndustrial>		  
+    </costList>
+    <building>
+      <turretGunDef>Gun_TwelvePounderWhit</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretBurstCooldownTime>2.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>	
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <researchPrerequisites>
+      <li>Stage2Rifle_BP</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

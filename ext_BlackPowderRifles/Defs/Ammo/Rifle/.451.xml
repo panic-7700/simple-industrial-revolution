@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>Ammo451</defName>
+		<label>.451 Cartridge</label>
+		<parent>AmmoRifles</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_451</defName>
+		<label>.451 Whitworth</label>
+		<ammoTypes>
+			<Ammo_451_FMJ>Bullet_451_FMJ</Ammo_451_FMJ>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="451Base" ParentName="SmallAmmoBase" Abstract="True">
+		<description>A paper cartridge sealed with wax containing a projectile and black powder, used with the Whitworth rifle.</description>
+		<statBases>
+			<Mass>0.084</Mass>
+			<Bulk>0.1</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_FueledSmithy</li>
+			<li>CE_AutoEnableCrafting_ElectricSmithy</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Ammo451</li>
+		</thingCategories>
+		<stackLimit>600</stackLimit>		
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="451Base">
+		<defName>Ammo_451_FMJ</defName>
+		<label>.451 Whitworth cartridge</label>
+		<generateAllowChance>0.5</generateAllowChance>
+		<graphicData>
+		    <texPath>Things/Ammo/Medieval/Musket/ConicalB</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.34</MarketValue>
+		</statBases>
+		<ammoClass>Hexagonal</ammoClass>
+		<cookOffProjectile>Bullet_451_FMJ</cookOffProjectile>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Base451Bullet" ParentName="BaseBulletCE" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>82</speed>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base451Bullet">
+		<defName>Bullet_451_FMJ</defName>
+		<label>.451 Whitworth</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>21</damageAmountBase>
+			<armorPenetrationSharp>6</armorPenetrationSharp>
+			<armorPenetrationBlunt>56.64</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_451_FMJ</defName>
+		<label>make .451 Whitworth cartridge x200</label>
+		<description>Craft 200 .451 Whitworth cartridges.</description>
+		<jobString>Making .451 Whitworth cartridges.</jobString>
+		<researchPrerequisite>CE_Gunpowder</researchPrerequisite>		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>34</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>		
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_451_FMJ>200</Ammo_451_FMJ>
+		</products>
+		<workAmount>3400</workAmount>
+	</RecipeDef>
+
+</Defs>

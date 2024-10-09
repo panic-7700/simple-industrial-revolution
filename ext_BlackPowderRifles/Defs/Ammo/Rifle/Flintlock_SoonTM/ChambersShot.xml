@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>Chambers50Shot</defName>
+		<label>Chambers Shot</label>
+		<parent>AmmoRifles</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_ChambersShot</defName>
+		<label>Chambers Shot</label>
+		<ammoTypes>
+			<Ammo_ChambersShot_FMJ>Bullet_ChambersShot_FMJ</Ammo_ChambersShot_FMJ>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="ChambersShotBase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>Paper cartridge containing a bullet with a flash hole going all the way through, allowing for a burst fire shot.</description>
+		<statBases>
+			<Mass>0.027</Mass>
+			<Bulk>0.06</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_FueledSmithy</li>
+			<li>CE_AutoEnableCrafting_ElectricSmithy</li>
+			<li>CE_PreIndustrialAmmo</li>			
+		</tradeTags>
+		<thingCategories>
+			<li>Chambers50Shot</li>
+		</thingCategories>	
+		<stackLimit>1200</stackLimit>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="ChambersShotBase">
+		<defName>Ammo_ChambersShot_FMJ</defName>
+		<label>Chambers bullet</label>
+		<graphicData>
+		    <texPath>Things/Ammo/Medieval/Musket/ConicalB</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.10</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>CE_PreIndustrialAmmo</li>
+		</tradeTags>
+		<techLevel>Medieval</techLevel>
+		<ammoClass>Chambers_Label</ammoClass>		
+		<cookOffProjectile>Bullet_ChambersShot_FMJ</cookOffProjectile>
+	</ThingDef>
+	
+	<CombatExtended.AmmoCategoryDef>
+        <defName>Chambers_Label</defName>
+        <label>Chambers bullet</label>
+        <labelShort>Chambers</labelShort>
+        <description>Bullet with a flash hole going all the way through, allowing for a burst fire shot.</description>
+    </CombatExtended.AmmoCategoryDef>	
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseChambersShotBullet" ParentName="BaseBulletCE" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>76</speed>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseChambersShotBullet">
+		<defName>Bullet_ChambersShot_FMJ</defName>
+		<label>Chambers bullet</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationSharp>4</armorPenetrationSharp>
+			<armorPenetrationBlunt>31.76</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_ChambersShot_FMJ</defName>
+		<label>make Chambers bullet x300</label>
+		<description>Craft 300 Chambers bullets.</description>
+		<jobString>Making Chambers bullets.</jobString>
+		<researchPrerequisites>
+			<li>CE_Gunpowder</li>
+		</researchPrerequisites>		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>48</count>
+			</li>	
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>				
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_ChambersShot_FMJ>300</Ammo_ChambersShot_FMJ>
+		</products>
+		<workAmount>4800</workAmount>
+	</RecipeDef>
+
+
+</Defs>

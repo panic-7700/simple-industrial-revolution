@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<!-- Based on the Brown Bess a .69 Cal ball out of a .75 Barrel, works for other large bore early guns as well -->
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_FastMusketBall</defName>
+		<label>Musket Ball</label>
+		<ammoTypes>
+			<Ammo_MusketBall>Bullet_FastMusketBall</Ammo_MusketBall>
+			<Ammo_MusketBuck>Bullet_MusketBuck</Ammo_MusketBuck>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_FastMusketBallFull</defName>
+		<label>Musket Ball</label>
+		<ammoTypes>
+			<Ammo_MusketBall>Bullet_FastMusketBall</Ammo_MusketBall>
+	<!--	<Ammo_MusketConical>Bullet_MusketConical</Ammo_MusketConical>	-->
+			<Ammo_MusketBuck>Bullet_MusketBuck</Ammo_MusketBuck>		
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+<!-- For pistols and other high caliber short guns -->	
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_SlowMusketBall</defName>
+		<label>Musket Ball</label>
+		<ammoTypes>
+			<Ammo_MusketBall>Bullet_SlowMusketBall</Ammo_MusketBall>
+			<Ammo_MusketBuck>Bullet_SlowMusketBuck</Ammo_MusketBuck>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_SlowMusketBallFull</defName>
+		<label>Musket Ball</label>
+		<ammoTypes>
+			<Ammo_MusketBall>Bullet_SlowMusketBall</Ammo_MusketBall>
+	<!--	<Ammo_MusketConical>Bullet_SlowMusketConical</Ammo_MusketConical>	-->		
+			<Ammo_MusketBuck>Bullet_SlowMusketBuck</Ammo_MusketBuck>	
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<!-- Made for the Brown Bess Carbine and other shorter primitive guns-->
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_CarbineMusketBallFull</defName>
+		<label>Musket Ball</label>
+		<ammoTypes>
+			<Ammo_MusketBall>Bullet_CarbineMusket</Ammo_MusketBall>
+	<!--	<Ammo_MusketConical>Bullet_CarbineMusketConical</Ammo_MusketConical>	-->		
+			<Ammo_MusketBuck>Bullet_SlowMusketBuck</Ammo_MusketBuck>	
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>		
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_CarbineMusketBallOld</defName>
+		<label>Musket Ball</label>
+		<ammoTypes>
+			<Ammo_MusketBall>Bullet_CarbineMusket</Ammo_MusketBall>		
+			<Ammo_MusketBuck>Bullet_SlowMusketBuck</Ammo_MusketBuck>	
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+	
+	<!-- For Heavy Rifles if they ever get added, use other ammo types as much as possible-->	
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_FastMusketBallOnly</defName>
+		<label>Musket Ball</label>
+		<ammoTypes>
+			<Ammo_MusketBall>Bullet_FastMusketBall</Ammo_MusketBall>
+	<!--	<Ammo_MusketConical>Bullet_MusketConical</Ammo_MusketConical>	-->		
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_FastMusketBallOnlyOld</defName>
+		<label>Musket Ball</label>
+		<ammoTypes>
+			<Ammo_MusketBall>Bullet_FastMusketBall</Ammo_MusketBall>		
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+	
+	<!-- For repeating flintlocks if they ever get added -->
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_CarbineMusketBallOnly</defName>
+		<label>Musket Ball</label>
+		<ammoTypes>
+			<Ammo_MusketBall>Bullet_CarbineMusket</Ammo_MusketBall>		
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_SlowMusketBallOnly</defName>
+		<label>Musket Ball</label>
+		<ammoTypes>
+			<Ammo_MusketBall>Bullet_SlowMusketBall</Ammo_MusketBall>	
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+	
+	<!-- ==================== Ammo ========================== -->
+	
+	<ThingDef Class="CombatExtended.AmmoDef" Name="MusketBallBase" ParentName="AmmoBase" Abstract="True">
+		<description>A paper cartridge sealed with wax containing a round projectile and black powder, fired by early, smoothbore firearms.</description>
+		<statBases>
+			<Mass>0.087</Mass>
+			<Bulk>0.12</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_PreIndustrialAmmo</li>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_FueledSmithy</li>
+			<li>CE_AutoEnableCrafting_ElectricSmithy</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoMusketBall</li>
+		</thingCategories>
+		<techLevel>Medieval</techLevel>
+		<stackLimit>600</stackLimit>		
+	</ThingDef>	
+	
+	<ThingDef Class="CombatExtended.AmmoDef" Name="MusketMoreBase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>A paper cartridge sealed with wax containing a conical projectile and black powder, fired by early, smoothbore firearms.</description>
+		<statBases>
+			<Mass>0.087</Mass>
+			<Bulk>0.12</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_FueledSmithy</li>
+			<li>CE_AutoEnableCrafting_ElectricSmithy</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoMusketBall</li>
+		</thingCategories>
+		<stackLimit>600</stackLimit>		
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+		<defName>Ammo_MusketBall</defName>
+		<label>musket ball</label>
+		<graphicData>
+			<texPath>Things/Ammo/Medieval/Musket/Paper</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.4</MarketValue>
+		</statBases>
+		<ammoClass>MusketBall</ammoClass>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+		<defName>Ammo_MusketBuck</defName>
+		<label>musket buckshot</label>
+		<generateAllowChance>0.33</generateAllowChance>
+		<graphicData>
+			<texPath>Things/Ammo/Medieval/Musket/ShotB</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.28</MarketValue>
+			<Mass>0.089</Mass>
+		</statBases>	
+		<ammoClass>BuckShot</ammoClass>
+	</ThingDef>
+	
+	<!--
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketMoreBase">
+		<defName>Ammo_MusketConical</defName>
+		<label>Musket conical</label>
+		<graphicData>
+			<texPath>Things/Ammo/Medieval/Musket/ConicalB</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.35</MarketValue>
+			<Mass>0.155</Mass>			
+		</statBases>
+		<ammoClass>Conical</ammoClass>
+	</ThingDef>	
+	-->
+
+	<!-- ================== Projectile Base ================== -->
+
+	<ThingDef Name="MusketBallBullet" ParentName="BaseBulletCE" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<!-- ================== Projectiles  ================== -->
+	
+	<ThingDef ParentName="MusketBallBullet">
+		<defName>Bullet_FastMusketBall</defName>
+		<label>musket ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>90</speed>	
+			<damageAmountBase>26</damageAmountBase>		
+			<armorPenetrationSharp>5</armorPenetrationSharp>
+			<armorPenetrationBlunt>64.8</armorPenetrationBlunt>				
+		</projectile>
+	</ThingDef>	
+	
+	<ThingDef ParentName="MusketBallBullet">
+		<defName>Bullet_MusketBuck</defName>
+		<label>buckshot pellet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shotgun_Pellet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>68</speed>
+			<damageAmountBase>7</damageAmountBase>
+			<pelletCount>12</pelletCount>
+			<armorPenetrationSharp>3.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>3.22</armorPenetrationBlunt>
+			<spreadMult>17.8</spreadMult>
+		</projectile>
+		<thingClass>CombatExtended.BulletCE</thingClass>
+	</ThingDef>
+	
+	<!--
+	<ThingDef ParentName="MusketBallBullet">
+		<defName>Bullet_MusketConical</defName>
+		<label>Conical Ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>79</speed>
+			<damageAmountBase>20</damageAmountBase>
+			<armorPenetrationSharp>7.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>64.8</armorPenetrationBlunt>
+		</projectile>
+		<thingClass>CombatExtended.BulletCE</thingClass>
+	</ThingDef>
+	-->
+	
+	<!-- ==================== Carbine ========================== -->	
+	
+	<ThingDef ParentName="MusketBallBullet">
+		<defName>Bullet_CarbineMusket</defName>
+		<label>musket ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>73</speed>
+			<damageAmountBase>22</damageAmountBase>
+			<armorPenetrationSharp>4.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>43.64</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>	
+	
+	<!--
+	<ThingDef ParentName="MusketBallBullet">
+		<defName>Bullet_CarbineMusketConical</defName>
+		<label>Conical Ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>47</speed>
+			<damageAmountBase>16</damageAmountBase>
+			<armorPenetrationSharp>6.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>43.64</armorPenetrationBlunt>
+		</projectile>
+		<thingClass>CombatExtended.BulletCE</thingClass>
+	</ThingDef>
+	-->
+	
+	<!-- Curently Unused, LV works better in carbines for balance -->	
+	<ThingDef ParentName="MusketBallBullet">
+		<defName>Bullet_CarbineMusketBuck</defName>
+		<label>buckshot pellet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shotgun_Pellet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>56</speed>
+			<damageAmountBase>6</damageAmountBase>
+			<pelletCount>12</pelletCount>
+			<armorPenetrationSharp>2.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>2.18</armorPenetrationBlunt>
+			<spreadMult>17.8</spreadMult>
+		</projectile>
+		<thingClass>CombatExtended.BulletCE</thingClass>
+	</ThingDef>	
+	
+	
+	<!-- ==================== Slow ========================== -->	
+	
+	<ThingDef ParentName="MusketBallBullet">
+		<defName>Bullet_SlowMusketBall</defName>
+		<label>musket ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>50</speed>	
+			<damageAmountBase>17</damageAmountBase>		
+			<armorPenetrationSharp>3.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>20</armorPenetrationBlunt>				
+		</projectile>
+	</ThingDef>	
+	
+	<!--
+	<ThingDef ParentName="MusketBallBullet">
+		<defName>Bullet_SlowMusketConical</defName>
+		<label>Conical Ball</label>	
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>44</speed>	
+			<damageAmountBase>13</damageAmountBase>		
+			<armorPenetrationSharp>5</armorPenetrationSharp>
+			<armorPenetrationBlunt>20</armorPenetrationBlunt>				
+		</projectile>
+		<thingClass>CombatExtended.BulletCE</thingClass>
+	</ThingDef>
+	-->
+	
+	<ThingDef ParentName="MusketBallBullet">
+		<defName>Bullet_SlowMusketBuck</defName>
+		<label>buckshot pellet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shotgun_Pellet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>46</speed>
+			<damageAmountBase>5</damageAmountBase>
+			<pelletCount>12</pelletCount>
+			<armorPenetrationSharp>2.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>1.48</armorPenetrationBlunt>
+			<spreadMult>17.8</spreadMult>
+		</projectile>
+		<thingClass>CombatExtended.BulletCE</thingClass>
+	</ThingDef>	
+	
+	<!-- ==================== HE / Sabot not in this mod ========================== -->
+	
+
+	<!-- ==================== Recipes ========================== -->
+	
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_MusketBall</defName>
+		<label>make Musket ball x100</label>
+		<description>Craft 100 Musket balls.</description>
+		<jobString>Making Musket balls.</jobString>
+		<researchPrerequisite>CE_Gunpowder</researchPrerequisite>
+		<workAmount>2000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>				
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_MusketBall>100</Ammo_MusketBall>
+		</products>
+	</RecipeDef>		
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_MusketBuck</defName>
+		<label>make musket Muckshot x100</label>
+		<description>Craft 100 Musket buckshot.</description>
+		<jobString>Making Musket buckshot.</jobString>
+		<researchPrerequisite>CE_Gunpowder</researchPrerequisite>		
+		<workAmount>2000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_MusketBuck>100</Ammo_MusketBuck>
+		</products>
+	</RecipeDef>
+	
+	<!--
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_MusketConical</defName>
+		<label>make Musket Conical x100</label>
+		<description>Craft 100 Musket Conical.</description>
+		<jobString>Making Musket Conical.</jobString>
+		<researchPrerequisite>CE_Gunpowder</researchPrerequisite>
+		<workAmount>2400</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>24</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>	
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_MusketConical>100</Ammo_MusketConical>
+		</products>
+	</RecipeDef>
+	-->
+	
+
+</Defs>

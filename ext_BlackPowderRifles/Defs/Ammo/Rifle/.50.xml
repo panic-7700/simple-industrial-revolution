@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>Ammo50ball</defName>
+		<label>.50 ball Cartridge</label>
+		<parent>AmmoRifles</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+	<!-- .490 ball out of a .50 rifle named .50 for game-play sake-->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_50ball</defName>
+		<label>.50 Caliber</label>
+		<ammoTypes>
+			<Ammo_50ball_FMJ>Bullet_50ball</Ammo_50ball_FMJ>
+			<Ammo_50ball_AP>Bullet_50ball_AP</Ammo_50ball_AP> 
+			<Ammo_50ball_Buck>Bullet_50ball_Buck</Ammo_50ball_Buck> 
+			<Ammo_50ball_HE>Bullet_50ball_HE</Ammo_50ball_HE> 
+			<Ammo_50ball_Sabot>Bullet_50ball_Sabot</Ammo_50ball_Sabot> 
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_Slow50ball</defName>
+		<label>.50 Caliber</label>
+		<ammoTypes>
+			<Ammo_50ball_FMJ>Bullet_Slow50ball</Ammo_50ball_FMJ>
+			<Ammo_50ball_AP>Bullet_Slow50ball_AP</Ammo_50ball_AP> 
+			<Ammo_50ball_Buck>Bullet_Slow50ball_Buck</Ammo_50ball_Buck>				
+			<Ammo_50ball_HE>Bullet_Slow50ball_HE</Ammo_50ball_HE>  
+			<Ammo_50ball_Sabot>Bullet_Slow50ball_Sabot</Ammo_50ball_Sabot>  
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_Slow50ballRevolver</defName>
+		<label>.50 Caliber</label>
+		<ammoTypes>
+			<Ammo_50ball_FMJ>Bullet_Slow50ball</Ammo_50ball_FMJ>
+			<Ammo_50ball_AP>Bullet_Slow50ball_AP</Ammo_50ball_AP> 		
+			<Ammo_50ball_HE>Bullet_Slow50ball_HE</Ammo_50ball_HE>  
+			<Ammo_50ball_Sabot>Bullet_Slow50ball_Sabot</Ammo_50ball_Sabot>  
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_50ballOld</defName>
+		<label>.50 Caliber</label>
+		<ammoTypes>
+			<Ammo_50ball_FMJ>Bullet_50ball</Ammo_50ball_FMJ>
+			<Ammo_50ball_Buck>Bullet_50ball_Buck</Ammo_50ball_Buck>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_Slow50ballOld</defName>
+		<label>.50 Caliber</label>
+		<ammoTypes>
+			<Ammo_50ball_FMJ>Bullet_Slow50ball</Ammo_50ball_FMJ>
+			<Ammo_50ball_Buck>Bullet_Slow50ball_Buck</Ammo_50ball_Buck>			
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_Slow50ballOldRevolver</defName>
+		<label>.50 Caliber</label>
+		<ammoTypes>
+			<Ammo_50ball_FMJ>Bullet_Slow50ball</Ammo_50ball_FMJ>		
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>	
+	
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="50ballBase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>A paper cartridge sealed with wax containing a projectile and black powder, fired by various .50 caliber guns.</description>
+		<statBases>
+			<Mass>0.067</Mass>
+			<Bulk>0.05</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_FueledSmithy</li>
+			<li>CE_AutoEnableCrafting_ElectricSmithy</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Ammo50ball</li>
+		</thingCategories>
+		<stackLimit>600</stackLimit>		
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="50ballBase">
+		<defName>Ammo_50ball_FMJ</defName>
+		<label>.50 Ball cartridge</label>
+		<graphicData>
+		    <texPath>Things/Ammo/Medieval/Musket/Paper</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.28</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>CE_PreIndustrialAmmo</li>
+		</tradeTags>
+		<techLevel>Medieval</techLevel>
+		<ammoClass>MusketBall</ammoClass>
+		<cookOffProjectile>Bullet_50ball</cookOffProjectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="50ballBase">
+		<defName>Ammo_50ball_AP</defName>
+		<label>.50 Conical ball cartridge</label>
+		<graphicData>
+		    <texPath>Things/Ammo/Medieval/Musket/ConicalB</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.32</MarketValue>			
+			<Mass>0.076</Mass>
+		</statBases>
+		<ammoClass>Conical</ammoClass>
+		<cookOffProjectile>Bullet_50ball_AP</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="50ballBase">
+		<defName>Ammo_50ball_Buck</defName>
+		<label>.50 Double ball cartridge</label>
+		<generateAllowChance>0.33</generateAllowChance>
+		<graphicData>
+			<texPath>Things/Ammo/Medieval/Musket/ShotB</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.28</MarketValue>
+			<Mass>0.079</Mass>
+		</statBases>
+		<tradeTags>
+			<li>CE_PreIndustrialAmmo</li>
+		</tradeTags>	
+		<techLevel>Medieval</techLevel>
+		<ammoClass>BuckShot</ammoClass>
+		<cookOffProjectile>Bullet_50ball_Buck</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="50ballBase">
+		<defName>Ammo_50ball_HE</defName>
+		<label>.50 Gardiner cartridge (HE)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Medieval/Musket/Gardiner</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.58</MarketValue>
+			<Mass>0.076</Mass>
+		</statBases>
+		<ammoClass>Gardiner</ammoClass>
+		<cookOffProjectile>Bullet_50ball_HE</cookOffProjectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="50ballBase">
+		<defName>Ammo_50ball_Sabot</defName>
+		<label>.50/45 Cartridge (Sabot)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Medieval/Musket/Sabot</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.40</MarketValue>
+			<Mass>0.071</Mass>	
+		</statBases>
+		<ammoClass>Sabot</ammoClass>
+		<cookOffProjectile>Bullet_50ball_Sabot</cookOffProjectile>
+	</ThingDef>		
+	
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Base50ballBullet" ParentName="BaseBulletCE" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>87</speed>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base50ballBullet">
+		<defName>Bullet_50ball</defName>
+		<label>.50 ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>116</speed>
+			<damageAmountBase>19</damageAmountBase>
+			<armorPenetrationSharp>4</armorPenetrationSharp>
+			<armorPenetrationBlunt>38.8</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base50ballBullet">
+		<defName>Bullet_50ball_AP</defName>
+		<label>.50 Conical ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationSharp>6</armorPenetrationSharp>
+			<armorPenetrationBlunt>38.8</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base50ballBullet">
+		<defName>Bullet_50ball_Buck</defName>
+		<label>.50 ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>86</speed>
+			<damageAmountBase>15</damageAmountBase>
+			<pelletCount>2</pelletCount>
+			<armorPenetrationSharp>3</armorPenetrationSharp>
+			<armorPenetrationBlunt>21.32</armorPenetrationBlunt>
+			<spreadMult>10.9</spreadMult>
+		</projectile>
+	</ThingDef>	
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base50ballBullet">
+		<defName>Bullet_50ball_HE</defName>
+		<label>.50 Gardiner (HE)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>19</damageAmountBase>
+			<armorPenetrationSharp>4</armorPenetrationSharp>
+			<armorPenetrationBlunt>38.8</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+			  	<def>Bomb_Secondary</def>
+			  	<amount>11</amount>
+				</li>
+		  </secondaryDamage>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base50ballBullet">
+		<defName>Bullet_50ball_Sabot</defName>
+		<label>.50/45 (Sabot)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>117</speed>
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>10.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>52.16</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>	
+	
+	
+	<!-- ================== Low velocity ================== -->	
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base50ballBullet">
+		<defName>Bullet_Slow50ball</defName>
+		<label>.50 ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>74</speed>
+			<damageAmountBase>14</damageAmountBase>
+			<armorPenetrationSharp>2.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>15.66</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>	
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base50ballBullet">
+		<defName>Bullet_Slow50ball_AP</defName>
+		<label>.50 Conical ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>55</speed>
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetrationSharp>4</armorPenetrationSharp>
+			<armorPenetrationBlunt>15.66</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base50ballBullet">
+		<defName>Bullet_Slow50ball_Buck</defName>
+		<label>.50 ball</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>50</speed>
+			<damageAmountBase>11</damageAmountBase>
+			<pelletCount>2</pelletCount>
+			<armorPenetrationSharp>1.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>7.2</armorPenetrationBlunt>
+			<spreadMult>17.8</spreadMult>
+		</projectile>
+	</ThingDef>	
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base50ballBullet">
+		<defName>Bullet_Slow50ball_HE</defName>
+		<label>.50 Gardiner (HE)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>55</speed>
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationSharp>2.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>15.6</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+			  	<def>Bomb_Secondary</def>
+			  	<amount>8</amount>
+				</li>
+		  </secondaryDamage>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base50ballBullet">
+		<defName>Bullet_Slow50ball_Sabot</defName>
+		<label>.50/45 (Sabot)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>55</speed>
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetrationSharp>4.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>35.96</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>		
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_50ball_FMJ</defName>
+		<label>make .50 Ball cartridge x200</label>
+		<description>Craft 200 .50 Ball cartridges.</description>
+		<jobString>Making .50 Ball cartridges.</jobString>
+		<researchPrerequisites>
+			<li>CE_Gunpowder</li>
+		</researchPrerequisites>		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>28</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>		
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_50ball_FMJ>200</Ammo_50ball_FMJ>
+		</products>
+		<workAmount>2800</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_50ball_AP</defName>
+		<label>make .50 Conical ball cartridge x200</label>
+		<description>Craft 200 .50 Conical ball cartridges.</description>
+		<jobString>Making .50 Conical ball cartridges.</jobString>
+		<researchPrerequisites>
+			<li>CE_Gunpowder</li>
+		</researchPrerequisites>		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>32</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_50ball_AP>200</Ammo_50ball_AP>
+		</products>
+		<workAmount>3200</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_50ball_Buck</defName>
+		<label>make .50 Double ball cartridge x200</label>
+		<description>Craft 200 Double ball cartridges.</description>
+		<jobString>Making .50 Double ball cartridges.</jobString>
+		<researchPrerequisites>
+			<li>CE_Gunpowder</li>
+		</researchPrerequisites>			
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_50ball_Buck>200</Ammo_50ball_Buck>
+		</products>
+		<workAmount>3000</workAmount>
+	</RecipeDef>
+
+		<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_50ball_HE</defName>
+		<label>make .50 Gardiner (HE) cartridge x200</label>
+		<description>Craft 200 .50 Gardiner (HE) cartridges.</description>
+		<jobString>Making .50 Gardiner (HE) cartridges.</jobString>
+		<researchPrerequisites>
+			<li>AdvancedAmmo_BP</li>
+		</researchPrerequisites>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>32</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>FSX</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_50ball_HE>200</Ammo_50ball_HE>
+		</products>
+		<workAmount>5200</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_50ball_Sabot</defName>
+		<label>make .50/45 (Sabot) cartridge x200</label>
+		<description>Craft 200 .50/45 (Sabot) cartridges.</description>
+		<jobString>Making .50/45 (Sabot) cartridges.</jobString>
+		<researchPrerequisites>
+			<li>AdvancedAmmo_BP</li>
+		</researchPrerequisites>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>22</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>			
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Uranium</li>
+				<li>Chemfuel</li>	
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_50ball_Sabot>200</Ammo_50ball_Sabot>
+		</products>
+		<workAmount>4600</workAmount>
+	</RecipeDef>
+
+</Defs>

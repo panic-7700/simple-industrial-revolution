@@ -1,11 +1,19 @@
-# A mod for simple early-industrial-era factions in Rimworld
+# Flintlock Era Factions
 
-Repeating firearms? Too high tech for these folks.
+This mod adds two flintlock-wielding factions to Rimworld. Repeating firearms? Too high tech for these folks.
 
 Based on Simple Industrial Factions, by Tostov and Hydra7-1.
 
 For more, see the [planning document](/Docs/Planning.md).
 
+
+## Credits
+
+- Art:
+	- [serina / al9000](https://steamcommunity.com/id/albertbokor/myworkshopfiles/?appid=294100)
+- Configs:
+	- serina / al9000
+	- [Auggster](https://steamcommunity.com/profiles/76561199138984571/myworkshopfiles/?appid=294100)
 
 ## License
 

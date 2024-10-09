@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>Ammo75Hex</defName>
+		<label>.75 Hex Cartridge</label>
+		<parent>AmmoRifles</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberHighCaliber</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_75HexShot</defName>
+		<label>.75 Hexagonal</label>
+		<ammoTypes>
+			<Ammo_75ShotHex_FMJ>Bullet_75ShotHex_FMJ</Ammo_75ShotHex_FMJ>
+			<Ammo_75ShotHex_HE>Bullet_75ShotHex_HE</Ammo_75ShotHex_HE>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="75ShotHexBase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>A paper cartridge sealed with wax containing a projectile and black powder, fired by .75 Hexagonal wall guns.</description>
+		<statBases>
+			<Mass>0.135</Mass>
+			<Bulk>0.17</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_FueledSmithy</li>
+			<li>CE_AutoEnableCrafting_ElectricSmithy</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Ammo75Hex</li>
+		</thingCategories>
+		<stackLimit>500</stackLimit>		
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="75ShotHexBase">
+		<defName>Ammo_75ShotHex_FMJ</defName>
+		<label>.75 Hexagonal cartridge</label>
+		<graphicData>
+		    <texPath>Things/Ammo/Medieval/Musket/ConicalB</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.56</MarketValue>
+		</statBases>
+		<ammoClass>Hexagonal</ammoClass>
+		<cookOffProjectile>Bullet_75ShotHex_FMJ</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="75ShotHexBase">
+		<defName>Ammo_75ShotHex_HE</defName>
+		<label>.75 Hexagonal Gardiner cartridge (HE)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Medieval/Musket/Gardiner</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1.28</MarketValue>
+		</statBases>
+		<ammoClass>Gardiner</ammoClass>
+		<cookOffProjectile>Bullet_75ShotHex_HE</cookOffProjectile>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Base75ShotHexBullet" ParentName="BaseBulletCE" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>101</speed>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base75ShotHexBullet">
+		<defName>Bullet_75ShotHex_FMJ</defName>
+		<label>.75 Hexagonal</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>36</damageAmountBase>
+			<armorPenetrationSharp>10</armorPenetrationSharp>
+			<armorPenetrationBlunt>162.26</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base75ShotHexBullet">
+		<defName>Bullet_75ShotHex_HE</defName>
+		<label>.75 Hexagonal Gardiner (HE)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>36</damageAmountBase>
+			<armorPenetrationSharp>10</armorPenetrationSharp>
+			<armorPenetrationBlunt>162.26</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+			  	<def>Bomb_Secondary</def>
+			  	<amount>22</amount>
+				</li>
+		  </secondaryDamage>
+		</projectile>
+	</ThingDef>
+	
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_75ShotHex_FMJ</defName>
+		<label>make .75 Hexagonal cartridge x100</label>
+		<description>Craft 100 .75 Hexagonal cartridges.</description>
+		<jobString>Making .75 Hexagonal cartridges.</jobString>
+		<researchPrerequisites>
+			<li>CE_Gunpowder</li>
+		</researchPrerequisites>		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>28</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>		
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_75ShotHex_FMJ>100</Ammo_75ShotHex_FMJ>
+		</products>
+		<workAmount>2800</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_75ShotHex_HE</defName>
+		<label>make .75 Hexagonal Gardiner (HE) cartridge x100</label>
+		<description>Craft 100 .75 Hexagonal Gardiner(HE) cartridges.</description>
+		<jobString>Making .75 Hexagonal Gardiner (HE) cartridges.</jobString>
+		<researchPrerequisites>
+			<li>AdvancedAmmo_BP</li>
+		</researchPrerequisites>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>28</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>FSX</li>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_75ShotHex_HE>100</Ammo_75ShotHex_HE>
+		</products>
+		<workAmount>5600</workAmount>
+	</RecipeDef>
+
+</Defs>

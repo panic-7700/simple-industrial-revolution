@@ -16,7 +16,7 @@
 	- [ ] grenadiers
 5. [x] ~~Cavalry with giddy up~~
 6. [ ] Traders
-	- fix apparel and weapons for merchants and villagers
+	- [ ] fix apparel and weapons for merchants and villagers
 
 
 #### Testing
