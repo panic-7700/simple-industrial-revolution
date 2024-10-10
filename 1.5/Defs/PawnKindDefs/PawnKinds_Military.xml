@@ -135,6 +135,30 @@
 	</PawnKindDef>
 
 
+	<!--Grenadiers
+			Higher Quality, musket, grenades -->
+	<!-- [TODO] -->
+	<!-- <PawnKindDef ParentName="ei_InfantryLineBase">
+		<defName>ei_exp_Grenadier</defName>
+			<apparelRequired inherit="False">
+				<li>rc_HessianGrenadierCap</li>
+				<li>rc_WebbingGrenadier</li>
+				<li>rc_ShirtAndWaistcoat</li>
+				<li>rc_ColorableJacketWHITEfacings</li>
+			</apparelRequired>
+	</PawnKindDef> -->
+
+	<!-- <PawnKindDef ParentName="ei_InfantryLineBase">
+		<defName>ei_rev_Grenadier</defName>
+		<apparelRequired inherit="False">
+			<li>rc_HessianGrenadierCap</li>
+			<li>rc_WebbingGrenadier</li>
+			<li>rc_ShirtAndWaistcoat</li>
+			<li>rc_ColorableJacketWHITEfacings</li>
+		</apparelRequired>
+	</PawnKindDef> -->
+
+
 	<!--Skirmishers
 	: High Quality : Rifle (exp) or Musket (rev) -->
 	<PawnKindDef Name="ei_SkirmisherBase" ParentName="EarlyInd_EliteSoldier" Abstract="True">

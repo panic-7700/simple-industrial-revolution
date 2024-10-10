@@ -2,7 +2,7 @@
 
 This mod adds two flintlock-wielding factions to Rimworld. Repeating firearms? Too high tech for these folks.
 
-Based on Simple Industrial Factions, by Tostov and Hydra7-1.
+Based loosely on Simple Industrial Factions by Tostov.
 
 For more, see the [planning document](/Docs/Planning.md).
 

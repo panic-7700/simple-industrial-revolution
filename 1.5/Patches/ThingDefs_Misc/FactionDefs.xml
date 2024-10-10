@@ -3,7 +3,7 @@
 	<Operation Class="PatchOperationSequence">
 		<operations>
 
-			<!-- CE raid balance (this is some jank) -->
+			<!-- [FIXME] CE raid balance (this is some jank) -->
 			<li Class="PatchOperationFindMod">
 				<mods>
 					<li>Combat Extended</li>

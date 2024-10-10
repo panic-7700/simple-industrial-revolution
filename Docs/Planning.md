@@ -13,11 +13,12 @@
 	- [x] officers
 	- [x] skirmishers
 	- [x] mercenaries
-	- [ ] grenadiers
+	- [TODO] grenadiers
 5. [x] ~~Cavalry with giddy up~~
 6. [ ] Traders
-	- [ ] fix apparel and weapons for merchants and villagers
-
+	- [TODO] nail down shopping list / wares
+	- [FIXME] apparel and weapons for merchants and villagers
+7. [FIXME] raid balancing needs tuning
 
 #### Testing
 
@@ -30,29 +31,32 @@
 
 ### 1.5 / stretch goals
 
-1. [ ] Titles
+1. Titles
 	- Trade discounts?
 	- Negative goodwill from factional opponent
 	- Permits
-2. [ ] Mercenaries
-3. [ ] Combat Command knockoff
+		- caravans rather than drops
+2. Mechanics
+	- Combat Command knockoff for Officers
+3. Units
+	- Mercenaries hirable by player
+	- Elites (excluding line infantry)
+4. Tech tree traversal
+	- simulated by higher-cost elites with breechloaders or early multishot firearms
+	- Martini Henry, Needle, etc (bolt-action for vanilla?)
 
 
 ## Factions
 
 - just two to keep it simple
 - no permanently hostile factions because Reasons
-	- but maybe make it so they're harder to keep happy
+	- [TODO] but maybe make it so they're harder to keep happy
 - revolutionary early-industrial faction
 	- individualist ideo
-	- blue and grey colorsets
+	- blue ~~and grey~~ color sets
 - expansionist early-industrial faction
 	- loyalist
-	- red and black color sets
-- stretch goals
-	- hire mercenaries
-	- title system?
-	- rather than drops, trigger caravans?
+	- red ~~and black~~ color sets
 
 
 ## Military
@@ -73,13 +77,13 @@
 		- [x] line infantry webbing (`redcoats!`)
 	- [ ] Grenadier
 		- [ ] Bursting and incendiary bombs (`flintlocks`)
-		- [ ] Grenadier webbing (`redcoats!`)
+		- [x] Grenadier webbing (`redcoats!`)
 		- [ ] Elites: Old Guard
 	- [ ] Skirmisher
 		- [ ] Rifleman **unique to expansionist faction**
 			- [x] flintlock rifle (`flintlocks`)
 			- [ ] sword bayonet or knife
-			- [x]] different colored jacket, maybe forced green?, white facings (`redcoats!`)
+			- [x] different colored jacket, maybe forced green?, white facings (`redcoats!`)
 			- [ ] Elites: Chosen Man
 		- [x] light infantry webbing (`redcoats!`)
 		- [x] Voltigeur **unique to revolutionary**

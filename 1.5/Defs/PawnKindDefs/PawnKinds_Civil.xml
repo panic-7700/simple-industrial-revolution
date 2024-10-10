@@ -21,6 +21,7 @@
 
 
 	<PawnKindDef ParentName="EarlyInd_BaseCivilian">
+		<!-- [TODO] period-appropriate clothes and weapons -->
 		<defName>ei_civilian</defName>
 		<label>imperial citizen</label>
 		<race>Human</race>
@@ -85,11 +86,13 @@
 			</subOptionsTakeAll>
 		</inventoryOptions>
 		<combatPower>40</combatPower>
+		<!-- [TODO] -->
 		<weaponTags>
 			<li>SimpleGun</li>
 		</weaponTags>
 		<weaponMoney>1100~3500</weaponMoney>
 		<apparelMoney>1250~2500</apparelMoney>
+		<!-- [TODO] -->
 		<apparelTags>
 			<li>IndustrialBasic</li>
 			<li>IndustrialAdvanced</li>
@@ -100,6 +103,7 @@
 			<li>Western</li>
 		</apparelDisallowTags>
 		<specificApparelRequirements>
+			<!-- [TODO] -->
 			<li>
 				<bodyPartGroup>UpperHead</bodyPartGroup>
 				<requiredTag>RoyalTier2</requiredTag>
@@ -107,6 +111,7 @@
 		</specificApparelRequirements>
 		<techHediffsChance>0.15</techHediffsChance>
 		<techHediffsMoney>1000~1800</techHediffsMoney>
+		<!-- [TODO] -->
 		<techHediffsTags>
 			<li>Advanced</li>
 			<li>ImplantEmpireCommon</li>
@@ -147,6 +152,7 @@
 			<li>Mining</li>
 			<li>Firefighting</li>
 		</requiredWorkTags>
+		<!-- [TODO] -->
 		<apparelTags>
 			<li>IndustrialBasic</li>
 		</apparelTags>
