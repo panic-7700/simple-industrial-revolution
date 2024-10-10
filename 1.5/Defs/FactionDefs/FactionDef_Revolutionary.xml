@@ -62,7 +62,7 @@
 		</xenotypeSet>
 		<!-- never arrive on mounts if GiddyUp is installed, the api is currently fucky -->
 		<modExtensions>
-			<li Class="GiddyUp.FactionRestrictions">
+			<li MayRequire="owlchemist.giddyup" Class="GiddyUp.FactionRestrictions">
 				<mountChance>0</mountChance>
 			</li>
 		</modExtensions>
